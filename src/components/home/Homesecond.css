@@ -1,0 +1,404 @@
+.arch-facilities {
+  /* background: #0f0f0f; */
+  color: #fff;
+  padding: 80px 0;
+}
+
+.arch-container {
+  width: 90%;
+  margin: auto;
+}
+
+.arch-header {
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+.arch-header h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  color: rgba(185, 33, 39);
+}
+
+.arch-header p {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* Slider */
+.arch-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.arch-grid {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s ease;
+}
+
+.arch-card {
+  min-width: 25%;
+  height: 600px;
+  /* height: auto; */
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.arch-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arch-card h3 {
+  position: absolute;
+  bottom: 30px; /* distance from bottom */
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%);
+  z-index: 10;
+  color: #fff; /* white text */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* subtle shadow */
+  padding: 0; /* remove any padding */
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  width: auto;
+}
+
+/* Navigation */
+.arch-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arch-nav.prev {
+  left: 15px;
+}
+.arch-nav.next {
+  right: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .arch-card {
+    min-width: 80%;
+  }
+}
+
+/* client section */
+/* ================================================= */
+.client-section {
+  padding: 80px 20px;
+  /* background-color: #f9f9f9; */
+  overflow: hidden;
+}
+
+.client-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+/* Header */
+.client-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.client-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: rgba(185, 33, 39);
+}
+
+.client-header p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 650px;
+  margin: auto;
+}
+
+/* Client Logos Track */
+.client-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.client-track {
+  display: flex;
+  gap: 60px; /* more space between logos */
+  width: max-content; /* allows smooth continuous scrolling */
+}
+
+.client-logo {
+  flex: 0 20%; /* 4 logos visible at a time */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-logo img {
+  width: 100%;
+  max-width: 200px; /* increase logo size */
+  object-fit: contain;
+}
+
+/* Portfolio */
+
+.portfolio-section {
+  padding: 100px 20px;
+  /* background-color: #f7f7f7; */
+}
+
+/* Container */
+.portfolio-container {
+  max-width: 90%; /* desktop friendly */
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.portfolio-header {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.portfolio-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: rgba(185, 33, 39);
+}
+
+.portfolio-header p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+}
+
+/* Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  aspect-ratio: 3 / 4; /* 👈 equal height cards */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay */
+.portfolio-card .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+/* -------------------- */
+/* Responsive Breakpoints */
+/* -------------------- */
+
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-section {
+    padding: 70px 16px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .portfolio-header h2 {
+    font-size: 26px;
+  }
+
+  .portfolio-header p {
+    font-size: 14px;
+  }
+}
+
+
+/* testimonials */
+
+.adclan-testimonial-section {
+  max-width: 90%;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Heading */
+.adclan-testimonial-heading h2 {
+  font-size: 2.5rem;
+  text-align: left;
+  margin-bottom: 20px;
+  color: rgba(185, 33, 39);
+}
+
+/* Paragraph */
+.adclan-testimonial-paragraph p {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Swiper Container */
+.adclan-swiper-container {
+  padding-bottom: 40px;
+  overflow: visible;
+}
+
+/* Each Slide */
+.swiper-slide {
+  width: 300px; /* width of single card */
+  flex-shrink: 0;
+}
+
+/* Card Styles */
+.adclan-slide-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative;
+}
+
+/* Video Wrapper */
+.adclan-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 70vh; /* adjust card video height */
+  overflow: hidden;
+}
+
+/* Video Styles */
+.adclan-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay Text */
+.adclan-video-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  text-align: left;
+}
+
+/* Client Name */
+.adclan-video-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+}
+
+/* Client Position/Subtitle */
+.adclan-video-text p {
+  font-size: 1rem;
+  margin: 0;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: 250px;
+  }
+  .adclan-video-wrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 200px;
+  }
+  .adclan-video-wrapper {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 90%;
+  }
+  .adclan-video-wrapper {
+    height: 180px;
+  }
+}
