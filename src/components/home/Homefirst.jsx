@@ -263,7 +263,7 @@ export default function Homefirst() {
             <div className="commercial-text">
               <h1>
                 <img
-                  src="http://rudrabuildwell.com/images/logo-aquacasa.gif"
+                  src="/assets/logo-aquacasa.gif"
                   width="70px"
                   alt=""
                 />
