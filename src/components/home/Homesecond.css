@@ -21,8 +21,9 @@
 }
 
 .arch-header p {
-  color: #bbb;
+  color: #686868;
   line-height: 1.6;
+  font-size: 18px;
 }
 
 /* Slider */
@@ -162,7 +163,7 @@
 /* Portfolio */
 
 .portfolio-section {
-  padding: 100px 20px;
+  padding: 30px 10px;
   /* background-color: #f7f7f7; */
 }
 
@@ -170,7 +171,7 @@
 .portfolio-container {
   max-width: 90%; /* desktop friendly */
   margin: auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 /* Header */
@@ -190,8 +191,8 @@
 }
 
 .portfolio-header p {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
   line-height: 1.6;
 }
 
@@ -295,7 +296,6 @@
   max-width: 90%;
   margin: 100px auto;
   text-align: center;
-  font-family: Arial, sans-serif;
   overflow: hidden;
 }
 
@@ -310,8 +310,8 @@
 /* Paragraph */
 .adclan-testimonial-paragraph p {
   text-align: left;
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
   margin-bottom: 40px;
 }
 
@@ -355,10 +355,10 @@
 /* Overlay Text */
 .adclan-video-text {
   position: absolute;
-  bottom: 15px;
+  bottom: 16px;
   left: 15px;
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
   text-align: left;
 }
 

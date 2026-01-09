@@ -2,7 +2,6 @@
   padding: 80px 20px 40px;
   background: #111;
   color: #fff;
-  font-family: "Inter", sans-serif;
 }
 
 .footer-inner {
@@ -48,7 +47,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100px;
   height: 1px;
   background: #b92127;
   transform: scaleX(0);

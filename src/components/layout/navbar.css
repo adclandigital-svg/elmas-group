@@ -8,12 +8,8 @@
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
-  -webkit-border-radius: 0 0 10px 10px;
-  -moz-border-radius: 0 0 10px 10px;
-  -ms-border-radius: 0 0 10px 10px;
-  -o-border-radius: 0 0 10px 10px;
   -webkit-transition: background 0.3s ease, backdrop-filter 0.3s ease;
   -moz-transition: background 0.3s ease, backdrop-filter 0.3s ease;
   -ms-transition: background 0.3s ease, backdrop-filter 0.3s ease;
@@ -42,6 +38,7 @@
   font-weight: 700;
   text-transform: uppercase;
   transition: all ease 0.3s;
+  
 }
 .nav-links a:hover {
   color: rgb(185, 33, 39);
@@ -109,6 +106,7 @@
   text-decoration: none;
   color: #111;
   padding: 12px 0px;
+  
 }
 .sidebar-links a:hover{
  color: rgb(185, 33, 39);
@@ -154,10 +152,6 @@
   margin-left: 5%;
   font-size: 12px;
   transition: all ease-in 0.2s;
-  -webkit-transition: all ease-in 0.2s;
-  -moz-transition: all ease-in 0.2s;
-  -ms-transition: all ease-in 0.2s;
-  -o-transition: all ease-in 0.2s;
 }
 .submenu a {
   font-size: 16px;

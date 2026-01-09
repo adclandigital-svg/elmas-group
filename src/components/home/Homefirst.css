@@ -75,9 +75,9 @@
 }
 .third-second-text p {
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
 }
 .line {
   width: 100%;
@@ -308,7 +308,7 @@ img {
   font-size: 18px;
   line-height: 1.6;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(0, 0, 0, 0.7);
   text-align: left;
 }
 .second-div2 > div {
@@ -331,7 +331,7 @@ img {
 }
 
 .second-div2-inner p {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /* INITIAL STATES */

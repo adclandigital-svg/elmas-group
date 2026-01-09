@@ -5,10 +5,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./navbar.css";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 export default function Navbar() {
+  const route =useRouter()
 
   const sidebarRef = useRef(null);
   const navbarRef = useRef(null);
@@ -61,8 +64,8 @@ export default function Navbar() {
   return (
     <>
       <header ref={navbarRef} className="navbar">
-        <div className="nav-container">
-          <div className="logo">
+        <div className="nav-container" style={{cursor:"pointer"}}>
+          <div className="logo"  onClick={()=>route.push("/")}>
             <img src="/assets/logo.png" width={100} loading="lazy" />
           </div>
 
@@ -88,11 +91,11 @@ export default function Navbar() {
         <nav className="sidebar-links">
           <a className="sidebar-links-mobile">Spring Elmas</a>
           <a  className="sidebar-links-mobile">Elmas Aquacasa</a>
-          <a href="/projects" className="sidebar-links-project">Projects</a>
+          <a href="#" className="sidebar-links-project">Projects</a>
 
           <div className="submenu">
-            <a href="/projects?q=spring-elmas">Spring Elmas</a>
-            <a href="/projects?q=elmas-aquacasa">Elmas Aquacasa</a>
+            <a href="/projects/spring-elmas">Spring Elmas</a>
+            <a href="/projects/elmas-aquacasa">Elmas Aquacasa</a>
           </div>
           <a href="/blogs">Blogs</a>
           <a href="/gallery">Gallery</a>

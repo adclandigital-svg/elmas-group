@@ -18,7 +18,6 @@ export default function Footer() {
         {/* Quick Links (Sidebar URLs) */}
         <div className="footer-nav">
           <h4>Quick Links</h4>
-          <a href="/projects" className="sidebar-links-project">Projects</a>
           <a href="/blogs">Blogs</a>
           <a href="/gallery">Gallery</a>
           <a href="/media">Media Centre</a>
