@@ -104,25 +104,27 @@ export default function ProjectPage() {
   useGSAP(() => {
     const reveals = gsap.utils.toArray(".blog-reveal");
 
-    reveals.forEach((item) => {
-      gsap.set(item, { transformOrigin: "top" });
+    gsap.set(reveals, { transformOrigin: "top" });
 
-      gsap.fromTo(
-        item,
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: reveals,
+          start: "top 85%",
+          end: "bottom 10%",
+          markers: true,
+        },
+      })
+      .fromTo(
+        reveals,
         { scaleY: 1 },
         {
           scaleY: 0,
-          duration: 1,
+          duration: 0.6,
           ease: "power3.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 75%",
-            end: "bottom 10%",
-            // markers: true,
-          },
+          stagger: 0.09, // <- true sequential reveal
         }
       );
-    });
   }, []);
 
   return (
