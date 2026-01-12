@@ -112,7 +112,6 @@ export default function ProjectPage() {
           trigger: reveals,
           start: "top 85%",
           end: "bottom 10%",
-          markers: true,
         },
       })
       .fromTo(

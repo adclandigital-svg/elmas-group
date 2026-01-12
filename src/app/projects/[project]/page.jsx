@@ -6,6 +6,7 @@ import HTMLFlipBook from "react-pageflip";
 import NeighbourSection from "./components/NeighbourSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import {
   FaSwimmingPool,
   FaDumbbell,
@@ -99,6 +100,30 @@ export default function ProjectPage() {
     const planIndex = Math.floor(page / 2);
     setActiveIndex(planIndex);
   };
+  useGSAP(() => {
+    const reveals = gsap.utils.toArray(".blog-reveal");
+
+    gsap.set(reveals, { transformOrigin: "top" });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: reveals,
+          start: "top 85%",
+          end: "bottom 10%",
+        },
+      })
+      .fromTo(
+        reveals,
+        { scaleY: 1 },
+        {
+          scaleY: 0,
+          duration: 0.6,
+          ease: "power3.out",
+          stagger: 0.09, // <- true sequential reveal
+        }
+      );
+  }, []);
 
   return (
     <>
@@ -188,18 +213,27 @@ export default function ProjectPage() {
           </h2>
 
           <div className="arrival-images">
-            <img
-              className="float-img"
-              src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353"
-            />
-            <img
-              className="float-img"
-              src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
-            />
-            <img
-              className="float-img"
-              src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
-            />
+            <div>
+              <img
+                className="float-img"
+                src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353"
+              />
+              <span className="blog-reveal"></span>
+            </div>
+            <div>
+              <img
+                className="float-img"
+                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+              />
+              <span className="blog-reveal"></span>
+            </div>
+            <div>
+              <img
+                className="float-img"
+                src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
+              />
+              <span className="blog-reveal"></span>
+            </div>
           </div>
         </section>
 
@@ -220,6 +254,7 @@ export default function ProjectPage() {
             <div className="service-card">
               <div>
                 <img src="https://img.freepik.com/premium-photo/chairs-table-living-room_1048944-18456116.jpg?w=600" />
+                <span className="blog-reveal"></span>
               </div>
 
               <h3>Clubhouse Lounge</h3>
@@ -229,6 +264,7 @@ export default function ProjectPage() {
             <div className="service-card">
               <div>
                 <img src="https://img.freepik.com/premium-photo/young-female-with-outdoor-activities-city-park-yoga-is-her-chosen-activity_159755-8469.jpg?ga=GA1.1.143927192.1764420012&semt=ais_hybrid&w=600&q=80" />
+                <span className="blog-reveal"></span>
               </div>
 
               <h3>Spa & Wellness</h3>
@@ -238,6 +274,7 @@ export default function ProjectPage() {
             <div className="service-card">
               <div>
                 <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" />
+                <span className="blog-reveal"></span>
               </div>
               <h3>Celebration Lawn</h3>
               <p>Party, Events & Gatherings</p>
@@ -246,6 +283,7 @@ export default function ProjectPage() {
             <div className="service-card">
               <div>
                 <img src="https://img.freepik.com/premium-photo/fitness-room_47474-105.jpg?w=600" />
+                <span className="blog-reveal"></span>
               </div>
               <h3>Fitness Center</h3>
               <p>Modern Gym & Training Studio</p>

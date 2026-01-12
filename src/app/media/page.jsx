@@ -5,32 +5,32 @@ import gsap from "gsap";
 import "./media-center.css";
 
 export default function MediaCenterPage() {
-  useEffect(() => {
-    gsap.from(".mc-hero h1", { opacity: 0, y: 40, duration: 1.2 });
-    gsap.from(".mc-ghost-text", { opacity: 0, y: -60, duration: 2 });
-    gsap.from(".mc-card", {
-      opacity: 0,
-      y: 60,
-      stagger: 0.15,
-      duration: 1.1,
-      ease: "power3.out",
-      delay: 0.2,
-    });
-    gsap.from(".mc-gallery-grid img", {
-      opacity: 0,
-      y: 30,
-      stagger: 0.12,
-      duration: 0.9,
-      delay: 0.4,
-    });
-    gsap.from(".mc-video-grid iframe", {
-      opacity: 0,
-      y: 30,
-      stagger: 0.12,
-      duration: 0.9,
-      delay: 0.5,
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(".mc-hero h1", { opacity: 0, y: 40, duration: 1.2 });
+  //   gsap.from(".mc-ghost-text", { opacity: 0, y: -60, duration: 2 });
+  //   gsap.from(".mc-card", {
+  //     opacity: 0,
+  //     y: 60,
+  //     stagger: 0.15,
+  //     duration: 1.1,
+  //     ease: "power3.out",
+  //     delay: 0.2,
+  //   });
+  //   gsap.from(".mc-gallery-grid img", {
+  //     opacity: 0,
+  //     y: 30,
+  //     stagger: 0.12,
+  //     duration: 0.9,
+  //     delay: 0.4,
+  //   });
+  //   gsap.from(".mc-video-grid iframe", {
+  //     opacity: 0,
+  //     y: 30,
+  //     stagger: 0.12,
+  //     duration: 0.9,
+  //     delay: 0.5,
+  //   });
+  // }, []);
 
   return (
     <div className="mc-page-wrapper">
