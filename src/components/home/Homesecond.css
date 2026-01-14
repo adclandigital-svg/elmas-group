@@ -1,7 +1,7 @@
 .arch-facilities {
   /* background: #0f0f0f; */
   color: #fff;
-  padding: 80px 0;
+  padding: 0px 0;
 }
 
 .arch-container {
@@ -17,7 +17,7 @@
 .arch-header h2 {
   font-size: 42px;
   margin-bottom: 12px;
-  color: rgba(185, 33, 39);
+  color: #b27f38;
 }
 
 .arch-header p {
@@ -41,7 +41,6 @@
 .arch-card {
   min-width: 25%;
   height: 600px;
-  /* height: auto; */
   position: relative;
   border-radius: 18px;
   overflow: hidden;
@@ -51,18 +50,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 6px solid white;
 }
 
 .arch-card h3 {
   position: absolute;
-  bottom: 30px; /* distance from bottom */
+  top: 30px; /* distance from bottom */
   left: 50%; /* center horizontally */
   transform: translateX(-50%);
   z-index: 10;
-  color: #fff; /* white text */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* subtle shadow */
+  color: #b27f38; /* white text */
   padding: 0; /* remove any padding */
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   text-align: center;
   width: auto;
@@ -92,6 +91,19 @@
 }
 .arch-nav.next {
   right: 15px;
+}
+
+/* diamond wrapper */
+.arch-card-dimond {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/dimond stroke pngs 4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 10;
 }
 
 /* Responsive */
@@ -187,7 +199,7 @@
   letter-spacing: -0.5px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: rgba(185, 33, 39);
+  color: #b27f38;
 }
 
 .portfolio-header p {
@@ -203,14 +215,35 @@
   gap: 30px;
 }
 
+/* .portfolio-card {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.base-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.overlay-png {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;  
+  height: 100%;
+  pointer-events: none; 
+} */
+
 /* Card */
 .portfolio-card {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
-  background-color: #fff;
-  aspect-ratio: 3 / 4; /* 👈 equal height cards */
+  aspect-ratio: 3 / 4; 
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -219,8 +252,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   transition: transform 0.5s ease;
+  z-index: -1;
+}
+.portfolio-card-dimonds{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  background-color: aqua;
+   background-image: url("/assets/dimond stroke pngs 4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .portfolio-card:hover img {
@@ -289,12 +333,11 @@
   }
 }
 
-
 /* testimonials */
 
 .adclan-testimonial-section {
   max-width: 90%;
-  margin: 100px auto;
+  margin: 50px auto;
   text-align: center;
   overflow: hidden;
 }
@@ -304,7 +347,7 @@
   font-size: 2.5rem;
   text-align: left;
   margin-bottom: 20px;
-  color: rgba(185, 33, 39);
+  color: #b27f38;
 }
 
 /* Paragraph */

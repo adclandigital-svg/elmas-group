@@ -6,6 +6,7 @@ import HTMLFlipBook from "react-pageflip";
 import NeighbourSection from "./components/NeighbourSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectSpecifications from "./components/ProjectSpecifications";
 import { useGSAP } from "@gsap/react";
 import {
   FaSwimmingPool,
@@ -155,6 +156,8 @@ export default function ProjectPage() {
           </div>
         </section>
       </div>
+
+      
       <div className="facilities-wrapper">
         {/* ----------- FACILITIES ICON GRID ----------- */}
         <section className="facilities-section">
@@ -168,39 +171,54 @@ export default function ProjectPage() {
               security. <br />
               Experience premium lifestyle features inside your gated community.
             </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              ea nisi <br />
+              quaerat eaque iusto nam nihil sed eum, officiis veniam dolorum
+              culpa veritatis <br /> ratione ex aspernatur hic numquam aperiam
+              impedit!
+            </p>
           </div>
 
           <div className="icon-grid">
             <div className="icon-box">
               <FaSwimmingPool /> Swimming Pool
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaBuilding /> Clubhouse
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaDumbbell /> Gymnasium
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaChild /> Kids Play Area
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaRunning /> Jogging Track
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaGamepad /> Indoor Games
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaShieldAlt /> 24x7 Security
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaGlassCheers /> Banquet Hall
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
           </div>
         </section>
@@ -242,7 +260,7 @@ export default function ProjectPage() {
           <p className="tag">LUXURY, COMFORT & COMMUNITY LIFE</p>
 
           <div className="services-header">
-            <h2>Amenities & Lifestyle Services</h2>
+            <h2>Living Comforts & Services</h2>
             <p>
               Discover thoughtfully curated lifestyle spaces that bring families
               together <br /> and offer unmatched leisure and recreation inside
@@ -294,7 +312,6 @@ export default function ProjectPage() {
       <NeighbourSection />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
-
         {/* Tabs */}
         <div className="fp-tabs">
           {plans.map((plan, i) => (
@@ -342,6 +359,10 @@ export default function ProjectPage() {
                   </li>
                 ))}
               </ul>
+              <div className="fp-page-download">
+                <a href="/assets/Spring-Elmas-Brochure.pdf"> Brochure</a>
+                <a href="/assets/SpringElmasPriceList.pdf">Price List</a>
+              </div>
             </div>,
           ])}
         </HTMLFlipBook>

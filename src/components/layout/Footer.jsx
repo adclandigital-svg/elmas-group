@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
 import "./footer.css";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -37,10 +41,18 @@ export default function Footer() {
         <div className="footer-connect">
           <h4>Connect</h4>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
+            <a href="#">
+              <FaInstagram />
+            </a>
+            <a href="#">
+              <FaLinkedin />
+            </a>
+            <a href="#">
+              <FaTwitter />
+            </a>
+            <a href="#">
+              <FaFacebookF />
+            </a>
           </div>
           <p>Elmas Group</p>
           <p>Noida Extension, Uttar Pradesh, India</p>

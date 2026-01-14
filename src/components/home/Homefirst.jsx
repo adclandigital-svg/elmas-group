@@ -176,6 +176,7 @@ export default function Homefirst() {
           Giving the <br />
           best just for you
         </h1>
+
         <div className="third-second">
           <div className="third-second-img">
             <img
@@ -207,14 +208,14 @@ export default function Homefirst() {
             <div className="residential-text active">
               <h1>
                 {" "}
-                <img
+                {/* <img
                   src="https://springelmas.com/img/logo.png"
                   width="110px"
                   alt=""
-                />
+                /> */}
                 Spring Elmas
               </h1>
-              <p>
+              {/* <p>
                 Spring Elmas has today evolved as one of the most vibrant real
                 estate destinations, With a number of ongoing world-class
                 developments and meticulous expansion.
@@ -228,7 +229,28 @@ export default function Homefirst() {
               <p>
                 Going smart over the natural resources endow the residents with
                 an eco-living in this blissfully tranquil location.
+              </p> */}
+              <p>
+                Spring Elmas has today evolved as one of the <br />
+                most vibrant real estate destinations,With a number <br /> of
+                ongoing world-class developments and meticulous expansion.{" "}
+                <br /> Where Spring Elmas in Noida Extension new launch
+                residential <br /> project with The sweeping lush surrounding,
+                assortment of <br />
+                finest amenities and ample space between towers will <br />
+                make your living an enriching experience,
+                <br />
+                Going smart over the natural resources <br /> endow the
+                residents with an <br />
+                eco-living in this blissfully
+                <br /> tranquil location. <br />
+                end
               </p>
+              <img
+                className="diamond-img"
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -262,14 +284,10 @@ export default function Homefirst() {
           <div className="third-second-text">
             <div className="commercial-text">
               <h1>
-                <img
-                  src="/assets/logo-aquacasa.gif"
-                  width="70px"
-                  alt=""
-                />
+                {/* <img src="/assets/logo-aquacasa.gif" width="70px" alt="" /> */}
                 &nbsp;Elmas Aquacasa
               </h1>
-              <p>
+              {/* <p>
                 Thoughtfully planned residential spaces designed to bring
                 comfort, convenience, and a sense of belonging to everyday life.
                 Homes crafted for modern families who value quality living and
@@ -286,7 +304,23 @@ export default function Homefirst() {
                 Elmas Aquacasa offers a perfect balance between privacy and
                 togetherness. It is a place where families grow, relationships
                 flourish, and life feels truly connected.
+              </p> */}
+              <p>
+                Thoughtfully planned residential spaces designed <br /> to bring 
+                comfort, convenience, and a sense of belonging <br />to everyday life.
+                Homes crafted for modern families who value <br />quality living and
+                peaceful surroundings.Spacious layouts, abundant <br /> natural light,
+                and smart use of space ensure that every home feels <br /> open, warm,
+                and welcoming. From premium finishes to <br /> functional design, every
+                detail is created to elevate <br /> your lifestyle.With amenities for
+                relaxation, <br /> recreation, and community living, Elmas <br />Aquacasa
+                offers a  perfect balance <br /> between privacy and  <br />togetherness. 
               </p>
+              <img
+                className="diamond-img-commercial"
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -340,6 +374,7 @@ export default function Homefirst() {
                 { count: 14, label: "Awards Won" },
               ].map((item, i) => (
                 <div key={i} className="second-div2-inner">
+                  <img className="second-div2-inner-image" src="/assets/dimond stroke pngs 2.png" alt="" />
                   <h1>
                     <span
                       data-count={item.count}

@@ -70,8 +70,8 @@ export default function Navbar() {
           </div>
 
           <nav className="nav-links">
-            <a href="#">Spring Elmas</a>
-            <a href="#">Elmas Aquacasa</a>
+            <a href="/projects/spring-elmas">Spring Elmas</a>
+            <a href="/projects/elmas-aquacasa">Elmas Aquacasa</a>
 
             <div ref={toggleRef} className="menu-toggle">
               <span></span>

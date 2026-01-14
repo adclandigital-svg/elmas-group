@@ -108,12 +108,13 @@ export default function HomeSecond() {
                 480: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
-                1200: { slidesPerView: 4 },
+                1200: { slidesPerView: 3 },
               }}
             >
               {cards.map((card, i) => (
                 <SwiperSlide key={i} className="arch-grid-slide">
                   <div className="arch-card">
+                    <div className="arch-card-dimond"></div>
                     <img className="float-img" src={card.img} loading="lazy" />
                     <h3>{card.title}</h3>
                   </div>
@@ -146,8 +147,16 @@ export default function HomeSecond() {
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=50"
                 loading="lazy"
                 alt="Modern Living Room Interior"
+                className="base-image"
               />
+
+              {/* <img
+                src="/assets/dimond stroke pngs 4.png"
+                alt="Overlay PNG"
+                className="overlay-png"
+              /> */}
             </div>
+
             <div className="portfolio-card">
               <img
                 src="https://img.freepik.com/free-photo/3d-rendering-luxury-modern-living-room-with-fabric-sofa_105762-2186.jpg"
@@ -201,54 +210,55 @@ export default function HomeSecond() {
         </div>
       </section>
       <section className="adclan-testimonial-section">
-      <div className="adclan-testimonial-heading">
-        <h2>
-          Hear From <br /> Our Happy Clients
-        </h2>
-      </div>
-      <div className="adclan-testimonial-paragraph">
-        <p>
-          Discover why our clients trust us for their real estate needs. <br />
-          Watch their video testimonials to see how we helped them find their
-          dream homes and achieve successful property sales.
-        </p>
-      </div>
+        <div className="adclan-testimonial-heading">
+          <h2>
+            Hear From <br /> Our Happy Clients
+          </h2>
+        </div>
+        <div className="adclan-testimonial-paragraph">
+          <p>
+            Discover why our clients trust us for their real estate needs.{" "}
+            <br />
+            Watch their video testimonials to see how we helped them find their
+            dream homes and achieve successful property sales.
+          </p>
+        </div>
 
-      <Swiper
-        modules={[Autoplay]}
-        className="adclan-swiper-container"
-        slidesPerView={3}
-        spaceBetween={30}
-        loop={true}
-        centeredSlides={true}
-        speed={800}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        breakpoints={{
-          1024: { slidesPerView: 3, spaceBetween: 30 },
-          768: { slidesPerView: 2, spaceBetween: 20 },
-          0: { slidesPerView: 1, spaceBetween: 10 },
-        }}
-      >
-        {slides.map((slide, i) => (
-          <SwiperSlide key={i} className="adclan-slide-card">
-            <div className="adclan-video-wrapper">
-              <video
-                src={slide.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="none"
-              />
-              <div className="adclan-video-text">
-                <h3>{slide.name}</h3>
-                <p>{slide.desc}</p>
+        <Swiper
+          modules={[Autoplay]}
+          className="adclan-swiper-container"
+          slidesPerView={3}
+          spaceBetween={30}
+          loop={true}
+          centeredSlides={true}
+          speed={800}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            0: { slidesPerView: 1, spaceBetween: 10 },
+          }}
+        >
+          {slides.map((slide, i) => (
+            <SwiperSlide key={i} className="adclan-slide-card">
+              <div className="adclan-video-wrapper">
+                <video
+                  src={slide.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                />
+                <div className="adclan-video-text">
+                  <h3>{slide.name}</h3>
+                  <p>{slide.desc}</p>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
     </>
   );
 }
