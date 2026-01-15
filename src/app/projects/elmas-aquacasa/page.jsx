@@ -172,6 +172,7 @@ export default function ProjectPage() {
           </div>
         </section>
       </div>
+      
       <div className="facilities-wrapper">
         {/* ----------- FACILITIES ICON GRID ----------- */}
         <section className="facilities-section">

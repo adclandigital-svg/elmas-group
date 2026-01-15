@@ -135,10 +135,9 @@ export default function ProjectPage() {
     console.log("Lead Data:", data);
     setShowForm(false);
     // 🔹 open brochure AFTER submit
-    if(showForm=="Brochure"){
+    if (showForm == "Brochure") {
       window.open("/assets/Spring-Elmas-Brochure.pdf", "_blank");
-    }
-    else{
+    } else {
       window.open("/assets/SpringElmasPriceList.pdf", "_blank");
     }
   };
@@ -166,13 +165,65 @@ export default function ProjectPage() {
           <div className="hero-overlay">
             <p>[ project / spring-elmas ]</p>
             <h1>Spring Elmas</h1>
-
-            {/* <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum ad esse excepturi itaque? Qui veniam totam omnis, et adipisci modi quibusdam. Maiores aperiam in totam tempore debitis libero asperiores temporibus.
-            </p> */}
           </div>
         </section>
       </div>
+      <section className="about-section">
+        <div className="about-container">
+          {/* LEFT */}
+          <div className="about-left">
+            <h2>About Project</h2>
+            <div className="project-address">
+              <span>Project Location</span>
+              <p>
+                Sector-12, Noida Extension  <br />(Greater Noida West), Uttar Pradesh –
+                201318
+              </p>
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="about-right">
+            <div className="about-text">
+              <p>
+                This thoughtfully planned residential project is designed to
+                offer a perfect balance of modern architecture, open green
+                spaces, and lifestyle-driven amenities. Every detail has been
+                crafted to enhance comfort, privacy, and everyday living.
+              </p>
+
+              <p>
+                Strategically located with excellent connectivity, the project
+                provides seamless access to key business hubs, schools,
+                healthcare, and entertainment destinations, making it an ideal
+                choice for families and professionals alike.
+              </p>
+            </div>
+
+            <div className="stats-grid">
+              <div className="stat">
+                <h3>12+</h3>
+                <span>Acres of land</span>
+              </div>
+
+              <div className="stat">
+                <h3>8</h3>
+                <span>Residential towers</span>
+              </div>
+
+              <div className="stat">
+                <h3>1,200+</h3>
+                <span>Premium residences</span>
+              </div>
+
+              <div className="stat">
+                <h3>70%</h3>
+                <span>Open & green spaces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="facilities-wrapper">
         {/* ----------- FACILITIES ICON GRID ----------- */}
@@ -402,7 +453,9 @@ export default function ProjectPage() {
               ✕
             </button>
 
-            <h3>Download {showForm=="Brochure"?"Brochure":"Price List"}</h3>
+            <h3>
+              Download {showForm == "Brochure" ? "Brochure" : "Price List"}
+            </h3>
             <p>Please fill the details to proceed</p>
 
             <form onSubmit={handleSubmit}>
