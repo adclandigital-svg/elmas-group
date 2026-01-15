@@ -89,6 +89,7 @@ const plans = [
 export default function ProjectPage() {
   const flipBook = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showForm, setShowForm] = useState(false);
 
   const handleTabClick = (index) => {
     if (flipBook.current) {
@@ -126,6 +127,22 @@ export default function ProjectPage() {
       );
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // 🔹 collect form data
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    console.log("Lead Data:", data);
+    setShowForm(false);
+    // 🔹 open brochure AFTER submit
+    if(showForm=="Brochure"){
+      window.open("/assets/Spring-Elmas-Brochure.pdf", "_blank");
+    }
+    else{
+      window.open("/assets/SpringElmasPriceList.pdf", "_blank");
+    }
+  };
+
   return (
     <>
       <div className="project-page">
@@ -157,7 +174,6 @@ export default function ProjectPage() {
         </section>
       </div>
 
-      
       <div className="facilities-wrapper">
         {/* ----------- FACILITIES ICON GRID ----------- */}
         <section className="facilities-section">
@@ -360,8 +376,8 @@ export default function ProjectPage() {
                 ))}
               </ul>
               <div className="fp-page-download">
-                <a href="/assets/Spring-Elmas-Brochure.pdf"> Brochure</a>
-                <a href="/assets/SpringElmasPriceList.pdf">Price List</a>
+                <a onClick={() => setShowForm("Brochure")}> Brochure</a>
+                <a onClick={() => setShowForm("Price")}>Price List</a>
               </div>
             </div>,
           ])}
@@ -378,6 +394,37 @@ export default function ProjectPage() {
           ></iframe>
         </div>
       </section>
+
+      {showForm && (
+        <div className="popup-overlay">
+          <div className="popup-form">
+            <button className="close-btn" onClick={() => setShowForm(false)}>
+              ✕
+            </button>
+
+            <h3>Download {showForm=="Brochure"?"Brochure":"Price List"}</h3>
+            <p>Please fill the details to proceed</p>
+
+            <form onSubmit={handleSubmit}>
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Mobile Number"
+                required
+              />
+
+              <button type="submit">Submit & Download</button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }

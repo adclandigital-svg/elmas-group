@@ -88,6 +88,7 @@ const plans = [
 export default function ProjectPage() {
   const flipBook = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showForm, setShowForm] = useState(false);
 
   const handleTabClick = (index) => {
     if (flipBook.current) {
@@ -125,6 +126,21 @@ export default function ProjectPage() {
         }
       );
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // 🔹 collect form data
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    console.log("Lead Data:", data);
+    setShowForm(false);
+    // 🔹 open brochure AFTER submit
+    if (showForm == "Brochure") {
+      window.open("/assets/Spring-Elmas-Brochure.pdf", "_blank");
+    } else {
+      window.open("/assets/SpringElmasPriceList.pdf", "_blank");
+    }
+  };
 
   return (
     <>
@@ -174,34 +190,42 @@ export default function ProjectPage() {
           <div className="icon-grid">
             <div className="icon-box" style={{ backgroundImage: "url()" }}>
               <FaSwimmingPool /> Swimming Pool
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaBuilding /> Clubhouse
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaDumbbell /> Gymnasium
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaChild /> Kids Play Area
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaRunning /> Jogging Track
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaGamepad /> Indoor Games
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaShieldAlt /> 24×7 Security
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
             <div className="icon-box">
               <FaGlassCheers /> Banquet Hall
+              <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
           </div>
         </section>
@@ -246,7 +270,7 @@ export default function ProjectPage() {
           <p className="tag">LUXURY, COMFORT & COMMUNITY LIFE</p>
 
           <div className="services-header">
-            <h2>Amenities & Lifestyle Services</h2>
+            <h2>Living Comforts & Services</h2>
             <p>
               Thoughtfully crafted lifestyle avenues at Rudra Aquacasa offer a
               perfect balance of leisure, wellness and community living.
@@ -343,6 +367,10 @@ export default function ProjectPage() {
                   </li>
                 ))}
               </ul>
+              <div className="fp-page-download">
+                <a onClick={() => setShowForm("Brochure")}> Brochure</a>
+                <a onClick={() => setShowForm("Price")}>Price List</a>
+              </div>
             </div>,
           ])}
         </HTMLFlipBook>
@@ -358,6 +386,39 @@ export default function ProjectPage() {
           ></iframe>
         </div>
       </section>
+
+      {showForm && (
+        <div className="popup-overlay">
+          <div className="popup-form">
+            <button className="close-btn" onClick={() => setShowForm(false)}>
+              ✕
+            </button>
+
+            <h3>
+              Download {showForm == "Brochure" ? "Brochure" : "Price List"}
+            </h3>
+            <p>Please fill the details to proceed</p>
+
+            <form onSubmit={handleSubmit}>
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Mobile Number"
+                required
+              />
+
+              <button type="submit">Submit & Download</button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }
