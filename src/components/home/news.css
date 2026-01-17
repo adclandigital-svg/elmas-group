@@ -1,0 +1,172 @@
+/* =========================
+   WRAPPER
+========================= */
+.featured-wrap {
+  width: 100%;
+  overflow: hidden;
+  /* margin-bottom: 70px; */
+  background-color: #ebf8ff;
+  padding: 90px 0px;
+}
+
+.featured-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 28px;
+  align-items: start;
+  overflow: hidden;
+}
+
+/* =========================
+   LEFT — ARTICLES
+========================= */
+.latest-articles {
+  overflow: hidden;
+}
+
+.latest-articles h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  color: #b27f38;
+}
+
+.article-swiper {
+  height: 650px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.article-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.article-card img {
+  width: 100%;
+  height: 78%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.article-card p {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* =========================
+   CENTER — FEATURED
+========================= */
+.featured-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.featured-main h5 {
+  font-size: 13px;
+  letter-spacing: 2px;
+   color: #e1bd9b;
+}
+
+.featured-main h2 {
+  font-size: 28px;
+  margin: 14px 0 24px;
+  line-height: 1.3;
+  max-width: 850px;
+  color: #b27f38;
+}
+
+.featured-image {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 80%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.featured-desc {
+  width: 35%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* =========================
+   LOGO STRIP (HORIZONTAL)
+========================= */
+.logo-swiper {
+  width: 100%;
+  margin-top: 26px;
+  overflow: hidden;
+}
+
+.logo-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.logo-swiper .swiper-slide {
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-card {
+  padding: 14px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.logo-card img {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+  .featured-container {
+    grid-template-columns: 1fr;
+  }
+
+  .article-swiper {
+    height: 480px;
+  }
+
+  .featured-image {
+    flex-direction: column;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .featured-desc {
+    width: 100%;
+  }
+}

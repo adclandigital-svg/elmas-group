@@ -6,6 +6,7 @@ import { Navigation, Autoplay } from "swiper/modules"; // Swiper v10+
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Homesecond.css";
+import FeaturedSection from "@/components/home/News";
 
 export default function HomeSecond() {
   const cards = [
@@ -77,7 +78,7 @@ export default function HomeSecond() {
 
   return (
     <>
-      <section className="arch-facilities">
+      {/* <section className="arch-facilities">
         <div className="arch-container">
           <div className="arch-header">
             <h2>
@@ -90,9 +91,7 @@ export default function HomeSecond() {
             </p>
           </div>
 
-          {/* ---------- Slider ---------- */}
           <div className="arch-slider-wrapper">
-            {/* Swiper will use your existing nav classes */}
             <Swiper
               modules={[Navigation, Autoplay]}
               spaceBetween={20}
@@ -122,12 +121,59 @@ export default function HomeSecond() {
               ))}
             </Swiper>
 
-            {/* Keep your existing nav buttons */}
             <button className="arch-nav prev">‹</button>
             <button className="arch-nav next">›</button>
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* <section className="project-split-section">
+        <div className="project-split-container">
+          
+          <div className="project-image-box">
+            <img
+              src="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150749.jpg" 
+              alt="Luxury Property"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+            <div className="project-badge">FEATURED</div>
+          </div>
+
+        
+          <div className="project-text-box">
+            <div className="project-content-inner">
+              <span className="project-category">Modern Architecture</span>
+              <h2 className="project-main-title">
+                The Grand Horizon <br />
+                Residency
+              </h2>
+              <p className="project-paragraph">
+                A masterfully designed living space that combines sustainable
+                materials with ultra-modern aesthetics. Located in the heart of
+                the business district, offering unmatched views and privacy.
+              </p>
+
+              <div className="project-stats">
+                <div className="stat-item">
+                  <strong>4,200</strong>
+                  <span>Sq. Ft.</span>
+                </div>
+                <div className="stat-item">
+                  <strong>04</strong>
+                  <span>Bedrooms</span>
+                </div>
+                <div className="stat-item">
+                  <strong>$2.5M</strong>
+                  <span>Starting</span>
+                </div>
+              </div>
+
+              <button className="project-view-btn">EXPLORE PROJECT</button>
+            </div>
+          </div>
+        </div>
+      </section> */}
       <section className="portfolio-section">
         <div className="portfolio-container">
           <div className="portfolio-header">
@@ -209,6 +255,7 @@ export default function HomeSecond() {
           </div>
         </div>
       </section>
+      <FeaturedSection />
       <section className="adclan-testimonial-section">
         <div className="adclan-testimonial-heading">
           <h2>

@@ -19,14 +19,14 @@
   background-color: #f7f7f7;
 }
 .third h1 {
-  width: 1600px;
+  width: 90%;
   font-size: 50px;
   color: #b27f38;
   margin-top: 30px;
 }
 .third-second {
   position: sticky; /* NOT sticky */
-  width: 1600px;
+  width: 90%;
   height: 700px;
   display: flex;
   justify-content: center;
@@ -81,7 +81,7 @@
   width: 100%;
   font-size: 40px;
   margin-bottom: 10px;
-  color: rgba(0, 0, 0, 0.6);
+  color: #b27f38;
   text-align: left;
   /* background-color: red; */
   margin-bottom: 40px;
@@ -110,14 +110,14 @@
   position: absolute;
   top: 30px;
   left: -15px;
-  opacity: 0.3;
+  opacity: 1;
 }
 .diamond-img-commercial {
   width: 650px;
   position: absolute;
   top: 25px;
   left: -20px;
-  opacity: 0.3;
+  opacity: 1;
 }
 .line {
   width: 100%;
@@ -285,7 +285,7 @@ img {
   margin: 0px 0px;
   flex-direction: column;
   gap: 50px;
-  height: 1050px;
+  height: 900px;
 }
 .section-title {
   text-align: left;
@@ -294,29 +294,44 @@ img {
   margin-bottom: 10px;
   color: #b27f38; /* or your brand color */
   width: 90%;
-
 }
 
-.second h5 {
-  width: 1600px;
+/* .second h5 {
+  width: 90%;
   font-size: 40px;
   color: rgb(185, 33, 39);
   text-align: center;
   margin-top: 30px;
-}
+} */
 
 .second-div {
   width: 100%;
+  height: 800px;
   display: flex;
   justify-content: start;
   gap: 50px;
+  position: relative;
 }
 
 .second-div1 {
   position: relative;
-  width: 60%;
-  height: 800px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.second-div1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-color: rgba(252, 252, 252, 0.406); */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.second-div1 > * {
+  position: relative;
+  z-index: 2;
 }
 
 .second-div1 img {
@@ -328,68 +343,92 @@ img {
   opacity: 0;
   transform: scale(1.05);
   will-change: opacity, transform;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 
 .second-div1 img.active {
   opacity: 1;
   transform: scale(1);
 }
-
-.second-div2 {
-  width: 600px;
+.second-div2-absolute {
+  height: 400px;
+  width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  position: absolute;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  gap: 10px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.second-div2-inner-dimond {
+  position: relative;
+  width: 300px;
+  height: 280px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* center text + stats block */
-  text-align: center;
-  gap: 50px;
-}
-.second-div2 h3 {
-  max-width: 90%;
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.7);
-  text-align: left;
-}
-.second-div2 > div {
-  width: 90%;
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  gap: 150px 0px;
-  justify-content: start;
+  align-items: center;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  border-radius: 12px;
 }
 
-.second-div2-inner {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  /* background-color: aqua; */
+.second-div2-inner-dimond:hover {
+  transform: rotateX(8deg) rotateY(-8deg) translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
 }
-.second-div2-inner-image{
+.second-div2-inner-dimond h1 {
+  margin-top: 20%;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  /* text-shadow: 2px 2px 2px black; */
+  
+}
+.second-div2-inner-dimond p {
+  margin-top: 10px;
+  font-size: 24px;
+  color: black;
+  /* text-shadow: 2px 2px 2px black; */
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  
+}
+.second-div2-inner-image {
   position: absolute;
-  width: 220px;
-  top: -20px;
-  left: 20px;
-  opacity: 0.4;
+  width: 300px;
+  z-index: -1;
+}
+.section-title-absolute{
+  font-size: 80px;
+  color: #b27f38;
+  width: 700px;
+  position:absolute;
+  height: 100px;
+  z-index: 5;
+  top: 30%;
+  /* background-color: aqua; */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
 }
 
-.second-div2-inner h1 {
-  font-size: 60px;
-  color: rgba(0, 0, 0, 0.3);
-}
 
-.second-div2-inner p {
-  color: rgba(0, 0, 0, 0.6);
-
-}
-
-/* INITIAL STATES */
-.second h5,
-.second-div1 img,
-.second-div2-inner {
-  opacity: 0;
-  transform: translateY(40px);
-}
 
 /* ============================= */
 /* RESPONSIVE PATCH – SECOND */

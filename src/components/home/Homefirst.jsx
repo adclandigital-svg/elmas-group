@@ -39,7 +39,7 @@ export default function Homefirst() {
           duration: 0.8,
           ease: "power3.out",
         },
-        "-=0.5"
+        "-=0.5",
       )
       .to(
         ".line",
@@ -48,7 +48,7 @@ export default function Homefirst() {
           y: 0,
           duration: 0.5,
         },
-        "-=0.4"
+        "-=0.4",
       )
       .to(
         ".third-second-text > div",
@@ -59,7 +59,7 @@ export default function Homefirst() {
           duration: 0.6,
           ease: "power3.out",
         },
-        "-=0.5"
+        "-=0.5",
       );
 
     /* SLIDER ANIMATION */
@@ -84,7 +84,7 @@ export default function Homefirst() {
             opacity: 0,
             scale: 0.96,
           },
-          "+=3"
+          "+=3",
         );
       });
     });
@@ -110,7 +110,7 @@ export default function Homefirst() {
         ".second-div1 img",
         { y: 40, scale: 0.8 },
         { opacity: 1, y: 0, scale: 1, duration: 1, ease: "power3.out" },
-        "-=0.5"
+        "-=0.5",
       )
       .to(".second-div2-inner", { opacity: 1, y: 0, stagger: 0.15 }, "-=0.4");
 
@@ -127,7 +127,7 @@ export default function Homefirst() {
           .fromTo(
             slide,
             { opacity: 0, scale: 1.05 },
-            { opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" }
+            { opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" },
           )
           .to(slide, {
             opacity: 0,
@@ -306,15 +306,20 @@ export default function Homefirst() {
                 flourish, and life feels truly connected.
               </p> */}
               <p>
-                Thoughtfully planned residential spaces designed <br /> to bring 
-                comfort, convenience, and a sense of belonging <br />to everyday life.
-                Homes crafted for modern families who value <br />quality living and
-                peaceful surroundings.Spacious layouts, abundant <br /> natural light,
-                and smart use of space ensure that every home feels <br /> open, warm,
-                and welcoming. From premium finishes to <br /> functional design, every
-                detail is created to elevate <br /> your lifestyle.With amenities for
-                relaxation, <br /> recreation, and community living, Elmas <br />Aquacasa
-                offers a  perfect balance <br /> between privacy and  <br />togetherness. 
+                Thoughtfully planned residential spaces designed <br /> to bring
+                comfort, convenience, and a sense of belonging <br />
+                to everyday life. Homes crafted for modern families who value{" "}
+                <br />
+                quality living and peaceful surroundings.Spacious layouts,
+                abundant <br /> natural light, and smart use of space ensure
+                that every home feels <br /> open, warm, and welcoming. From
+                premium finishes to <br /> functional design, every detail is
+                created to elevate <br /> your lifestyle.With amenities for
+                relaxation, <br /> recreation, and community living, Elmas{" "}
+                <br />
+                Aquacasa offers a perfect balance <br /> between privacy and{" "}
+                <br />
+                togetherness.
               </p>
               <img
                 className="diamond-img-commercial"
@@ -326,12 +331,12 @@ export default function Homefirst() {
         </div>
       </section>
       <section ref={sectionRef} className="section second">
-        <h2 className="section-title">
-          Our Legacy in <br />
-          Design &amp; Living
-        </h2>
 
         <div className="second-div">
+          <h2 className="section-title-absolute">
+          Our Legacy in 
+          Design &amp; Living
+        </h2>
           {/* IMAGE SLIDER */}
           <div
             className="second-div1"
@@ -353,41 +358,31 @@ export default function Homefirst() {
               loading="lazy"
             />
           </div>
-
-          {/* TEXT + STATS */}
-          <div className="second-div2">
-            <h3>
-              Being alive means energizing your body, expanding your mind, and
-              awakening your soul. Discover spaces designed to help you live,
-              work, shop, and play fully—where thoughtful design inspires
-              balance, creativity, and well-being. From vibrant social
-              environments to calm personal retreats, every space is crafted to
-              support a lifestyle that feels meaningful, effortless, and deeply
-              connected to how you experience life every day.
-            </h3>
-
-            <div>
-              {[
-                { count: 50, label: "Complete Projects" },
-                { count: 70, label: "Years Experience" },
-                { count: 15, label: "Lakh sq.m Delivered" },
-                { count: 14, label: "Awards Won" },
-              ].map((item, i) => (
-                <div key={i} className="second-div2-inner">
-                  <img className="second-div2-inner-image" src="/assets/dimond stroke pngs 2.png" alt="" />
-                  <h1>
-                    <span
-                      data-count={item.count}
-                      ref={(el) => el && countersRef.current.push(el)}
-                    >
-                      0
-                    </span>
-                    <span className="plus">+</span>
-                  </h1>
-                  <p>{item.label}</p>
-                </div>
-              ))}
-            </div>
+          <div className="second-div2-absolute">
+            {[
+              { count: 50, label: "Complete Projects" },
+              { count: 70, label: "Years Experience" },
+              { count: 15, label: "Lakh sq.m Delivered" },
+              { count: 14, label: "Awards Won" },
+            ].map((item, i) => (
+              <div key={i} className="second-div2-inner-dimond">
+                <img
+                  className="second-div2-inner-image"
+                  src="/assets/dimond stroke pngs 4 T 2.png"
+                  alt=""
+                />
+                <h1>
+                  <span
+                    data-count={item.count}
+                    ref={(el) => el && countersRef.current.push(el)}
+                  >
+                    0
+                  </span>
+                  <span className="plus">+</span>
+                </h1>
+                <p>{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

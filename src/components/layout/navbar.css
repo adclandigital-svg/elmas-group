@@ -46,7 +46,7 @@
 /* SCROLLED */
 .navbar.scrolled {
   /* background: rgba(255, 255, 255, 0.6); */
-  background: #93d2f7b7;
+  background: rgba(147, 210, 247, 0.521);
   backdrop-filter: blur(12px);
 }
 
@@ -71,10 +71,10 @@
 
 /* Hover effect on the span itself */
 .menu-toggle:hover span {
-  background: rgb(185, 33, 39);
+  background: #b27f38;
 }
 .sidebar-close:hover span {
-  background: rgb(185, 33, 39);
+  background: #b27f38;
 }
 
 /* When navbar is scrolled */

@@ -70,6 +70,7 @@ export default function Navbar() {
           </div>
 
           <nav className="nav-links">
+            <a href="/">Home</a>
             <a href="/projects/spring-elmas">Spring Elmas</a>
             <a href="/projects/elmas-aquacasa">Elmas Aquacasa</a>
 
@@ -86,7 +87,7 @@ export default function Navbar() {
         <button ref={closeBtnRef} className="sidebar-close">
           <span></span>
           <span></span>
-        </button>
+        </button> 
 
         <nav className="sidebar-links">
           <a className="sidebar-links-mobile">Spring Elmas</a>
