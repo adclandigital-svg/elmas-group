@@ -105,37 +105,40 @@ export default function Homefirst() {
       },
     });
 
-    tl.to(".second h5", { opacity: 1, y: -40 })
-      .fromTo(
-        ".second-div1 img",
-        { y: 40, scale: 0.8 },
-        { opacity: 1, y: 0, scale: 1, duration: 1, ease: "power3.out" },
-        "-=0.5",
-      )
-      .to(".second-div2-inner", { opacity: 1, y: 0, stagger: 0.15 }, "-=0.4");
-
     // ============================
     // IMAGE SLIDER USING GSAP TIMELINE
     // ============================
     imagesRef.current.forEach((container) => {
       const slides = container.querySelectorAll("img");
 
-      const sliderTL = gsap.timeline({ repeat: -1 });
+      // Initial state
+      gsap.set(slides, { opacity: 0, scale: 1.05 });
+      gsap.set(slides[0], { opacity: 1, scale: 1 });
 
-      slides.forEach((slide) => {
-        sliderTL
-          .fromTo(
-            slide,
-            { opacity: 0, scale: 1.05 },
-            { opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" },
-          )
-          .to(slide, {
+      const tl = gsap.timeline({ repeat: -1 });
+
+      slides.forEach((slide, i) => {
+        const next = slides[i + 1] || slides[0];
+
+        tl.to(
+          next,
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 1.2,
+            ease: "power2.out",
+          },
+          "+=10",
+        ).to(
+          slide,
+          {
             opacity: 0,
             scale: 1.05,
             duration: 1,
             ease: "power2.out",
-            delay: 3, // visible for 3s
-          });
+          },
+          "<",
+        );
       });
     });
 
@@ -172,7 +175,7 @@ export default function Homefirst() {
         </video>
       </section>
       <section ref={thirdRef} className="section third third-section">
-        <h1>
+        <h1 className="third-section-h1">
           Giving the <br />
           best just for you
         </h1>
@@ -206,30 +209,7 @@ export default function Homefirst() {
           </div>
           <div className="third-second-text">
             <div className="residential-text active">
-              <h1>
-                {" "}
-                {/* <img
-                  src="https://springelmas.com/img/logo.png"
-                  width="110px"
-                  alt=""
-                /> */}
-                Spring Elmas
-              </h1>
-              {/* <p>
-                Spring Elmas has today evolved as one of the most vibrant real
-                estate destinations, With a number of ongoing world-class
-                developments and meticulous expansion.
-              </p>
-              <p>
-                Where Spring Elmas in Noida Extension new launch residential
-                project with The sweeping lush surrounding, assortment of finest
-                amenities and ample space between towers will make your living
-                an enriching experience,{" "}
-              </p>
-              <p>
-                Going smart over the natural resources endow the residents with
-                an eco-living in this blissfully tranquil location.
-              </p> */}
+              <h1> Spring Elmas</h1>
               <p>
                 Spring Elmas has today evolved as one of the <br />
                 most vibrant real estate destinations,With a number <br /> of
@@ -283,28 +263,7 @@ export default function Homefirst() {
           </div>
           <div className="third-second-text">
             <div className="commercial-text">
-              <h1>
-                {/* <img src="/assets/logo-aquacasa.gif" width="70px" alt="" /> */}
-                &nbsp;Elmas Aquacasa
-              </h1>
-              {/* <p>
-                Thoughtfully planned residential spaces designed to bring
-                comfort, convenience, and a sense of belonging to everyday life.
-                Homes crafted for modern families who value quality living and
-                peaceful surroundings.
-              </p>
-              <p>
-                Spacious layouts, abundant natural light, and smart use of space
-                ensure that every home feels open, warm, and welcoming. From
-                premium finishes to functional design, every detail is created
-                to elevate your lifestyle.
-              </p>
-              <p>
-                With amenities for relaxation, recreation, and community living,
-                Elmas Aquacasa offers a perfect balance between privacy and
-                togetherness. It is a place where families grow, relationships
-                flourish, and life feels truly connected.
-              </p> */}
+              <h1>&nbsp;Elmas Aquacasa</h1>
               <p>
                 Thoughtfully planned residential spaces designed <br /> to bring
                 comfort, convenience, and a sense of belonging <br />
@@ -331,30 +290,27 @@ export default function Homefirst() {
         </div>
       </section>
       <section ref={sectionRef} className="section second">
-
         <div className="second-div">
           <h2 className="section-title-absolute">
-          Our Legacy in 
-          Design &amp; Living
-        </h2>
-          {/* IMAGE SLIDER */}
+            Our Legacy in Design &amp; Living
+          </h2>
           <div
             className="second-div1"
             ref={(el) => el && imagesRef.current.push(el)}
           >
             <img
               className="float-img"
-              src="https://img.freepik.com/free-photo/3d-rendering-luxury-modern-living-room-with-fabric-sofa_105762-2186.jpg"
+              src="/assets/luxury-modern-living-room-with-elegant-decor-generated-by-ai.jpg"
               loading="lazy"
             />
             <img
               className="float-img"
-              src="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-bookshelf_105762-2182.jpg"
+              src="/assets/modern-living-room-with-sectional-sofa-fireplace.jpg"
               loading="lazy"
             />
             <img
               className="float-img"
-              src="https://img.freepik.com/free-photo/living-room-scandinavian-interior-design_53876-146865.jpg"
+              src="/assets/interior-design-neoclassical-style-with-furnishings-decor.jpg"
               loading="lazy"
             />
           </div>
@@ -368,7 +324,7 @@ export default function Homefirst() {
               <div key={i} className="second-div2-inner-dimond">
                 <img
                   className="second-div2-inner-image"
-                  src="/assets/dimond stroke pngs 4 T 2.png"
+                  src="/assets/dimond stroke pngs.png"
                   alt=""
                 />
                 <h1>

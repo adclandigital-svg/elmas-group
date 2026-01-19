@@ -1,0 +1,176 @@
+/* LuxurySectionRedesign.css */
+
+/* Section Container */
+.luxury-section-redesign {
+  position: relative;
+  padding: 100px 20px 150px;
+  background: #fdfcfb;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hero Title */
+.hero-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.luxury-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+/* Slider */
+.luxury-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.luxury-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+  z-index: 1;
+}
+
+.luxury-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Stats / Diamonds */
+.luxury-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.diamond-card {
+  text-align: center;
+  max-width: 200px;
+  position: relative;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.diamond-card:hover {
+  transform: translateY(-10px);
+}
+
+.diamond {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.diamond img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.diamond-card h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.diamond-card h1 .plus {
+  font-size: 1.5rem;
+  color: #f59e0b;
+}
+
+.diamond-card p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .luxury-title {
+    font-size: 2.5rem;
+  }
+
+  .luxury-slide {
+    height: 400px;
+  }
+
+  .diamond-card h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-section-redesign {
+    padding: 80px 15px 120px;
+  }
+
+  .luxury-title {
+    font-size: 2rem;
+  }
+
+  .luxury-slide {
+    height: 300px;
+  }
+
+  .diamond-card {
+    max-width: 150px;
+  }
+
+  .diamond-card h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-stats {
+    gap: 20px;
+  }
+
+  .diamond-card {
+    max-width: 120px;
+  }
+
+  .diamond-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .diamond-card p {
+    font-size: 0.9rem;
+  }
+}

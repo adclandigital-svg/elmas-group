@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -22,37 +23,37 @@ export default function Footer() {
         {/* Quick Links (Sidebar URLs) */}
         <div className="footer-nav">
           <h4>Quick Links</h4>
-          <a href="/blogs">Blogs</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/media">Media Centre</a>
-          <a href="/careers">Job Openings</a>
-          <a href="/contact">Reach us</a>
+          <Link href="/blogs">Blogs</Link>
+          <Link href="/gallery">Gallery</Link>
+          <Link href="/media">Media Centre</Link>
+          <Link href="/careers">Job Openings</Link>
+          <Link href="/contact">Reach us</Link>
         </div>
 
         {/* Policy Links */}
         <div className="footer-policy">
           <h4>Policies</h4>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Cookie Policy</a>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms-conditions">Terms & Conditions</Link>
+          <Link href="/cookies-policy">Cookie Policy</Link>
         </div>
 
         {/* Connect / Social */}
         <div className="footer-connect">
           <h4>Connect</h4>
           <div className="social-icons">
-            <a href="#">
+            <Link href="#">
               <FaInstagram />
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="#">
               <FaLinkedin />
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="#">
               <FaTwitter />
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="#">
               <FaFacebookF />
-            </a>
+            </Link>
           </div>
           <p>Elmas Group</p>
           <p>Noida Extension, Uttar Pradesh, India</p>

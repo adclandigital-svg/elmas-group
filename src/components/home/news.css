@@ -1,6 +1,6 @@
 /* =========================
-   WRAPPER
-========================= */
+    WRAPPER
+  ========================= */
 .featured-wrap {
   width: 100%;
   overflow: hidden;
@@ -20,8 +20,8 @@
 }
 
 /* =========================
-   LEFT — ARTICLES
-========================= */
+    LEFT — ARTICLES
+  ========================= */
 .latest-articles {
   overflow: hidden;
 }
@@ -66,8 +66,8 @@
 }
 
 /* =========================
-   CENTER — FEATURED
-========================= */
+    CENTER — FEATURED
+  ========================= */
 .featured-main {
   width: 100%;
   display: flex;
@@ -78,7 +78,7 @@
 .featured-main h5 {
   font-size: 13px;
   letter-spacing: 2px;
-   color: #e1bd9b;
+  color: #e1bd9b;
 }
 
 .featured-main h2 {
@@ -112,8 +112,8 @@
 }
 
 /* =========================
-   LOGO STRIP (HORIZONTAL)
-========================= */
+    LOGO STRIP (HORIZONTAL)
+  ========================= */
 .logo-swiper {
   width: 100%;
   margin-top: 26px;
@@ -146,15 +146,35 @@
 }
 
 /* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 1100px) {
+    RESPONSIVE
+  ========================= */
+@media (max-width: 1480px) {
+  .featured-desc {
+    width: 35%;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 1024px) {
+  .featured-wrap {
+    padding: 70px 0;
+  }
+
   .featured-container {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .article-swiper {
-    height: 480px;
+    height: 820px;
+    width: 100%;
+  }
+
+  .featured-main h2 {
+    font-size: 24px;
+  }
+  .latest-articles h4 {
+    font-size: 20px;
   }
 
   .featured-image {
@@ -163,10 +183,72 @@
 
   .featured-image img {
     width: 100%;
-    height: 300px;
+    height: 340px;
   }
 
   .featured-desc {
     width: 100%;
+    font-size: 15px;
+  }
+  .article-card-upper {
+    width: 70%;
+  }
+  .article-swiper .swiper-wrapper {
+    align-items: center;
+  }
+
+  .article-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   MOBILE (≤600px)
+========================= */
+@media (max-width: 600px) {
+  .featured-wrap {
+    padding: 50px 0;
+  }
+  .article-card-upper {
+    width: 100%;
+  }
+
+  .article-swiper {
+    height: 700px;
+  }
+
+  .article-card img {
+    height: 80%;
+  }
+
+  .article-card p {
+    font-size: 13px;
+  }
+
+  .featured-main h5 {
+    font-size: 11px;
+  }
+
+  .featured-main h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .featured-image img {
+    height: 240px;
+  }
+
+  .featured-desc {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .logo-card {
+    padding: 10px 22px;
+  }
+
+  .logo-card img {
+    height: 42px;
   }
 }

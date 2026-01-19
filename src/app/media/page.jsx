@@ -1,116 +1,185 @@
 "use client";
 
-import { useEffect } from "react";
-import gsap from "gsap";
 import "./media-center.css";
 
 export default function MediaCenterPage() {
-  // useEffect(() => {
-  //   gsap.from(".mc-hero h1", { opacity: 0, y: 40, duration: 1.2 });
-  //   gsap.from(".mc-ghost-text", { opacity: 0, y: -60, duration: 2 });
-  //   gsap.from(".mc-card", {
-  //     opacity: 0,
-  //     y: 60,
-  //     stagger: 0.15,
-  //     duration: 1.1,
-  //     ease: "power3.out",
-  //     delay: 0.2,
-  //   });
-  //   gsap.from(".mc-gallery-grid img", {
-  //     opacity: 0,
-  //     y: 30,
-  //     stagger: 0.12,
-  //     duration: 0.9,
-  //     delay: 0.4,
-  //   });
-  //   gsap.from(".mc-video-grid iframe", {
-  //     opacity: 0,
-  //     y: 30,
-  //     stagger: 0.12,
-  //     duration: 0.9,
-  //     delay: 0.5,
-  //   });
-  // }, []);
-
   return (
-    <div className="mc-page-wrapper">
-      {/* HERO SECTION */}
+    <main className="mc-wrap">
+      {/* ================= HERO ================= */}
       <section className="mc-hero">
-        <div className="mc-ghost-text">MEDIA CENTER</div>
-        <h1>Press, Updates & Brand Stories</h1>
-        <p>
-          Browse official releases, media coverage, interviews, photographs and
-          featured videos from our brand archive.
-        </p>
+        <div className="mc-hero-overlay" />
+        <div className="mc-hero-content">
+          <span className="mc-eyebrow">MEDIA CENTRE</span>
+          <h1>
+            Stories That Shape
+            <br />
+            Modern Living
+          </h1>
+          <p>
+            Discover press releases, industry recognition, project launches, and
+            exclusive brand stories from our journey in luxury real estate.
+          </p>
+        </div>
       </section>
 
-      {/* PRESS CARDS */}
-      <section className="mc-cards-grid">
-        <article className="mc-card">
-          <span className="mc-tag">Press Release</span>
-          <h2>New strategic partnership announced</h2>
-          <p>Official collaboration announcement summary.</p>
-        </article>
+      {/* ================= FEATURED PRESS ================= */}
+      <section className="mc-featured">
+        <div className="mc-section-head">
+          <h2>Latest Highlights</h2>
+          <p>Our most recent press coverage and announcements</p>
+        </div>
 
-        <article className="mc-card">
-          <span className="mc-tag">In The News</span>
-          <h2>Brand featured in international publication</h2>
-          <p>Coverage highlighting milestones and leadership.</p>
-        </article>
+        <div className="mc-featured-grid">
+          <article className="mc-feature-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" />
+            <div className="mc-feature-overlay">
+              <span>Press Release</span>
+              <h3>Spring Elmas Launches Premium Smart Residences</h3>
+              <p>
+                Introducing future-ready homes blending luxury, sustainability,
+                and urban convenience in Noida Extension.
+              </p>
+              <a href="#">Read Story</a>
+            </div>
+          </article>
 
-        <article className="mc-card">
-          <span className="mc-tag">Interview</span>
-          <h2>CEO speaks on growth and innovation</h2>
-          <p>Key insights on mission, vision and culture.</p>
-        </article>
-
-        <article className="mc-card">
-          <span className="mc-tag">Event</span>
-          <h2>Participation in global business summit</h2>
-          <p>Showcasing future roadmap and strategic direction.</p>
-        </article>
+          <article className="mc-feature-card">
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=1400" />
+            <div className="mc-feature-overlay">
+              <span>In The News</span>
+              <h3>Elmas Group Featured Among Top Emerging Developers</h3>
+              <p>
+                Industry leaders recognize our commitment to quality design and
+                future-forward communities.
+              </p>
+              <a href="#">Read Story</a>
+            </div>
+          </article>
+        </div>
       </section>
 
-      {/* IMAGE GALLERY */}
+      {/* ================= PRESS GRID ================= */}
+      <section className="mc-press">
+        <div className="mc-section-head left">
+          <h2>Press & Announcements</h2>
+          <p>Updates from our projects, leadership and milestones</p>
+        </div>
+
+        <div className="mc-press-grid">
+          <article className="mc-press-card">
+            <span>Press Release</span>
+            <h4>Elmas Aquacasa Construction Milestone Achieved</h4>
+            <p>
+              Phase 1 structural completion reached ahead of schedule,
+              reaffirming our delivery commitment.
+            </p>
+            <a href="#">Read More →</a>
+          </article>
+
+          <article className="mc-press-card">
+            <span>Interview</span>
+            <h4>CEO Shares Vision for Sustainable Urban Living</h4>
+            <p>
+              Leadership insights on smart cities, green development and
+              community-driven design.
+            </p>
+            <a href="#">Read More →</a>
+          </article>
+
+          <article className="mc-press-card">
+            <span>Award</span>
+            <h4>Spring Elmas Wins Excellence in Residential Design</h4>
+            <p>
+              Recognized for architectural innovation, planning and resident
+              lifestyle experience.
+            </p>
+            <a href="#">Read More →</a>
+          </article>
+
+          <article className="mc-press-card">
+            <span>Event</span>
+            <h4>Elmas Group at National Real Estate Summit 2025</h4>
+            <p>
+              Showcasing upcoming developments and investment opportunities
+              across NCR.
+            </p>
+            <a href="#">Read More →</a>
+          </article>
+        </div>
+      </section>
+
+      {/* ================= IMAGE GALLERY ================= */}
       <section className="mc-gallery">
-        <h3>Image Library</h3>
+        <div className="mc-section-head center">
+          <h2>Project Gallery</h2>
+          <p>Visual stories from our developments and lifestyle spaces</p>
+        </div>
 
         <div className="mc-gallery-grid">
-          <img
-            src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800"
-            alt="Media Image 1"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800"
-            alt="Media Image 2"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800"
-            alt="Media Image 3"
-          />
+          <div className="mc-gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1400" />
+            <span>Luxury Living Room</span>
+          </div>
+          <div className="mc-gallery-item">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400" />
+            <span>Modern Kitchen</span>
+          </div>
+          <div className="mc-gallery-item">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400" />
+            <span>Bedroom Suite</span>
+          </div>
+          <div className="mc-gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" />
+            <span>Grand Entrance Lobby</span>
+          </div>
+          <div className="mc-gallery-item wide">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1600" />
+            <span>Clubhouse & Amenities</span>
+          </div>
         </div>
       </section>
 
-      {/* VIDEO SECTION */}
+      {/* ================= VIDEO SECTION ================= */}
       <section className="mc-video">
-        <h3>Featured Videos</h3>
+        <div className="mc-section-head center">
+          <h2>Brand Films</h2>
+          <p>Explore our projects through immersive visuals</p>
+        </div>
 
         <div className="mc-video-grid">
-          <iframe
-            src="https://www.youtube.com/embed/ysz5S6PUM-U"
-            title="Video 1"
-            loading="lazy"
-            allowFullScreen
-          ></iframe>
+          <div className="mc-video-card">
+            <iframe
+              src="https://www.youtube.com/embed/ysz5S6PUM-U"
+              title="Project Walkthrough"
+              loading="lazy"
+              allowFullScreen
+            ></iframe>
+            <h4>Spring Elmas — Project Walkthrough</h4>
+          </div>
 
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Video 2"
-            loading="lazy"
-            allowFullScreen
-          ></iframe>
+          <div className="mc-video-card">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Brand Film"
+              loading="lazy"
+              allowFullScreen
+            ></iframe>
+            <h4>Elmas Group — Brand Story</h4>
+          </div>
         </div>
       </section>
-    </div>
+
+      {/* ================= MEDIA CONTACT ================= */}
+      <section className="mc-contact">
+        <div className="mc-contact-box">
+          <h3>Connect With Our Media Desk</h3>
+          <p>
+            Journalists, partners, and collaborators — reach our communications
+            team for press kits, interviews, site visits, and brand resources.
+          </p>
+          <a href="/contact">Request Media Access</a>
+        </div>
+      </section>
+    </main>
   );
 }

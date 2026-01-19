@@ -16,9 +16,10 @@ export default function FeaturedSection() {
           <Swiper
             direction="vertical"
             slidesPerView={3}
-            spaceBetween={18}
+            spaceBetween={8}
             loop={true}
             speed={1200}
+            centeredSlides={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -27,42 +28,42 @@ export default function FeaturedSection() {
             modules={[Autoplay]}
             className="article-swiper"
           >
-            <SwiperSlide>
+            <SwiperSlide className="article-card-upper">
               <div className="article-card">
                 <img src="https://img.freepik.com/premium-photo/cafe-interior-layout-loft-style-dark-colors-open-space-interior-view-various-coffee-welc_926199-2276413.jpg?w=2000" />
                 <p>Skyline Residences Launches Premium Smart Homes</p>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className="article-card-upper">
               <div className="article-card">
                 <img src="https://img.freepik.com/premium-photo/dark-modern-stylish-male-apartment-interior-with-lighting-decorative-walls-fireplace-dressing-area-huge-window_267786-301.jpg?w=2000" />
                 <p>Green Living Communities Gain Strong Buyer Demand</p>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className="article-card-upper">
               <div className="article-card">
                 <img src="https://img.freepik.com/premium-photo/dark-modern-stylish-male-apartment-interior-with-lighting-decorative-walls-fireplace-dressing-area-huge-window_267786-234.jpg?w=2000" />
                 <p>Commercial Hubs Drive New Investment Opportunities</p>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className="article-card-upper">
               <div className="article-card">
                 <img src="https://img.freepik.com/premium-photo/cafe-interior-layout-loft-style-dark-colors-open-space-interior-view-various-coffee-welc_926199-2276413.jpg?w=2000" />
                 <p>Waterfront Residences Attract Premium Homebuyers</p>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className="article-card-upper">
               <div className="article-card">
                 <img src="https://img.freepik.com/premium-photo/dark-modern-stylish-male-apartment-interior-with-lighting-decorative-walls-fireplace-dressing-area-huge-window_267786-301.jpg?w=2000" />
                 <p>Smart Township Projects Record High Pre-Bookings</p>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className="article-card-upper">
               <div className="article-card">
                 <img src="https://img.freepik.com/premium-photo/dark-modern-stylish-male-apartment-interior-with-lighting-decorative-walls-fireplace-dressing-area-huge-window_267786-234.jpg?w=2000" />
                 <p>Office Parks Near Metro Corridors See Growth Surge</p>

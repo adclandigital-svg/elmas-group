@@ -216,9 +216,11 @@
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
-  aspect-ratio: 3 / 4; 
+  aspect-ratio: 3 / 4;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .portfolio-card img {
@@ -228,13 +230,13 @@
   transition: transform 0.5s ease;
   z-index: -1;
 }
-.portfolio-card-dimonds{
+.portfolio-card-dimonds {
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: 1000;
   background-color: aqua;
-   background-image: url("/assets/dimond stroke pngs 4.png");
+  background-image: url("/assets/dimond stroke pngs 4.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -408,6 +410,12 @@
   .adclan-video-wrapper {
     height: 160px;
   }
+  .adclan-testimonial-heading h2 {
+    font-size: 25px;
+  }
+  .adclan-testimonial-paragraph p {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -418,128 +426,3 @@
     height: 180px;
   }
 }
-
-
-
-
-
-/* .project-split-section {
-  width: 100%;
-  min-height: 85vh;
-  display: flex;
-  background-color: #fff;
-}
-
-.project-split-container {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-
-.project-image-box {
-  flex: 1 1 50%;
-  position: relative;
-  min-height: 500px;
-}
-
-.project-badge {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  background: #c49b66; 
-  color: white;
-  padding: 6px 15px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-
-.project-text-box {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-  background-color: #1a1a1a;
-}
-
-.project-content-inner {
-  max-width: 450px;
-}
-
-.project-category {
-  color: #c49b66;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 3px;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.project-main-title {
-  color: #ffffff;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.1;
-  margin-bottom: 25px;
-  font-weight: 700;
-}
-
-.project-paragraph {
-  color: #a0a0a0;
-  line-height: 1.8;
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
-
-.project-stats {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 40px;
-  border-top: 1px solid #333;
-  padding-top: 20px;
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-item strong {
-  color: #fff;
-  font-size: 18px;
-}
-
-.stat-item span {
-  color: #666;
-  font-size: 12px;
-}
-
-
-.project-view-btn {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #c49b66;
-  padding: 15px 35px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.project-view-btn:hover {
-  background-color: #c49b66;
-  color: #1a1a1a;
-}
-
-@media (max-width: 992px) {
-  .project-image-box, .project-text-box {
-    flex: 1 1 100%;
-  }
-  
-  .project-text-box {
-    padding: 40px 20px;
-  }
-} */

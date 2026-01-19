@@ -63,7 +63,7 @@
   margin-bottom: 15px;
   line-height: 1.2;
   font-weight: 500;
-  color: rgb(185, 33, 39);
+  color: #b27f38;
 }
 
 .career-contact-info p {
@@ -122,7 +122,7 @@
 
 .career-btn:hover {
   background: #000000;
-  color: rgb(185, 33, 39);
+  color: #b27f38;
 }
 
 /* RESPONSIVE */
