@@ -6,7 +6,7 @@ import HTMLFlipBook from "react-pageflip";
 import NeighbourSection from "./components/NeighbourSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ProjectSpecifications from "./components/ProjectSpecifications";
+import ProjectHighlights from "./components/ProjectHighlights";
 import { useGSAP } from "@gsap/react";
 import {
   FaSwimmingPool,
@@ -123,29 +123,52 @@ export default function ProjectPage() {
           duration: 0.6,
           ease: "power3.out",
           stagger: 0.09, // <- true sequential reveal
-        }
+        },
       );
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 🔹 collect form data
+
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     console.log("Lead Data:", data);
+
     setShowForm(false);
-    // 🔹 open brochure AFTER submit
-    if (showForm == "Brochure") {
-      window.open("/assets/Spring-Elmas-Brochure.pdf", "_blank");
-    } else {
-      window.open("/assets/SpringElmasPriceList.pdf", "_blank");
-    }
+
+    const link = document.createElement("a");
+    link.href =
+      showForm === "Brochure"
+        ? "/assets/Spring-Elmas-Brochure.pdf"
+        : "/assets/SpringElmasPriceList.pdf";
+    link.download = "";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
+
+  const [size, setSize] = useState({ width: 700, height: 600 });
+
+  useEffect(() => {
+    const updateSize = () => {
+      const w = window.innerWidth;
+
+      if (w >= 1400) setSize({ width: 700, height: 600 });
+      else if (w >= 1024) setSize({ width: 620, height: 520 });
+      else if (w >= 768) setSize({ width: 520, height: 460 });
+      else if (w >= 480) setSize({ width: 360, height: 440 });
+      else setSize({ width: 300, height: 400 });
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   return (
     <>
       <div className="project-page">
-        {/* ⭐ HERO VIDEO SECTION ⭐ */}
         <section className="hero-video-section">
           <video
             className="hero-video"
@@ -155,8 +178,6 @@ export default function ProjectPage() {
             loop
             playsInline
           />
-
-          {/* fallback image if video not supported */}
           <img
             src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80"
             className="hero-video-fallback"
@@ -168,65 +189,7 @@ export default function ProjectPage() {
           </div>
         </section>
       </div>
-      <section className="about-section">
-        <div className="about-container">
-          {/* LEFT */}
-          <div className="about-left">
-            <h2>About Project</h2>
-            <div className="project-address">
-              <span>Project Location</span>
-              <p>
-                Sector-12, Noida Extension  <br />(Greater Noida West), Uttar Pradesh –
-                201318
-              </p>
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <div className="about-right">
-            <div className="about-text">
-              <p>
-                This thoughtfully planned residential project is designed to
-                offer a perfect balance of modern architecture, open green
-                spaces, and lifestyle-driven amenities. Every detail has been
-                crafted to enhance comfort, privacy, and everyday living.
-              </p>
-
-              <p>
-                Strategically located with excellent connectivity, the project
-                provides seamless access to key business hubs, schools,
-                healthcare, and entertainment destinations, making it an ideal
-                choice for families and professionals alike.
-              </p>
-            </div>
-
-            <div className="stats-grid">
-              <div className="stat">
-                <h3>12+</h3>
-                <span>Acres of land</span>
-              </div>
-
-              <div className="stat">
-                <h3>8</h3>
-                <span>Residential towers</span>
-              </div>
-
-              <div className="stat">
-                <h3>1,200+</h3>
-                <span>Premium residences</span>
-              </div>
-
-              <div className="stat">
-                <h3>70%</h3>
-                <span>Open & green spaces</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="facilities-wrapper">
-        {/* ----------- FACILITIES ICON GRID ----------- */}
+      <div className="facilities-section-outer">
         <section className="facilities-section">
           <div className="text-side">
             <p className="tag">PROJECT FACILITIES</p>
@@ -289,8 +252,9 @@ export default function ProjectPage() {
             </div>
           </div>
         </section>
+      </div>
 
-        {/* ----------- ARRIVAL SECTION (3 IMAGES) ----------- */}
+      <div className="facilities-wrapper">
         <section className="arrival-section">
           <p className="tag">RELAXATION & COMFORT</p>
           <h2>
@@ -323,7 +287,7 @@ export default function ProjectPage() {
         </section>
 
         {/* ----------- AMENITIES & SERVICES GRID CARDS ----------- */}
-        <section className="services-section">
+        {/* <section className="services-section">
           <p className="tag">LUXURY, COMFORT & COMMUNITY LIFE</p>
 
           <div className="services-header">
@@ -374,12 +338,67 @@ export default function ProjectPage() {
               <p>Modern Gym & Training Studio</p>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
+      <section className="about-section">
+        <div className="about-container">
+          <div className="about-left">
+            <h2>About Project</h2>
+            <div className="project-address">
+              <span>Project Location</span>
+              <p>
+                Sector-12, Noida Extension <br />
+                (Greater Noida West), Uttar Pradesh – 201318
+              </p>
+            </div>
+          </div>
+
+          <div className="about-right">
+            <div className="about-text">
+              <p>
+                This thoughtfully planned residential project is designed to
+                offer a perfect balance of modern architecture, open green
+                spaces, and lifestyle-driven amenities. Every detail has been
+                crafted to enhance comfort, privacy, and everyday living.
+              </p>
+
+              <p>
+                Strategically located with excellent connectivity, the project
+                provides seamless access to key business hubs, schools,
+                healthcare, and entertainment destinations, making it an ideal
+                choice for families and professionals alike.
+              </p>
+            </div>
+
+            <div className="stats-grid">
+              <div className="stat">
+                <h3>12+</h3>
+                <span>Acres of land</span>
+              </div>
+
+              <div className="stat">
+                <h3>8</h3>
+                <span>Residential towers</span>
+              </div>
+
+              <div className="stat">
+                <h3>1,200+</h3>
+                <span>Premium residences</span>
+              </div>
+
+              <div className="stat">
+                <h3>70%</h3>
+                <span>Open & green spaces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <NeighbourSection />
+      <ProjectHighlights />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
-        {/* Tabs */}
         <div className="fp-tabs">
           {plans.map((plan, i) => (
             <button
@@ -392,20 +411,17 @@ export default function ProjectPage() {
           ))}
         </div>
 
-        {/* Flipbook */}
         <HTMLFlipBook
-          width={700}
-          height={600}
+          width={size.width}
+          height={size.height}
           className="fp-flipbook"
           showCover={false}
-          // shadow + realism
           drawShadow={true}
           maxShadowOpacity={0.8}
           flippingTime={900}
           swipeDistance={30}
-          // required for depth
           useMouseEvents={true}
-          mobileScrollSupport={false}
+          mobileScrollSupport={true}
           ref={flipBook}
           onFlip={handleFlip}
         >

@@ -187,6 +187,7 @@ export default function ProjectPage() {
               Experience premium lifestyle features inside your gated community.
             </p>
           </div>
+          
 
           <div className="icon-grid">
             <div className="icon-box" style={{ backgroundImage: "url()" }}>

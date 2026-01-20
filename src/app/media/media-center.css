@@ -486,3 +486,23 @@
     font-size: 14px;
   }
 }
+
+/* ================= GSAP IMAGE REVEAL (TRUE MASK) ================= */
+
+.reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal-mask {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.reveal-inner {
+  width: 100%;
+  height: 100%;
+}
