@@ -135,7 +135,7 @@
 }
 
 .page-btn.active {
-  background: #000000;
+  background: #000000 !important;
   color: #fff;
 }
 /* -------- RESPONSIVE -------- */
