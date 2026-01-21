@@ -404,7 +404,7 @@ export default function ProjectPage() {
           {plans.map((plan, i) => (
             <button
               key={i}
-              className={`fp-tab ${activeIndex === i ? "active" : ""}`}
+              className={`fp-tab ${activeIndex === i ? "active1" : ""}`}
               onClick={() => handleTabClick(i)}
             >
               {plan.title}

@@ -6,7 +6,11 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <title>Elmas Group</title>
+      <head>
+        <link rel="preload" href="/assets/logo.png" as="image" />
+        <title>Elmas Group</title>
+      </head>
+      
       <body>
         <Navbar/>
         <SmoothScroll/>

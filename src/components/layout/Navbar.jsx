@@ -103,7 +103,8 @@ export default function Navbar() {
       <header ref={navbarRef} className="navbar">
         <div className="nav-container" style={{ cursor: "pointer" }}>
           <div className="logo" onClick={() => route.push("/")}>
-            <img src="/assets/logo.png" width={100} loading="lazy" />
+            <img src="/assets/logo.png" width={100} loading="eager" decoding="async" />
+
           </div>
 
           <nav className="nav-links">
