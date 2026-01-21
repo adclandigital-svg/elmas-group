@@ -245,6 +245,7 @@ export default function HomeSecond() {
                   loop
                   playsInline
                   preload="none"
+                  loading="lazy"
                 />
                 <div className="adclan-video-text">
                   <h3>{slide.name}</h3>

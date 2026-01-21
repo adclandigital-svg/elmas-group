@@ -41,7 +41,7 @@ export default function FeaturedSection() {
                 style={{ cursor: "pointer" }}
               >
                 <div className="article-card">
-                  <img src={blog.image} alt={blog.title} />
+                  <img src={blog.image} alt={blog.title} loading="lazy"/>
                   <p>{blog.title}</p>
                 </div>
               </SwiperSlide>
@@ -55,7 +55,7 @@ export default function FeaturedSection() {
           <h2>SKYLINE RESIDENCES — THE NEXT ICONIC ADDRESS</h2>
 
           <div className="featured-image">
-            <img src="https://img.freepik.com/premium-photo/dark-modern-stylish-male-apartment-interior-with-lighting-decorative-walls-fireplace-dressing-area-huge-window_267786-234.jpg?w=2000" />
+            <img src="https://img.freepik.com/premium-photo/dark-modern-stylish-male-apartment-interior-with-lighting-decorative-walls-fireplace-dressing-area-huge-window_267786-234.jpg?w=2000" loading="lazy"/>
             <p className="featured-desc">
               Our latest project update reveals the launch of Skyline Residences
               — a future-ready residential landmark offering premium smart
@@ -85,60 +85,60 @@ export default function FeaturedSection() {
           >
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png" />
+                <img src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png" loading="lazy"/>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://e7.pngegg.com/pngimages/160/547/png-clipart-aaj-tak-india-television-channel-news-broadcasting-news-anchor-on-tv-breaking-news-television-text.png" />
+                <img src="https://e7.pngegg.com/pngimages/160/547/png-clipart-aaj-tak-india-television-channel-news-broadcasting-news-anchor-on-tv-breaking-news-television-text.png" loading="lazy"/>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://www.vhv.rs/dpng/d/493-4935300_the-hindu-newspaper-logo-png-logo-of-the.png" />
+                <img src="https://www.vhv.rs/dpng/d/493-4935300_the-hindu-newspaper-logo-png-logo-of-the.png" loading="lazy"/>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjjXoJrm98pN9PWgGodxByoe3Yc8bfIZaNM79xmEGUpJvFm0qPGr4T48&s=10" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjjXoJrm98pN9PWgGodxByoe3Yc8bfIZaNM79xmEGUpJvFm0qPGr4T48&s=10" loading="lazy"/>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://lamhas.com/wp-content/uploads/2022/06/8-1.png" />
+                <img src="https://lamhas.com/wp-content/uploads/2022/06/8-1.png" loading="lazy"/>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="logo-card">
-                <img src="https://e7.pngegg.com/pngimages/160/547/png-clipart-aaj-tak-india-television-channel-news-broadcasting-news-anchor-on-tv-breaking-news-television-text.png" />
+                <img src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png" loading="lazy"/>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://www.vhv.rs/dpng/d/493-4935300_the-hindu-newspaper-logo-png-logo-of-the.png" />
+                <img src="https://e7.pngegg.com/pngimages/160/547/png-clipart-aaj-tak-india-television-channel-news-broadcasting-news-anchor-on-tv-breaking-news-television-text.png" loading="lazy"/>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjjXoJrm98pN9PWgGodxByoe3Yc8bfIZaNM79xmEGUpJvFm0qPGr4T48&s=10" />
+                <img src="https://www.vhv.rs/dpng/d/493-4935300_the-hindu-newspaper-logo-png-logo-of-the.png" loading="lazy"/>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="logo-card">
-                <img src="https://lamhas.com/wp-content/uploads/2022/06/8-1.png" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjjXoJrm98pN9PWgGodxByoe3Yc8bfIZaNM79xmEGUpJvFm0qPGr4T48&s=10" loading="lazy"/>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="logo-card">
+                <img src="https://lamhas.com/wp-content/uploads/2022/06/8-1.png" loading="lazy"/>
               </div>
             </SwiperSlide>
           </Swiper>

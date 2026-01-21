@@ -230,6 +230,7 @@ export default function Homefirst() {
                 className="diamond-img"
                 src="/assets/dimond stroke pngs 2.png"
                 alt=""
+                loading="lazy"
               />
             </div>
           </div>
@@ -284,6 +285,7 @@ export default function Homefirst() {
                 className="diamond-img-commercial"
                 src="/assets/dimond stroke pngs 2.png"
                 alt=""
+                loading="lazy"
               />
             </div>
           </div>
@@ -326,6 +328,7 @@ export default function Homefirst() {
                   className="second-div2-inner-image"
                   src="/assets/dimond stroke pngs.png"
                   alt=""
+                  loading="lazy"
                 />
                 <h1>
                   <span

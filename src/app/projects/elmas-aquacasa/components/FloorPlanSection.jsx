@@ -43,7 +43,7 @@ export default function FloorPlanSection({ plans = [], handleFlip, setShowForm }
           ? plans.map((plan, index) => (
               <React.Fragment key={index}>
                 <div className="fp-page fp-front">
-                  <img src={plan.image} alt={plan.title} className="fp-image" />
+                  <img src={plan.image} alt={plan.title} className="fp-image" loading="lazy" />
                   <h3 className="fp-page-title">{plan.title}</h3>
                 </div>
 

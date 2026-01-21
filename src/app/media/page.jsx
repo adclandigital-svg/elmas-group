@@ -77,7 +77,7 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" />
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" loading="lazy"/>
               <div className="mc-feature-overlay">
                 <span>Press Release</span>
                 <h3>Spring Elmas Launches Premium Smart Residences</h3>
@@ -93,7 +93,7 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=1400" />
+              <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=1400" loading="lazy"/>
               <div className="mc-feature-overlay">
                 <span>In The News</span>
                 <h3>Elmas Group Featured Among Top Emerging Developers</h3>
@@ -149,35 +149,35 @@ export default function MediaCenterPage() {
           <div className="mc-gallery-item tall reveal">
             <div className="reveal-inner">
               <span className="reveal-mask" />
-              <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1400" />
+              <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1400" loading="lazy"/>
               <span>Luxury Living Room</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400" />
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400" loading="lazy"/>
               <span>Modern Kitchen</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400" />
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400" loading="lazy"/>
               <span>Bedroom Suite</span>
             </div>
           </div>
           <div className="mc-gallery-item tall reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" />
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" loading="lazy"/>
               <span>Grand Entrance Lobby</span>
             </div>
           </div>
           <div className="mc-gallery-item wide reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1600" />
+              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1600" loading="lazy"/>
               <span>Clubhouse & Amenities</span>
             </div>
           </div>

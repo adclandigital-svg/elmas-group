@@ -37,6 +37,7 @@ export default function NeighbourSection() {
             src={s.image}
             className={`nb-image ${active === i ? "active" : ""}`}
             alt=""
+            loading="lazy"
           />
         ))}
 

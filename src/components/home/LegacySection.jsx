@@ -90,7 +90,7 @@ export default function LuxurySectionRedesign() {
         {stats.map((item, i) => (
           <div key={i} className="diamond-card">
             <div className="diamond">
-              <img src="/assets/dimond stroke pngs.png" alt="diamond" />
+              <img src="/assets/dimond stroke pngs.png" alt="diamond" loading="lazy" />
             </div>
             <h1>
               <span

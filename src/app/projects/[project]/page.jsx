@@ -181,6 +181,7 @@ export default function ProjectPage() {
           <img
             src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80"
             className="hero-video-fallback"
+            loading="lazy"
           />
 
           <div className="hero-overlay">
@@ -213,42 +214,42 @@ export default function ProjectPage() {
           <div className="icon-grid">
             <div className="icon-box">
               <FaSwimmingPool /> Swimming Pool
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
 
             <div className="icon-box">
               <FaBuilding /> Clubhouse
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
 
             <div className="icon-box">
               <FaDumbbell /> Gymnasium
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
 
             <div className="icon-box">
               <FaChild /> Kids Play Area
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
 
             <div className="icon-box">
               <FaRunning /> Jogging Track
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
 
             <div className="icon-box">
               <FaGamepad /> Indoor Games
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
 
             <div className="icon-box">
               <FaShieldAlt /> 24x7 Security
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
 
             <div className="icon-box">
               <FaGlassCheers /> Banquet Hall
-              <img src="/assets/dimond stroke pngs 2.png" alt="" />
+              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
             </div>
           </div>
         </section>
@@ -266,6 +267,7 @@ export default function ProjectPage() {
               <img
                 className="float-img"
                 src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353"
+                loading="lazy"
               />
               <span className="blog-reveal"></span>
             </div>
@@ -273,6 +275,7 @@ export default function ProjectPage() {
               <img
                 className="float-img"
                 src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+                loading="lazy"
               />
               <span className="blog-reveal"></span>
             </div>
@@ -280,6 +283,7 @@ export default function ProjectPage() {
               <img
                 className="float-img"
                 src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
+                loading="lazy"
               />
               <span className="blog-reveal"></span>
             </div>
@@ -427,7 +431,7 @@ export default function ProjectPage() {
         >
           {plans.flatMap((plan, index) => [
             <div className="fp-page fp-front" key={`front-${index}`}>
-              <img src={plan.image} alt={plan.title} className="fp-image" />
+              <img src={plan.image} alt={plan.title} className="fp-image" loading="lazy" />
               <h3 className="fp-page-title">{plan.title}</h3>
             </div>,
 
