@@ -103,8 +103,14 @@ export default function Navbar() {
       <header ref={navbarRef} className="navbar">
         <div className="nav-container" style={{ cursor: "pointer" }}>
           <div className="logo" onClick={() => route.push("/")}>
-            <img src="/assets/logo.png" width={100} loading="eager" decoding="async" />
-
+            <img
+              src="/assets/logo.png"
+              width="100"
+              alt="Elmas Group"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
           </div>
 
           <nav className="nav-links">
