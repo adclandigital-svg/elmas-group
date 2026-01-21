@@ -5,20 +5,20 @@ import "./NeighbourSection.css";
 const slides = [
   {
     text: "Metro Station – just 5 minutes walk from the community",
-    image: "https://images.unsplash.com/photo-1534595038511-9f219fe0c979",
+    image: "https://img.freepik.com/premium-photo/monorail-train-sao-paulo-metro_926199-2833106.jpg?w=1480",
   },
     {
     text: "International Schools and Colleges within 10 minutes",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+    image: "https://img.freepik.com/premium-photo/entrance-ackerman-union-ucla-with-modern-architectural-design_536604-18800.jpg?w=1480",
   },
 
   {
     text: "Multi-speciality hospitals and emergency care nearby",
-    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3",
+    image: "https://img.freepik.com/premium-photo/aerial-photography-santa-giulia-milan-italy-residential-area-southeastern-outskirts-milan_611820-380.jpg?w=1480",
   },
   {
     text: "Premium shopping malls, cafes and multiplexes around the corner",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf",
+    image: "https://img.freepik.com/premium-photo/restaurant-with-large-glass-ceiling-tables-chairs_1065421-8566.jpg?w=1480",
   },
   
 ];

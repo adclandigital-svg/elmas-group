@@ -602,6 +602,7 @@
 .fp-back {
   text-align: left;
   padding: 50px;
+  position: relative;
 }
 
 .fp-description {
@@ -640,7 +641,9 @@
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
-  position: static; /* remove absolute for responsiveness */
+  position: absolute;
+  bottom: 70px;
+  left: 40px;
 }
 
 .fp-page-download a {
@@ -704,6 +707,8 @@
   }
   .fp-page-download {
     justify-content: center;
+    bottom: 0px;
+    left: 15px;
   }
 }
 

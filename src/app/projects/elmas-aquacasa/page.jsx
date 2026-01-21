@@ -17,6 +17,7 @@ import {
   FaGlassCheers,
   FaBuilding,
 } from "react-icons/fa";
+import ProjectHighlights from "./components/ProjectHighlights";
 
 const plans = [
   {
@@ -123,7 +124,7 @@ export default function ProjectPage() {
           duration: 0.6,
           ease: "power3.out",
           stagger: 0.09, // <- true sequential reveal
-        }
+        },
       );
   }, []);
 
@@ -141,6 +142,24 @@ export default function ProjectPage() {
       window.open("/assets/SpringElmasPriceList.pdf", "_blank");
     }
   };
+
+  const [size, setSize] = useState({ width: 700, height: 600 });
+
+  useEffect(() => {
+    const updateSize = () => {
+      const w = window.innerWidth;
+
+      if (w >= 1400) setSize({ width: 700, height: 600 });
+      else if (w >= 1024) setSize({ width: 620, height: 520 });
+      else if (w >= 768) setSize({ width: 520, height: 460 });
+      else if (w >= 480) setSize({ width: 360, height: 440 });
+      else setSize({ width: 300, height: 400 });
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   return (
     <>
@@ -172,9 +191,7 @@ export default function ProjectPage() {
           </div>
         </section>
       </div>
-      
-      <div className="facilities-wrapper">
-        {/* ----------- FACILITIES ICON GRID ----------- */}
+      <div className="facilities-section-outer">
         <section className="facilities-section">
           <div className="text-side">
             <p className="tag">PROJECT FACILITIES</p>
@@ -186,11 +203,17 @@ export default function ProjectPage() {
               security. <br />
               Experience premium lifestyle features inside your gated community.
             </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              ea nisi <br />
+              quaerat eaque iusto nam nihil sed eum, officiis veniam dolorum
+              culpa veritatis <br /> ratione ex aspernatur hic numquam aperiam
+              impedit!
+            </p>
           </div>
-          
 
           <div className="icon-grid">
-            <div className="icon-box" style={{ backgroundImage: "url()" }}>
+            <div className="icon-box">
               <FaSwimmingPool /> Swimming Pool
               <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
@@ -221,7 +244,7 @@ export default function ProjectPage() {
             </div>
 
             <div className="icon-box">
-              <FaShieldAlt /> 24×7 Security
+              <FaShieldAlt /> 24x7 Security
               <img src="/assets/dimond stroke pngs 2.png" alt="" />
             </div>
 
@@ -231,8 +254,9 @@ export default function ProjectPage() {
             </div>
           </div>
         </section>
+      </div>
 
-        {/* ----------- ARRIVAL SECTION (3 IMAGES) ----------- */}
+      <div className="facilities-wrapper">
         <section className="arrival-section">
           <p className="tag">RELAXATION & COMFORT</p>
           <h2>
@@ -243,24 +267,21 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=900"
-                alt="Luxury Pool"
+                src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353"
               />
               <span className="blog-reveal"></span>
             </div>
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=900"
-                alt="Modern Living Room"
+                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
               />
               <span className="blog-reveal"></span>
             </div>
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900"
-                alt="Waterfront Lifestyle"
+                src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
               />
               <span className="blog-reveal"></span>
             </div>
@@ -268,61 +289,117 @@ export default function ProjectPage() {
         </section>
 
         {/* ----------- AMENITIES & SERVICES GRID CARDS ----------- */}
-        <section className="services-section">
+        {/* <section className="services-section">
           <p className="tag">LUXURY, COMFORT & COMMUNITY LIFE</p>
 
           <div className="services-header">
             <h2>Living Comforts & Services</h2>
             <p>
-              Thoughtfully crafted lifestyle avenues at Rudra Aquacasa offer a
-              perfect balance of leisure, wellness and community living.
+              Discover thoughtfully curated lifestyle spaces that bring families
+              together <br /> and offer unmatched leisure and recreation inside
+              the community.
             </p>
           </div>
 
           <div className="services-grid">
             <div className="service-card">
               <div>
-                <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" />
+                <img src="https://img.freepik.com/premium-photo/chairs-table-living-room_1048944-18456116.jpg?w=600" />
                 <span className="blog-reveal"></span>
               </div>
-              <h3>Resort-Style Swimming Pool</h3>
-              <p>Jacuzzi · Deck · Aqua Fun Zone</p>
+
+              <h3>Clubhouse Lounge</h3>
+              <p>Community Hangout & Indoor Games</p>
             </div>
 
             <div className="service-card">
               <div>
-                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" />
+                <img src="https://img.freepik.com/premium-photo/young-female-with-outdoor-activities-city-park-yoga-is-her-chosen-activity_159755-8469.jpg?ga=GA1.1.143927192.1764420012&semt=ais_hybrid&w=600&q=80" />
                 <span className="blog-reveal"></span>
               </div>
-              <h3>Luxury Clubhouse Lounge</h3>
-              <p>Café · Games · Co-working Spaces</p>
+
+              <h3>Spa & Wellness</h3>
+              <p>Sauna, Yoga, Meditation Deck</p>
             </div>
 
             <div className="service-card">
               <div>
-                <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80" />
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" />
                 <span className="blog-reveal"></span>
               </div>
               <h3>Celebration Lawn</h3>
-              <p>Weddings · Parties · Open-air Events</p>
+              <p>Party, Events & Gatherings</p>
             </div>
 
             <div className="service-card">
               <div>
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" />
+                <img src="https://img.freepik.com/premium-photo/fitness-room_47474-105.jpg?w=600" />
                 <span className="blog-reveal"></span>
               </div>
-              <h3>Premium Fitness Center</h3>
-              <p>Cardio Zone · CrossFit · Personal Training</p>
+              <h3>Fitness Center</h3>
+              <p>Modern Gym & Training Studio</p>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
+      <section className="about-section">
+        <div className="about-container">
+          <div className="about-left">
+            <h2>About Project</h2>
+            <div className="project-address">
+              <span>Project Location</span>
+              <p>
+                Sector-12, Noida Extension <br />
+                (Greater Noida West), Uttar Pradesh – 201318
+              </p>
+            </div>
+          </div>
+
+          <div className="about-right">
+            <div className="about-text">
+              <p>
+                This thoughtfully planned residential project is designed to
+                offer a perfect balance of modern architecture, open green
+                spaces, and lifestyle-driven amenities. Every detail has been
+                crafted to enhance comfort, privacy, and everyday living.
+              </p>
+
+              <p>
+                Strategically located with excellent connectivity, the project
+                provides seamless access to key business hubs, schools,
+                healthcare, and entertainment destinations, making it an ideal
+                choice for families and professionals alike.
+              </p>
+            </div>
+
+            <div className="stats-grid">
+              <div className="stat">
+                <h3>12+</h3>
+                <span>Acres of land</span>
+              </div>
+
+              <div className="stat">
+                <h3>8</h3>
+                <span>Residential towers</span>
+              </div>
+
+              <div className="stat">
+                <h3>1,200+</h3>
+                <span>Premium residences</span>
+              </div>
+
+              <div className="stat">
+                <h3>70%</h3>
+                <span>Open & green spaces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <ProjectHighlights />
       <NeighbourSection />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
-
-        {/* Tabs */}
         <div className="fp-tabs">
           {plans.map((plan, i) => (
             <button
@@ -335,20 +412,17 @@ export default function ProjectPage() {
           ))}
         </div>
 
-        {/* Flipbook */}
         <HTMLFlipBook
-          width={700}
-          height={600}
+          width={size.width}
+          height={size.height}
           className="fp-flipbook"
           showCover={false}
-          // shadow + realism
           drawShadow={true}
           maxShadowOpacity={0.8}
           flippingTime={900}
           swipeDistance={30}
-          // required for depth
           useMouseEvents={true}
-          mobileScrollSupport={false}
+          mobileScrollSupport={true}
           ref={flipBook}
           onFlip={handleFlip}
         >
