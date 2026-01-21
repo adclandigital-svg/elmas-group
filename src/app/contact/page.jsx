@@ -9,8 +9,17 @@ import { useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactPage() {
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
   useGSAP(() => {
-    // left side text
     gsap.from(".left-text h1, .left-text p", {
       scrollTrigger: ".left-side",
       opacity: 0,
@@ -20,7 +29,6 @@ export default function ContactPage() {
       ease: "power2.out",
     });
 
-    // right side form
     gsap.from(
       ".right-side h2, .right-side h1, .right-side p, .right-side .form-group",
       {
@@ -30,10 +38,9 @@ export default function ContactPage() {
         duration: 0.6,
         stagger: 0.12,
         ease: "power2.out",
-      }
+      },
     );
 
-    // info cards
     gsap.from(".info-cards .info-card", {
       scrollTrigger: ".info-cards",
       opacity: 0,
@@ -43,7 +50,6 @@ export default function ContactPage() {
       ease: "power2.out",
     });
 
-    // map reveal
     gsap.from(".map-section iframe", {
       scrollTrigger: ".map-section",
       opacity: 0,
@@ -52,7 +58,6 @@ export default function ContactPage() {
       ease: "power3.out",
     });
 
-    // FAQ animation
     gsap.from(".faq-item", {
       scrollTrigger: {
         trigger: ".faq-section",
@@ -93,6 +98,48 @@ export default function ContactPage() {
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  // ✅ Validation
+  const validateForm = () => {
+    if (!form.name.trim()) return "Name is required";
+    if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(form.phone))
+      return "Enter valid 10-digit phone number";
+    if (!/^\S+@\S+\.\S+$/.test(form.email)) return "Enter valid email";
+    if (form.message.length < 5) return "Message too short";
+    return null;
+  };
+
+  // ✅ Submit Handler
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const error = validateForm();
+    if (error) return setStatus(error);
+
+    setLoading(true);
+    setStatus("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus("✅ Message sent successfully!");
+        setForm({ name: "", phone: "", email: "", message: "" });
+      } else {
+        setStatus("❌ Failed to send message");
+      }
+    } catch (err) {
+      setStatus("❌ Server error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="contact-page">
       {/* SPLIT SECTION */}
@@ -106,9 +153,7 @@ export default function ContactPage() {
               out to us anytime—we’d love to connect! We specialize in
               delivering top-notch solutions tailored to your needs. Our office
               is a hub of creativity, collaboration, and innovation, where every
-              project is handled with care and expertise. Whether you want to
-              discuss a new project, ask questions, or just say hello, we are
-              always ready to assist you. Your satisfaction is our priority.
+              project is handled with care and expertise.
             </p>
           </div>
         </div>
@@ -120,6 +165,7 @@ export default function ContactPage() {
           <p>
             Reach out to us for any inquiries, collaborations, or investments.
           </p>
+
           <div className="info-cards">
             <div className="info-card">
               <span className="icon">📍</span>
@@ -144,27 +190,66 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="form-group">
-            <input type="text" placeholder="Your Name" />
-          </div>
+          {/* ✅ FORM */}
+            <p
+              className={`form-status ${
+                status?.includes("success") || status.includes("✅")
+                  ? "success"
+                  : "error"
+              }`}
+            >
+              {status? status : ""}
+            </p>
 
-          <div className="form-group">
-            <input type="text" placeholder="Phone Number" />
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                name="name"
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                type="text"
+                placeholder="Your Name"
+              />
+            </div>
 
-          <div className="form-group">
-            <input type="email" placeholder="Email Address" />
-          </div>
+            <div className="form-group">
+              <input
+                name="phone"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                type="text"
+                placeholder="Phone Number"
+              />
+            </div>
 
-          <div className="form-group">
-            <textarea rows="5" placeholder="Your Message"></textarea>
-          </div>
+            <div className="form-group">
+              <input
+                name="email"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                type="email"
+                placeholder="Email Address"
+              />
+            </div>
 
-          <button className="contact-btn">Send Message</button>
+            <div className="form-group">
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                rows="5"
+                placeholder="Your Message"
+              />
+            </div>
 
-          {/* INFO CARDS BELOW FORM */}
+            <button className="contact-btn" type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
       <section className="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div className="faq-container">
