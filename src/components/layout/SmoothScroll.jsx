@@ -9,13 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll() {
   useEffect(() => {
+    const isMobile = window.innerWidth <= 991;
     const lenis = new Lenis({
       duration: 1.0,
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smooth: true,
       smoothTouch: false,
-      wheelMultiplier: 0.9,
-      touchMultiplier: 1.2,
+      wheelMultiplier: isMobile? 1.5:0.9,
+      touchMultiplier: isMobile? 1.5:0.9,
     });
 
     const raf = (time) => {
