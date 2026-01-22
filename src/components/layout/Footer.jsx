@@ -55,7 +55,7 @@ export default function Footer() {
               <FaFacebookF />
             </Link>
           </div>
-          <p>Elmas Group</p>
+          <p>Elmas Group,</p>
           <p>Noida Extension, Uttar Pradesh, India</p>
           <p>Email: info@elmasgroup.com</p>
           <p>Phone: +91 98765 43210</p>

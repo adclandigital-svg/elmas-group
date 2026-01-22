@@ -63,6 +63,23 @@
   justify-content: center;
 }
 
+  .project-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/Your paragraptext.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover; /* or cover if you want fill */
+    opacity: 1; /* 👈 subtle */
+    z-index: 0;
+  }
+
+  .project-content > * {
+    position: relative;
+    z-index: 1;
+  }
+
 .project-content h2 {
   font-size: 32px;
   font-weight: 700;
@@ -131,16 +148,16 @@
     font-size: 22px;
   }
   .project-content h4 {
-  font-size: 15px;
-  font-weight: 500;
-  margin-bottom: 16px;
-  color: #666;
-}
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #666;
+  }
 
-.project-content p {
-  font-size: 12px;
-  line-height: 1.4;
-}
+  .project-content p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
 }
 
 /* Swiper pagination bullets */
