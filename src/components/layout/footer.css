@@ -1,7 +1,18 @@
+:root {
+  --footer-bg: #c2e6fc;
+  --footer-text-white: #fff;
+  --footer-text-muted: rgba(0, 0, 0, 0.7);
+  --footer-text-dark: rgba(0, 0, 0, 0.8);
+  --footer-text-black: #000000;
+  --footer-accent: #b27f38;
+  --footer-border: rgba(0, 0, 0, 0.1);
+}
+
+/* ================= FOOTER ================= */
 .footer {
   padding: 80px 20px 40px;
-  background: rgba(147, 210, 247, 0.521);
-  color: #fff;
+  background: var(--footer-bg);
+  color: var(--footer-text-white);
 }
 
 .footer-inner {
@@ -19,23 +30,22 @@
   font-size: 15px;
   line-height: 1.6;
   margin-top: 10px;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--footer-text-muted);
 }
 
-/* Links (Navigation / Quick Links / Policy) */
 .footer-nav h4,
 .footer-policy h4,
 .footer-connect h4 {
   margin-bottom: 12px;
   font-size: 18px;
-  color: #b27f38;
+  color: var(--footer-accent);
 }
 
 .footer-nav a,
 .footer-policy a {
   display: block;
   position: relative;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--footer-text-dark);
   text-decoration: none;
   margin-bottom: 10px;
   padding-bottom: 4px;
@@ -49,12 +59,11 @@
   bottom: 0;
   width: 100px;
   height: 1px;
-  background: #b27f38;
+  background: var(--footer-accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-
 
 .footer-nav a:hover::after,
 .footer-policy a:hover::after {
@@ -70,7 +79,7 @@
 
 .footer-connect .social-icons a {
   font-size: 20px;
-  color: #000000;
+  color: var(--footer-text-black);
   transition: color 0.3s ease, transform 0.3s ease;
   -webkit-transition: color 0.3s ease, transform 0.3s ease;
   -moz-transition: color 0.3s ease, transform 0.3s ease;
@@ -79,7 +88,7 @@
 }
 
 .footer-connect .social-icons a:hover i {
-  color: #b27f38;
+  color: var(--footer-accent);
   transform: scale(1.2);
 }
 
@@ -89,12 +98,14 @@
   text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 1);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--footer-border);
   padding-top: 20px;
 }
-.footer-connect p{
-  color:black
+
+.footer-connect p {
+  color: var(--footer-text-black);
 }
+
 /* Responsive */
 @media screen and (max-width: 1024px) {
   .footer-inner {

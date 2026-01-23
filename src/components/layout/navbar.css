@@ -1,26 +1,55 @@
+/* :root {
+  --nav-bg: rgba(180, 224, 252, 0.9);
+  --nav-shadow: rgba(0, 0, 0, 0.15);
+  --text-light: #111;
+  --text-dark: #111;
+  --hover-accent: #b17521;
+  --sidebar-bg: rgba(255, 255, 255, 0.96);
+  --sidebar-hover: #b17521;
+} */
+
+:root {
+  --nav-bg: linear-gradient(160deg, #d3b071,#b17e38 );
+  --nav-shadow: rgba(0, 0, 0, 0.15);
+  --text-light: #fff;
+  --text-dark: #111;
+  --hover-accent: #93d6f5; 
+  --sidebar-bg: rgba(255, 255, 255, 0.96);
+  --sidebar-hover:#38bdfa;
+}
+
+/* :root {
+  --nav-bg: #d3b071;
+  --nav-shadow: rgba(0, 0, 0, 0.15);
+  --text-light: #fff;
+  --text-dark: #111;
+  --hover-accent: #a86e02;
+  --sidebar-bg: rgba(255, 255, 255, 0.96);
+  --sidebar-hover: #a86e02;
+} */
+/* :root {
+  --nav-bg: #d6ebe2;
+  --nav-shadow: rgba(0, 0, 0, 0.15);
+  --text-light: #a86e02;
+  --text-dark: #111;
+  --hover-accent: #a86e02;
+  --sidebar-bg: rgba(255, 255, 255, 0.96);
+  --sidebar-hover: #a86e02;
+} */
+
+
+
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: -2px;
   width: 100%;
   z-index: 1000;
-  background: rgba(147, 210, 247, 0.521);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  /* border-radius: 0 0 10px 10px; */
+  box-shadow: 0 8px 32px var(--nav-shadow);
   transition:
-    background 0.3s ease,
-    backdrop-filter 0.3s ease;
-  -webkit-transition:
-    background 0.3s ease,
-    backdrop-filter 0.3s ease;
-  -moz-transition:
-    background 0.3s ease,
-    backdrop-filter 0.3s ease;
-  -ms-transition:
-    background 0.3s ease,
-    backdrop-filter 0.3s ease;
-  -o-transition:
     background 0.3s ease,
     backdrop-filter 0.3s ease;
 }
@@ -42,25 +71,27 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
-  font-size: 14px;
+  color: var(--text-light);
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  transition: all ease 0.3s;
+  transition: color 0.3s ease;
 }
 .nav-links a:hover {
-  color: rgb(185, 33, 39);
+  color: var(--hover-accent) !important; /* ✅ same as normal */
 }
 
 /* SCROLLED */
 .navbar.scrolled {
-  /* background: rgba(255, 255, 255, 0.6); */
-  background: rgba(147, 210, 247, 0.521);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
 }
 
 .navbar.scrolled a {
-  color: #111;
+  color: var(--text-dark);
+}
+.navbar.scrolled a:hover {
+  color: var(--hover-accent) !important;
 }
 
 /* MENU */
@@ -74,21 +105,17 @@
 .menu-toggle span {
   width: 24px;
   height: 2px;
-  background: #fff;
+  background: var(--text-light);
   transition: background 0.3s ease;
 }
 
-/* Hover effect on the span itself */
 .menu-toggle:hover span {
-  background: #b27f38;
-}
-.sidebar-close:hover span {
-  background: #b27f38;
+  background: var(--hover-accent) !important;
 }
 
 /* When navbar is scrolled */
 .navbar.scrolled .menu-toggle span {
-  background: #111;
+  background: var(--text-dark);
 }
 
 /* SIDEBAR */
@@ -98,7 +125,7 @@
   right: -100%;
   width: 340px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--sidebar-bg);
   backdrop-filter: blur(12px);
   z-index: 2000;
   padding: 120px 40px;
@@ -107,18 +134,16 @@
 .sidebar-links {
   display: flex;
   flex-direction: column;
-  /* gap: 24px; */
 }
 
 .sidebar-links a {
   font-size: 18px;
   text-decoration: none;
-  color: #111;
+  color: var(--text-dark);
   padding: 12px 0px;
+  transition: color 0.3s ease;
 }
-.sidebar-links a:hover {
-  color: rgb(185, 33, 39);
-}
+
 /* CLOSE ICON */
 .sidebar-close {
   position: absolute;
@@ -137,19 +162,25 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: #111;
+  background: var(--text-dark);
+  transition: background 0.3s ease;
+}
+.sidebar-close:hover span {
+  background: var(--sidebar-hover);
 }
 
 .sidebar-close span:first-child {
   transform: rotate(45deg);
 }
-
 .sidebar-close span:last-child {
   transform: rotate(-45deg);
 }
+
 .sidebar-links-mobile {
   display: none;
 }
+
+/* SUBMENU */
 .submenu {
   display: flex;
   overflow: hidden;
@@ -163,8 +194,10 @@
 }
 .submenu a {
   font-size: 16px;
-  color: rgba(17, 17, 17, 0.514);
   padding: 0;
+}
+.sidebar-links a:hover {
+  color: var(--sidebar-hover) !important;
 }
 .sidebar-links-project:hover + .submenu {
   height: 70px;
@@ -172,7 +205,6 @@
 .submenu:hover {
   height: 70px;
 }
-
 
 @media (max-width: 1024px) {
   .nav-links a {
@@ -182,6 +214,6 @@
     display: inline;
   }
   .sidebar-links-project {
-  display: none !important;
-}
+    display: none !important;
+  }
 }

@@ -161,6 +161,17 @@ img {
     width: 100%;
     max-width: 1400px;
   }
+  .diamond-img-commercial,
+  .diamond-img {
+    width: 580px;
+    top: 25px;
+    left: 10px;
+  }
+  .third-second-text p {
+    /* font-size: 10px; */
+    font-size: 18px;
+    line-height: 1.6;
+  }
 }
 
 /* ≤1440px laptops */
@@ -281,7 +292,7 @@ img {
 }
 
 /* ≤480px small phones */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .third h1 {
     font-size: 28px;
   }
@@ -292,8 +303,11 @@ img {
   .diamond-img-commercial,
   .diamond-img {
     top: 50px;
-    left: 110px;
-    width: 382px;
+    left: 125px;
+    width: 350px;
+  }
+  .third-second-text p {
+    font-size: 10px;
   }
 }
 
@@ -303,6 +317,7 @@ img {
   flex-direction: column;
   gap: 50px;
   height: 900px;
+  overflow: hidden;
 }
 .section-title {
   text-align: left;
@@ -333,7 +348,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.206);
+  background-color: rgba(0, 0, 0, 0.506);
   pointer-events: none;
   z-index: 2;
 }
@@ -361,7 +376,6 @@ img {
 .second-div1 img.active {
   opacity: 1;
   transform: scale(1);
-  
 }
 .second-div2-absolute {
   height: 400px;
@@ -451,12 +465,12 @@ img {
 @media (max-width: 1440px) {
   .section-title,
   .second-div {
-    max-width: 1200px;
+    max-width: 100%;
   }
 
   .second {
     height: auto;
-    min-height: 120vh;
+    /* min-height: 120vh; */
   }
 }
 
@@ -490,9 +504,10 @@ img {
     color: #b27f38;
   }
   .second {
-    height: 800px;
+    height: auto;
     padding: 80px 24px;
     gap: 40px;
+    margin-bottom: 0;
   }
 
   .second-div {
