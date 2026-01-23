@@ -14,9 +14,9 @@
   --nav-shadow: rgba(0, 0, 0, 0.15);
   --text-light: #fff;
   --text-dark: #111;
-  --hover-accent: #93d6f5; 
+  --hover-accent: #006c70; 
   --sidebar-bg: rgba(255, 255, 255, 0.96);
-  --sidebar-hover:#38bdfa;
+  --sidebar-hover:#006c70;
 }
 
 /* :root {

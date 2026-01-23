@@ -1,11 +1,12 @@
 :root {
-  --footer-bg: #c2e6fc;
+  --footer-bg: linear-gradient(160deg, #d3b071,#b17e38 );
   --footer-text-white: #fff;
-  --footer-text-muted: rgba(0, 0, 0, 0.7);
-  --footer-text-dark: rgba(0, 0, 0, 0.8);
+  --footer-text-muted: rgba(0, 0, 0, 1);
+  --footer-text-dark: rgba(0, 0, 0, 1);
   --footer-text-black: #000000;
-  --footer-accent: #b27f38;
-  --footer-border: rgba(0, 0, 0, 0.1);
+  --footer-accent: bLACK;
+  --footer-border: rgba(0, 0, 0, 0.3);
+  --hover:#006c70;
 }
 
 /* ================= FOOTER ================= */
@@ -13,6 +14,9 @@
   padding: 80px 20px 40px;
   background: var(--footer-bg);
   color: var(--footer-text-white);
+}
+.footer a:hover{
+  color:  var(--hover)!important;
 }
 
 .footer-inner {
@@ -27,8 +31,8 @@
 /* Brand */
 .footer-brand p {
   max-width: 360px;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.4;
   margin-top: 10px;
   color: var(--footer-text-muted);
 }
@@ -37,8 +41,9 @@
 .footer-policy h4,
 .footer-connect h4 {
   margin-bottom: 12px;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--footer-accent);
+  text-transform: uppercase;
 }
 
 .footer-nav a,
@@ -59,10 +64,14 @@
   bottom: 0;
   width: 100px;
   height: 1px;
-  background: var(--footer-accent);
+  background: var(--hover)!important;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
 }
 
 .footer-nav a:hover::after,
@@ -96,7 +105,7 @@
 .footer-bottom {
   margin-top: 40px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 1);
   border-top: 1px solid var(--footer-border);
   padding-top: 20px;

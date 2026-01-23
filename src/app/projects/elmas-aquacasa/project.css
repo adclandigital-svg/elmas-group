@@ -846,7 +846,7 @@
 }
 
 .about-container {
-  width: 95%;
+  max-width: 1800px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -924,6 +924,11 @@
 .stat span {
   font-size: 14px;
   color: #777;
+}
+@media (max-width: 1800px) {
+  .about-container {
+  max-width: 95%;
+  }
 }
 
 /* ================= RESPONSIVE ================= */
