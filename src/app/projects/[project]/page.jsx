@@ -193,63 +193,93 @@ export default function ProjectPage() {
       <div className="facilities-section-outer">
         <section className="facilities-section">
           <div className="text-side">
-            <p className="tag">PROJECT FACILITIES</p>
+            <p className="tag">PROJECT AMENITIES</p>
             <h2>
-              World-Class <br /> Residential Amenities
+              Premium Lifestyle <br /> At Spring Elmas
             </h2>
             <p>
-              Designed to elevate everyday living with comfort, luxury and
-              security. <br />
-              Experience premium lifestyle features inside your gated community.
+              A thoughtfully designed residential community <br /> offering luxury,
+              comfort and modern living in the heart of Greater <br />Noida West.
+              Every amenity is crafted to elevate your everyday lifestyle.
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-              ea nisi <br />
-              quaerat eaque iusto nam nihil sed eum, officiis veniam dolorum
-              culpa veritatis <br /> ratione ex aspernatur hic numquam aperiam
-              impedit!
+              Enjoy a perfect blend of wellness, recreation and relaxation with <br />
+              world-class facilities inside a secure gated township designed for <br />
+              families, professionals and future-ready living.
             </p>
           </div>
 
           <div className="icon-grid">
             <div className="icon-box">
               <FaSwimmingPool /> Swimming Pool
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaBuilding /> Clubhouse
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
-              <FaDumbbell /> Gymnasium
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <FaDumbbell /> Fitness Centre
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
-              <FaChild /> Kids Play Area
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <FaChild /> Kids Play Zone
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaRunning /> Jogging Track
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
-              <FaGamepad /> Indoor Games
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <FaGamepad /> Indoor Games <br /> Room
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
-              <FaShieldAlt /> 24x7 Security
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <FaShieldAlt /> 3-Tier Security <br /> System
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
-              <FaGlassCheers /> Banquet Hall
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <FaGlassCheers /> Party Hall / <br /> Banquet
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
@@ -347,12 +377,12 @@ export default function ProjectPage() {
       <section className="about-section">
         <div className="about-container">
           <div className="about-left">
-            <h2>About Project</h2>
+            <h2>About Spring Elmas</h2>
             <div className="project-address">
               <span>Project Location</span>
               <p>
-                Sector-12, Noida Extension <br />
-                (Greater Noida West), Uttar Pradesh – 201318
+                Sector-12, Greater Noida West <br />
+                (Noida Extension), Uttar Pradesh – 201318
               </p>
             </div>
           </div>
@@ -360,39 +390,41 @@ export default function ProjectPage() {
           <div className="about-right">
             <div className="about-text">
               <p>
-                This thoughtfully planned residential project is designed to
-                offer a perfect balance of modern architecture, open green
-                spaces, and lifestyle-driven amenities. Every detail has been
-                crafted to enhance comfort, privacy, and everyday living.
+                Spring Elmas is a premium residential development crafted to
+                deliver elegant architecture, spacious homes and thoughtfully
+                curated lifestyle amenities. Every residence is designed to
+                offer superior comfort, natural ventilation and modern living
+                experiences.
               </p>
 
               <p>
-                Strategically located with excellent connectivity, the project
-                provides seamless access to key business hubs, schools,
-                healthcare, and entertainment destinations, making it an ideal
-                choice for families and professionals alike.
+                Located in the heart of Greater Noida West, the project enjoys
+                excellent connectivity to Noida, Delhi and major business hubs
+                while being surrounded by schools, hospitals, shopping
+                destinations and daily conveniences — making it ideal for
+                families and working professionals.
               </p>
             </div>
 
             <div className="stats-grid">
               <div className="stat">
-                <h3>12+</h3>
-                <span>Acres of land</span>
+                <h3>5+</h3>
+                <span>Acres of development</span>
               </div>
 
               <div className="stat">
-                <h3>8</h3>
+                <h3>4</h3>
                 <span>Residential towers</span>
               </div>
 
               <div className="stat">
-                <h3>1,200+</h3>
-                <span>Premium residences</span>
+                <h3>400+</h3>
+                <span>Premium apartments</span>
               </div>
 
               <div className="stat">
-                <h3>70%</h3>
-                <span>Open & green spaces</span>
+                <h3>65%</h3>
+                <span>Open & landscaped spaces</span>
               </div>
             </div>
           </div>
@@ -431,7 +463,12 @@ export default function ProjectPage() {
         >
           {plans.flatMap((plan, index) => [
             <div className="fp-page fp-front" key={`front-${index}`}>
-              <img src={plan.image} alt={plan.title} className="fp-image" loading="lazy" />
+              <img
+                src={plan.image}
+                alt={plan.title}
+                className="fp-image"
+                loading="lazy"
+              />
               <h3 className="fp-page-title">{plan.title}</h3>
             </div>,
 
@@ -458,7 +495,7 @@ export default function ProjectPage() {
       <section className="map-section">
         <div className="map-wrapper">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019949809906!2d-122.41941568468193!3d37.77492977975982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c2d2b20f7%3A0xadc7d5d0f5f1e5ab!2sCity%20Center!5e0!3m2!1sen!2s!4v1700000000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1183054479466!2d77.33707237469218!3d28.596227485729816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce51bb75705cd%3A0x88444239fb967882!2sSpring%20Elmas!5e0!3m2!1sen!2sin!4v1685816154912!5m2!1sen!2sin"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

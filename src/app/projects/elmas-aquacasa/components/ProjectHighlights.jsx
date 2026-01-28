@@ -14,6 +14,7 @@ import {
   FaBolt,
   FaVideo,
   FaShieldAlt,
+  FaLeaf 
 } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,56 +23,45 @@ export default function ProjectHighlights() {
   const sectionRef = useRef();
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 75%",
-      },
-    });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+        },
+      });
 
-    tl.from(".ph-eyebrow", {
-      y: 30,
-      opacity: 0,
-      duration: 0.6,
-    })
-      .from(
-        ".ph-number-wrap h1",
-        {
-          y: 60,
-          opacity: 0,
-          duration: 0.8,
-        },
-        "-=0.3",
-      )
-      .from(
-        ".ph-subtitle",
-        {
-          y: 20,
-          opacity: 0,
-          duration: 0.5,
-        },
-        "-=0.4",
-      )
-      .from(
-        ".ph-list li",
-        {
-          x: -40,
-          opacity: 0,
-          stagger: 0.12,
-          duration: 0.5,
-        },
-        "-=0.2",
-      )
-      .from(
-        ".ph-item",
-        {
-          y: 40,
-          opacity: 0,
-          stagger: 0.08,
-          duration: 0.6,
-        },
-        "-=0.4",
-      );
+      tl.from(".ph-eyebrow", {
+        // y: 20,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      })
+        .from(
+          ".ph-list li",
+          {
+            y: 20,
+            autoAlpha: 0,
+            stagger: 0.1,
+            duration: 0.4,
+            ease: "power2.out",
+          },
+          "-=0.2",
+        )
+        .from(
+          ".ph-item",
+          {
+            // y: 24,
+            autoAlpha: 0,
+            stagger: 0.08,
+            duration: 0.45,
+            ease: "power2.out",
+          },
+          "-=0.25",
+        );
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -80,32 +70,40 @@ export default function ProjectHighlights() {
         {/* LEFT */}
         <div className="ph-left">
           <span className="ph-eyebrow">PROJECT HIGHLIGHTS</span>
-
-          <div className="ph-number-wrap">
-            <h1>01</h1>
-          </div>
-
-          <p className="ph-subtitle">THE FLAGSHIP RESIDENCE</p>
-
           <ul className="ph-list">
-            
             <li>
-              <span>01</span> Limited Edition Residences
+              <span>01</span> Grand Luxury Entrance
             </li>
             <li>
-              <span>02</span> 50+ Floor Infinity Pool
+              <span>02</span> Premium Doors & Smart Security
             </li>
             <li>
-              <span>03</span> 45+ Floor Gardens & Terraces
+              <span>03</span> Oversized UPVC Windows
             </li>
             <li>
-              <span>04</span> Smart Home Automation
+              <span>04</span> Modern Modular Kitchen
             </li>
             <li>
-              <span>05</span> Panoramic Gardens & Terraces
+              <span>05</span> Luxury Bedrooms & Balconies
             </li>
             <li>
-              <span>06</span> Smart Home Automation
+              <span>06</span> Glass Balcony Railings + Extra-Wide Deck-Style
+              Balconies
+            </li>
+            <li>
+              <span>07</span> Branded Bath Fittings
+            </li>
+            <li>
+              <span>08</span> Trusted Electrical Setup
+            </li>
+            <li>
+              <span>09</span> High-Speed Branded Elevators
+            </li>
+            <li>
+              <span>10</span> Grand Lifestyle Club Amenities
+            </li>
+            <li>
+              <span>11</span> Central Green Park – A Landmark Open Space USP
             </li>
           </ul>
         </div>
@@ -117,53 +115,58 @@ export default function ProjectHighlights() {
           <div className="ph-grid">
             <Spec
               icon={<FaCouch />}
-              title="LIVING ROOM"
-              text="Italian Marble Flooring with Acoustic Underlay"
-            />
-            <Spec
-              icon={<FaLightbulb />}
-              title="DINING AREA"
-              text="Architectural Cove Lighting with Smart Dimming"
-            />
-            <Spec
-              icon={<FaBed />}
-              title="MASTER BEDROOM"
-              text="Engineered Wooden Flooring with Walk-in Wardrobe"
-            />
-            <Spec
-              icon={<FaBed />}
-              title="GUEST BEDROOM"
-              text="Premium Laminated Flooring with Mood Lighting"
-            />
-            <Spec
-              icon={<FaBath />}
-              title="MASTER BATHROOM"
-              text="Rain Shower, Wall-Hung WC & Designer Vanity"
-            />
-            <Spec
-              icon={<FaWarehouse />}
-              title="WARDROBES"
-              text="Soft-Close Modular Wardrobes with Sensor Lighting"
-            />
-            <Spec
-              icon={<FaBath />}
-              title="POWDER ROOM"
-              text="Imported Fixtures with Stone Counter Basin"
-            />
-            <Spec
-              icon={<FaWarehouse />}
-              title="STORAGE"
-              text="Custom Utility Cabinets with Hidden Shelving"
-            />
-            <Spec
-              icon={<FaVideo />}
-              title="SURVEILLANCE"
-              text="24/7 CCTV Monitoring with Mobile Access"
+              title="GRAND LUXURY ENTRANCE"
+              text="Double-height lobby, Italian marble flooring & designer wall paneling for a 5-star arrival experience."
             />
             <Spec
               icon={<FaShieldAlt />}
-              title="SECURITY"
-              text="Biometric Entry & Video Door Phone System"
+              title="PREMIUM DOORS & SMART SECURITY"
+              text="8 ft designer doors with smart lock + video doorbell for enhanced elegance & safety."
+            />
+            <Spec
+              icon={<FaLightbulb />}
+              title="OVERSIZED UPVC WINDOWS"
+              text="8 ft glass sliders bringing in abundant natural light and a premium modern look."
+            />
+            <Spec
+              icon={<FaWarehouse />}
+              title="MODERN MODULAR KITCHEN"
+              text="Granite countertop, double sink, dual plumbing & below-counter setup for a functional and stylish workspace."
+            />
+            <Spec
+              icon={<FaBed />}
+              title="LUXURY BEDROOMS & BALCONIES"
+              text="600×1200 mm premium tiles / wooden flooring options + anti-skid balcony tiles for safety and aesthetics."
+            />
+            <Spec
+              icon={<FaVideo />}
+              title="GLASS BALCONY RAILINGS"
+              text="Toughened glass railing + extra-wide deck-style balconies — among the widest in the segment."
+            />
+            <Spec
+              icon={<FaBath />}
+              title="BRANDED BATH FITTINGS"
+              text="Grohe / American Standard / Jaguar / Roca — premium durability and comfort."
+            />
+            <Spec
+              icon={<FaBolt />}
+              title="TRUSTED ELECTRICAL SETUP"
+              text="In-wiring from Havells / Polycab. Electrical fittings from Philips / Anchor / Encore / Northwest."
+            />
+            <Spec
+              icon={<FaWarehouse />}
+              title="HIGH-SPEED BRANDED ELEVATORS"
+              text="Schindler / OTIS / Mitsubishi for smooth and reliable movement."
+            />
+            <Spec
+              icon={<FaCouch />}
+              title="GRAND LIFESTYLE CLUB AMENITIES"
+              text="70,000–85,000 sq ft club with pools, sports courts, gym, spa, theatre, banquet hall, kids zones, temple & pet area."
+            />
+            <Spec
+              icon={<FaLeaf />}
+              title="CENTRAL GREEN PARK"
+              text="Approx. 17,000 meters landscaped green park with lawns, walking zones & serene open leisure spaces."
             />
           </div>
         </div>

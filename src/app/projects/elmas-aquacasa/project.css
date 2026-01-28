@@ -173,6 +173,7 @@
   color: rgba(0, 0, 0, 0.9);
   line-height: 1.4;
   font-size: 18px;
+  max-width: 550px;
 }
 .tag {
   color: #d8a23d;
@@ -330,7 +331,6 @@
 
 .arrival-section {
   background-position: center;
-  padding: 40px 0;
 }
 
 .arrival-section h2 {
@@ -536,12 +536,15 @@
 
 /* Tabs */
 .fp-tabs {
+  margin: auto;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
+
 
 .fp-tab {
   background: #eee;
@@ -674,6 +677,9 @@
   .fp-back {
     padding: 40px;
   }
+  .fp-tabs button{
+  font-size: 10px;
+}
 }
 
 @media (max-width: 992px) {

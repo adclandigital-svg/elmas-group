@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
+import ContactPopup from "@/components/layout/ContactPopup";
 import { usePathname } from "next/navigation";
 import { Cormorant_Garamond } from "next/font/google";
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         {!isAdmin && <SmoothScroll />}
         {children}
         {!isAdmin && <Footer />}
+        {!isAdmin && <ContactPopup />}
       </body>
     </html>
   );

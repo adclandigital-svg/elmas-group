@@ -326,7 +326,7 @@ export default function Homefirst() {
               <div key={i} className="second-div2-inner-dimond">
                 <img
                   className="second-div2-inner-image"
-                  src="/assets/dimond stroke pngs.png"
+                  src="/assets/white-dimond-stroke.png"
                   alt=""
                   loading="lazy"
                 />

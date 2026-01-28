@@ -18,73 +18,136 @@ import {
   FaBuilding,
 } from "react-icons/fa";
 import ProjectHighlights from "./components/ProjectHighlights";
-
 const plans = [
   {
-    title: "3 BHK + 2T - 1355 Sqft",
-    image: "https://springelmas.com/img/others/1355.png",
+    title: "2BHK + 2T - 1055 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big1.jpg",
     details: [
-      { label: "Balcony Area", value: "186.87 Sqft" },
-      { label: "Saleable Area", value: "1355 Sqft" },
-      { label: "Builtup Area", value: "1039.35 Sqft" },
-      { label: "RERA Carpet", value: "793.92 Sqft" },
+      { label: "Saleable Area", value: "1055 Sqft" },
+      { label: "Bedrooms", value: "2" },
+      { label: "Bathrooms", value: "2" },
+      { label: "Tower", value: "T4 To T9" },
     ],
-    description:
-      "Premium 3BHK home with airy balconies, spacious drawing room and elegant interiors.",
+    description: "2 Bedroom + 2 Toilet",
   },
-
   {
-    title: "3 BHK + 3T - 1580 Sqft",
-    image: "https://springelmas.com/img/others/1580.png",
+    title: "2BHK + 2T - 1065 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big2.jpg",
     details: [
-      { label: "Balcony Area", value: "195.96 Sqft" },
-      { label: "Saleable Area", value: "1580 Sqft" },
-      { label: "Builtup Area", value: "1200.66 Sqft" },
-      { label: "RERA Carpet", value: "919.28 Sqft" },
+      { label: "Saleable Area", value: "1065 Sqft" },
+      { label: "Bedrooms", value: "2" },
+      { label: "Bathrooms", value: "2" },
+      { label: "Tower", value: "T6" },
     ],
-    description:
-      "Serene apartment flooded with natural light and thoughtfully designed spaces.",
+    description: "2 Bedroom + 2 Toilet",
   },
-
   {
-    title: "3 BHK + 3T - 1600 Sqft",
-    image: "https://springelmas.com/img/others/1600.png",
+    title: "2BHK + 2T + Study - 1227 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big3.jpg",
     details: [
-      { label: "Balcony Area", value: "186.29 Sqft" },
-      { label: "Saleable Area", value: "1600 Sqft" },
-      { label: "Builtup Area", value: "1188.09 Sqft" },
-      { label: "RERA Carpet", value: "940.43 Sqft" },
+      { label: "Saleable Area", value: "1227 Sqft" },
+      { label: "Bedrooms", value: "2" },
+      { label: "Bathrooms", value: "2" },
+      { label: "Study", value: "Yes" },
+      { label: "Tower", value: "T4 To T9" },
     ],
-    description:
-      "Lavish 3BHK residence with modern kitchen, wide balconies and luxury bathrooms.",
+    description: "2 Bedroom + 2 Toilet + Study",
   },
-
   {
-    title: "3BHK + Study - 1895 Sqft",
-    image: "https://springelmas.com/img/others/1895.png",
+    title: "2BHK + 2T - 1320 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big4.jpg",
     details: [
-      { label: "Total Area", value: "1895 Sqft" },
-      { label: "Bedroom", value: "132 Sqft" },
-      { label: "Bathroom", value: "45 Sqft" },
-      { label: "Balcony", value: "222.85 Sqft" },
+      { label: "Saleable Area", value: "1320 Sqft" },
+      { label: "Bedrooms", value: "2" },
+      { label: "Bathrooms", value: "2" },
+      { label: "Tower", value: "T3, T10, T11 & T18" },
     ],
-    description:
-      "Includes premium study room ideal for work-from-home lifestyle.",
+    description: "2 Bedroom + 2 Toilet",
   },
-
   {
-    title: "4BHK + Servant - 2450 Sqft",
-    image: "https://springelmas.com/img/others/2450.png",
+    title: "3BHK + 2T - 1450 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big11.jpg",
     details: [
-      { label: "Total Area", value: "2450 Sqft" },
-      { label: "Bedroom", value: "154 Sqft" },
-      { label: "Bathroom", value: "35 Sqft" },
-      { label: "Balcony", value: "268.36 Sqft" },
+      { label: "Saleable Area", value: "1450 Sqft" },
+      { label: "Bedrooms", value: "3" },
+      { label: "Bathrooms", value: "2" },
+      { label: "Tower", value: "T4 To T9" },
     ],
-    description:
-      "Ultra-luxury residence with grand living spaces and separate servant room.",
+    description: "3 Bedroom + 2 Toilet",
+  },
+  {
+    title: "3BHK + 3T + Store - 1655 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big5.jpg",
+    details: [
+      { label: "Saleable Area", value: "1655 Sqft" },
+      { label: "Bedrooms", value: "3" },
+      { label: "Bathrooms", value: "3" },
+      { label: "Store Room", value: "Yes" },
+      { label: "Tower", value: "T1 - T14" },
+    ],
+    description: "3 Bedroom + 3 Toilet + Store",
+  },
+  {
+    title: "3BHK + 3T + Store - 1681 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big6.jpg",
+    details: [
+      { label: "Saleable Area", value: "1681 Sqft" },
+      { label: "Bedrooms", value: "3" },
+      { label: "Bathrooms", value: "3" },
+      { label: "Store Room", value: "Yes" },
+      { label: "Tower", value: "T2 & T12" },
+    ],
+    description: "3 Bedroom + 3 Toilet + Store",
+  },
+  {
+    title: "3BHK + 3T + Servant - 1825 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big7.jpg",
+    details: [
+      { label: "Saleable Area", value: "1825 Sqft" },
+      { label: "Bedrooms", value: "3" },
+      { label: "Bathrooms", value: "3" },
+      { label: "Servant Room", value: "Yes" },
+    ],
+    description: "3 Bedroom + 3 Toilet + Servant",
+  },
+  {
+    title: "3BHK + 3T + Servant - 1832 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big8.jpg",
+    details: [
+      { label: "Saleable Area", value: "1832 Sqft" },
+      { label: "Bedrooms", value: "3" },
+      { label: "Bathrooms", value: "3" },
+      { label: "Servant Room", value: "Yes" },
+    ],
+    description: "3 Bedroom + 3 Toilet + Servant",
+  },
+  {
+    title: "3BHK + 3T + Servant - 1840 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big9.jpg",
+    details: [
+      { label: "Saleable Area", value: "1840 Sqft" },
+      { label: "Bedrooms", value: "3" },
+      { label: "Bathrooms", value: "3" },
+      { label: "Servant Room", value: "Yes" },
+      { label: "Tower", value: "T16 & T17" },
+    ],
+    description: "3 Bedroom + 3 Toilet + Servant",
+  },
+  {
+    title: "4BHK + 3T + Servant - 2225 Sqft",
+    image: "/assets/aquacasa/aquacasa-fp-big10.jpg",
+    details: [
+      { label: "Saleable Area", value: "2225 Sqft" },
+      { label: "Bedrooms", value: "4" },
+      { label: "Bathrooms", value: "3" },
+      { label: "Servant Room", value: "Yes" },
+      { label: "Tower", value: "T16 & T17" },
+    ],
+    description: "4 Bedroom + 3 Toilet + Servant",
   },
 ];
+
+
 
 export default function ProjectPage() {
   const flipBook = useRef(null);
@@ -200,58 +263,87 @@ export default function ProjectPage() {
               World-Class <br /> Residential Amenities
             </h2>
             <p>
-              Designed to elevate everyday living with comfort, luxury and
-              security. <br />
-              Experience premium lifestyle features inside your gated community.
+              Aqua Casa is where tranquility meets modern living. Inspired by
+              the calming essence of water, our homes are designed to bring
+              peace, freshness, and a sense of harmony to everyday life. Every
+              corner of Aqua Casa reflects comfort, elegance, and a connection
+              with nature—making it not just a house, but a sanctuary you’ll be
+              proud to call home.
             </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-              ea nisi <br />
-              quaerat eaque iusto nam nihil sed eum, officiis veniam dolorum
-              culpa veritatis <br /> ratione ex aspernatur hic numquam aperiam
-              impedit!
-            </p>
+            <p>Fresh Living, Inspired by Nature.</p>
           </div>
 
           <div className="icon-grid">
             <div className="icon-box">
               <FaSwimmingPool /> Swimming Pool
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaBuilding /> Clubhouse
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaDumbbell /> Gymnasium
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaChild /> Kids Play Area
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaRunning /> Jogging Track
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaGamepad /> Indoor Games
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaShieldAlt /> 24x7 Security
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="icon-box">
               <FaGlassCheers /> Banquet Hall
-              <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+              <img
+                src="/assets/dimond stroke pngs 2.png"
+                alt=""
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
@@ -353,7 +445,7 @@ export default function ProjectPage() {
             <div className="project-address">
               <span>Project Location</span>
               <p>
-                Sector-12, Noida Extension <br />
+                Sector-16, Noida Extension <br />
                 (Greater Noida West), Uttar Pradesh – 201318
               </p>
             </div>
@@ -362,44 +454,45 @@ export default function ProjectPage() {
           <div className="about-right">
             <div className="about-text">
               <p>
-                This thoughtfully planned residential project is designed to
-                offer a perfect balance of modern architecture, open green
-                spaces, and lifestyle-driven amenities. Every detail has been
-                crafted to enhance comfort, privacy, and everyday living.
+                Elmas Aqua Casa is a premium residential development designed to
+                offer spacious homes with modern architecture, landscaped green
+                spaces, and lifestyle-focused amenities for comfortable urban
+                living.
               </p>
 
               <p>
-                Strategically located with excellent connectivity, the project
-                provides seamless access to key business hubs, schools,
-                healthcare, and entertainment destinations, making it an ideal
-                choice for families and professionals alike.
+                Strategically located in Sector-16, Greater Noida West, the
+                project enjoys excellent connectivity to Noida, Ghaziabad, and
+                Delhi NCR through major expressways, metro routes, and upcoming
+                infrastructure.
               </p>
             </div>
 
             <div className="stats-grid">
               <div className="stat">
-                <h3>12+</h3>
+                <h3>10+</h3>
                 <span>Acres of land</span>
               </div>
 
               <div className="stat">
-                <h3>8</h3>
+                <h3>9</h3>
                 <span>Residential towers</span>
               </div>
 
               <div className="stat">
-                <h3>1,200+</h3>
+                <h3>1,450+</h3>
                 <span>Premium residences</span>
               </div>
 
               <div className="stat">
                 <h3>70%</h3>
-                <span>Open & green spaces</span>
+                <span>Open & landscaped spaces</span>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <ProjectHighlights />
       <NeighbourSection />
       <section className="fp-book-section">
@@ -432,7 +525,12 @@ export default function ProjectPage() {
         >
           {plans.flatMap((plan, index) => [
             <div className="fp-page fp-front" key={`front-${index}`}>
-              <img src={plan.image} alt={plan.title} className="fp-image" loading="lazy" />
+              <img
+                src={plan.image}
+                alt={plan.title}
+                className="fp-image"
+                loading="lazy"
+              />
               <h3 className="fp-page-title">{plan.title}</h3>
             </div>,
 

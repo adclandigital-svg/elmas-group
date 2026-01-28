@@ -1,0 +1,153 @@
+.cp-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+}
+
+.cp-content {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(247, 247, 247, 0.9)
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 450px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.cp-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #b27f38;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.cp-close-btn:hover {
+  background: rgba(178, 127, 56, 0.1);
+  transform: rotate(90deg);
+}
+
+.cp-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cp-header h2 {
+  font-size: 28px;
+  color: #b27f38;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cp-header p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cp-status {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cp-status.success {
+  color: green;
+}
+
+.cp-status.error {
+  color: red;
+}
+
+.cp-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-group {
+  margin-bottom: 20px;
+}
+
+.cp-group input,
+.cp-group textarea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  background: transparent;
+  font-family: var(--font-cormorant);
+  transition: border-color 0.3s ease;
+}
+
+.cp-group input:focus,
+.cp-group textarea:focus {
+  outline: none;
+  border-bottom-color: #b27f38;
+}
+
+.cp-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.cp-btn {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #b27f38;
+  background: transparent;
+  color: #b27f38;
+  font-size: 16px;
+  font-family: var(--font-cormorant);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.cp-btn:hover {
+  background: #b27f38;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(178, 127, 56, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cp-content {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  .cp-header h2 {
+    font-size: 24px;
+  }
+}

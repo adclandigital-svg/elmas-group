@@ -188,6 +188,7 @@
 }
 
 .icon-box {
+  text-align: center;
   height: 160px;
   width: 200px;
   display: flex;
@@ -330,7 +331,6 @@
 
 .arrival-section {
   background-position: center;
-  padding: 40px 0;
 }
 
 .arrival-section h2 {
