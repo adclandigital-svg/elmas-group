@@ -46,13 +46,13 @@
   top: -2px;
   width: 100%;
   z-index: 1000;
-  background: var(--nav-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /*background: var(--nav-bg);
+   -webkit-backdrop-filter: blur(12px);
+  */backdrop-filter: blur(4px);
+
   box-shadow: 0 8px 32px var(--nav-shadow);
-  transition:
-    background 0.3s ease,
-    backdrop-filter 0.3s ease;
+  transition:background 0.3s ease,    backdrop-filter 0.3s ease;
+
 }
 
 .nav-container {

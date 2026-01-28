@@ -83,10 +83,12 @@
   }
 
   .hero-overlay {
+    max-width: unset;
+    width: fit-content;
     bottom: 24px;
     left: 20px;
-    right: 20px;
-    max-width: unset;
+    right: auto;
+    padding: 10px;
   }
 
   .hero-overlay h1 {
@@ -545,7 +547,6 @@
   flex-wrap: wrap;
 }
 
-
 .fp-tab {
   background: #eee;
   border: none;
@@ -677,9 +678,9 @@
   .fp-back {
     padding: 40px;
   }
-  .fp-tabs button{
-  font-size: 10px;
-}
+  .fp-tabs button {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -933,7 +934,7 @@
 }
 @media (max-width: 1800px) {
   .about-container {
-  max-width: 95%;
+    max-width: 95%;
   }
 }
 

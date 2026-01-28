@@ -83,10 +83,12 @@
   }
 
   .hero-overlay {
+    max-width: unset;
+    width: fit-content;
     bottom: 24px;
     left: 20px;
-    right: 20px;
-    max-width: unset;
+    right: auto;
+    padding: 10px;
   }
 
   .hero-overlay h1 {
@@ -173,6 +175,7 @@
   color: rgba(0, 0, 0, 0.9);
   line-height: 1.4;
   font-size: 18px;
+  max-width: 550px;
 }
 .tag {
   color: #d8a23d;
@@ -188,7 +191,6 @@
 }
 
 .icon-box {
-  text-align: center;
   height: 160px;
   width: 200px;
   display: flex;
@@ -536,6 +538,8 @@
 
 /* Tabs */
 .fp-tabs {
+  margin: auto;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -673,6 +677,9 @@
   }
   .fp-back {
     padding: 40px;
+  }
+  .fp-tabs button {
+    font-size: 10px;
   }
 }
 
@@ -927,7 +934,7 @@
 }
 @media (max-width: 1800px) {
   .about-container {
-  max-width: 95%;
+    max-width: 95%;
   }
 }
 

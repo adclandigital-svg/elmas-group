@@ -1,5 +1,5 @@
 .nb-section {
-  height: 90vh;
+  height: 750px;
   width: 100%;
   padding: 40px 0;
   display: flex;
@@ -141,7 +141,7 @@
 /* ================= TABLET ================= */
 @media (max-width: 1024px) {
   .nb-section {
-    height: 90vh;
+    height: 600px;
   }
 
   .nb-center-title {
@@ -166,7 +166,7 @@
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .nb-section {
-    height: 65vh;
+    height: 550px;
     padding: 20px 0;
   }
 
@@ -225,7 +225,7 @@
 /* ================= SMALL MOBILE ================= */
 @media (max-width: 480px) {
   .nb-section {
-    height: 80vh;
+    height: 550px;
   }
 
   .nb-center-title {
