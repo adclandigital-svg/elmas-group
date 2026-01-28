@@ -191,6 +191,7 @@
 }
 
 .icon-box {
+  text-align: center;
   height: 160px;
   width: 200px;
   display: flex;
