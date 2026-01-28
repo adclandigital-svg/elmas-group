@@ -22,7 +22,7 @@ export default function ContactPopup() {
 
     const timer = setTimeout(() => {
       setShow(true);
-    }, 5000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
