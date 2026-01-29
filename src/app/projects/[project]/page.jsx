@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectHighlights from "./components/ProjectHighlights";
 import { useGSAP } from "@gsap/react";
+import LocationSection from "./components/LocationSection";
 import {
   FaSwimmingPool,
   FaDumbbell,
@@ -431,7 +432,8 @@ export default function ProjectPage() {
         </div>
       </section>
 
-      <NeighbourSection />
+      {/* <NeighbourSection /> */}
+      <LocationSection/>
       <ProjectHighlights />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
@@ -487,7 +489,7 @@ export default function ProjectPage() {
                 <a onClick={() => setShowForm("Brochure")}> Brochure</a>
                 <a onClick={() => setShowForm("Price")}>Price List</a>
               </div>
-            </div>,
+            </div>
           ])}
         </HTMLFlipBook>
       </section>

@@ -6,6 +6,7 @@ import HTMLFlipBook from "react-pageflip";
 import NeighbourSection from "./components/NeighbourSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LocationSection from "./components/LocationSection";
 import { useGSAP } from "@gsap/react";
 import {
   FaSwimmingPool,
@@ -493,8 +494,10 @@ export default function ProjectPage() {
         </div>
       </section>
 
+      
+      {/* <NeighbourSection /> */}
+      <LocationSection/>
       <ProjectHighlights />
-      <NeighbourSection />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
         <div className="fp-tabs">
