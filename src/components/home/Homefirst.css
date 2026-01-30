@@ -1,11 +1,17 @@
 .hero {
   position: relative;
+  height: 100vh;
 }
 
 .hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
 }
 .third {
   /* padding: 30px 0px; */
@@ -183,7 +189,8 @@ img {
 
   .third {
     height: auto;
-    min-height: 200vh;
+    min-height: 100vh;
+    padding: 40px 0px;
   }
 }
 
@@ -205,6 +212,9 @@ img {
 
 /* ≤1024px tablets */
 @media (max-width: 1024px) {
+  .third {
+    min-height: 100vh;
+  }
   .third h1,
   .third-second {
     max-width: 90%;
@@ -496,6 +506,10 @@ img {
 }
 
 @media (max-width: 1024px) {
+  .second-div1::after {
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+  }
   .section-title-absolute {
     font-size: 80px;
     color: #b27f38;
@@ -508,8 +522,7 @@ img {
   }
   .second {
     height: auto;
-    padding: 80px 24px;
-    gap: 40px;
+    padding: 40px 24px;
     margin-bottom: 0;
   }
 
@@ -517,7 +530,7 @@ img {
     height: auto;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 20px;
   }
 
   .section-title-absolute {
@@ -545,7 +558,7 @@ img {
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-    margin-top: 20px;
+    /* margin-top: 10px; */
   }
 
   .second-div2-inner-dimond {
@@ -564,14 +577,20 @@ img {
 
   .second-div2-inner-image {
     width: 240px;
+    content: url("/assets/dimond stroke pngs 2.png");
   }
 }
 
 @media (max-width: 600px) {
   .second {
-    min-height: 1050px;
-    padding: 10px 16px;
+    padding: 40px 16px;
     gap: 0px;
+  }
+  .second-div {
+    gap: 40px;
+  }
+  .second-div2-absolute {
+    margin-top: -20px;
   }
 
   .section-title-absolute {
@@ -611,11 +630,6 @@ img {
 }
 
 @media (max-width: 400px) {
-  .second {
-    min-height: 1100px;
-    padding: 10px 16px;
-    gap: 0px;
-  }
   .section-title-absolute {
     font-size: 26px;
   }
@@ -639,8 +653,5 @@ img {
 
   .second-div2-inner-image {
     width: 180px;
-  }
-  .second-div2-absolute {
-    margin-top: -40px;
   }
 }

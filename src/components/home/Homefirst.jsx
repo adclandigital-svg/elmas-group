@@ -162,7 +162,7 @@ export default function Homefirst() {
   }, []);
   return (
     <>
-      <section className="section hero">
+      <section className="hero">
         <video
           className="hero-video"
           autoPlay={true}

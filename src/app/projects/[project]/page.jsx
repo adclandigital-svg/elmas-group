@@ -91,18 +91,30 @@ export default function ProjectPage() {
   const flipBook = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    const saved = sessionStorage.getItem("leadData");
+    if (saved) {
+      setFormData(JSON.parse(saved));
+      setSubmitted(true);
+    }
+  }, []);
 
   const handleTabClick = (index) => {
     if (flipBook.current) {
-      flipBook.current.pageFlip().flip(index * 2); // Each plan has front/back => multiply by 2
+      flipBook.current.pageFlip().flip(index * 2);
     }
+  };
+
+  const handleFlip = (e) => {
+    const page = e.data;
+    const index =
+      window.innerWidth < 768 ? Math.trunc(page / 2) : Math.floor(page / 2);
     setActiveIndex(index);
   };
-  const handleFlip = (e) => {
-    const page = e.data; // current page number
-    const planIndex = Math.floor(page / 2);
-    setActiveIndex(planIndex);
-  };
+
   useGSAP(() => {
     const reveals = gsap.utils.toArray(".blog-reveal");
 
@@ -128,25 +140,40 @@ export default function ProjectPage() {
       );
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-    console.log("Lead Data:", data);
+    try {
+      if (!submitted) {
+        const res = await fetch("/api/send-lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...formData,
+            type: showForm === "Brochure" ? "Brochure" : "Price List",
+            project: "Spring Elmas",
+          }),
+        });
 
-    setShowForm(false);
+        if (!res.ok) throw new Error("API failed");
 
-    const link = document.createElement("a");
-    link.href =
-      showForm === "Brochure"
-        ? "/assets/Spring-Elmas-Brochure.pdf"
-        : "/assets/SpringElmasPriceList.pdf";
-    link.download = "";
+        sessionStorage.setItem("leadData", JSON.stringify(formData));
+        setSubmitted(true);
+      }
 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+      const link = document.createElement("a");
+      link.href =
+        showForm === "Brochure"
+          ? "/assets/Spring-Elmas-Brochure.pdf"
+          : "/assets/SpringElmasPriceList.pdf";
+      link.download = "";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      console.error("Lead submission failed:", err);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   const [size, setSize] = useState({ width: 700, height: 600 });
@@ -199,13 +226,16 @@ export default function ProjectPage() {
               Premium Lifestyle <br /> At Spring Elmas
             </h2>
             <p>
-              A thoughtfully designed residential community <br /> offering luxury,
-              comfort and modern living in the heart of Greater <br />Noida West.
-              Every amenity is crafted to elevate your everyday lifestyle.
+              A thoughtfully designed residential community <br /> offering
+              luxury, comfort and modern living in the heart of Greater <br />
+              Noida West. Every amenity is crafted to elevate your everyday
+              lifestyle.
             </p>
             <p>
-              Enjoy a perfect blend of wellness, recreation and relaxation with <br />
-              world-class facilities inside a secure gated township designed for <br />
+              Enjoy a perfect blend of wellness, recreation and relaxation with{" "}
+              <br />
+              world-class facilities inside a secure gated township designed for{" "}
+              <br />
               families, professionals and future-ready living.
             </p>
           </div>
@@ -433,7 +463,7 @@ export default function ProjectPage() {
       </section>
 
       {/* <NeighbourSection /> */}
-      <LocationSection/>
+      <LocationSection />
       <ProjectHighlights />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
@@ -489,7 +519,7 @@ export default function ProjectPage() {
                 <a onClick={() => setShowForm("Brochure")}> Brochure</a>
                 <a onClick={() => setShowForm("Price")}>Price List</a>
               </div>
-            </div>
+            </div>,
           ])}
         </HTMLFlipBook>
       </section>
@@ -518,21 +548,43 @@ export default function ProjectPage() {
             <p>Please fill the details to proceed</p>
 
             <form onSubmit={handleSubmit}>
-              <input type="text" name="name" placeholder="Full Name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                required
+                disabled={submitted}
+              />
               <input
                 type="email"
                 name="email"
                 placeholder="Email Address"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 required
+                disabled={submitted}
               />
               <input
                 type="tel"
                 name="phone"
                 placeholder="Mobile Number"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
                 required
+                disabled={submitted}
               />
 
-              <button type="submit">Submit & Download</button>
+              <button type="submit">
+                {submitted ? "Download" : "Submit & Download"}
+              </button>
             </form>
           </div>
         </div>

@@ -49,7 +49,6 @@ const plans = [
       { label: "Saleable Area", value: "1227 Sqft" },
       { label: "Bedrooms", value: "2" },
       { label: "Bathrooms", value: "2" },
-      { label: "Study", value: "Yes" },
       { label: "Tower", value: "T4 To T9" },
     ],
     description: "2 Bedroom + 2 Toilet + Study",
@@ -83,7 +82,6 @@ const plans = [
       { label: "Saleable Area", value: "1655 Sqft" },
       { label: "Bedrooms", value: "3" },
       { label: "Bathrooms", value: "3" },
-      { label: "Store Room", value: "Yes" },
       { label: "Tower", value: "T1 - T14" },
     ],
     description: "3 Bedroom + 3 Toilet + Store",
@@ -95,7 +93,6 @@ const plans = [
       { label: "Saleable Area", value: "1681 Sqft" },
       { label: "Bedrooms", value: "3" },
       { label: "Bathrooms", value: "3" },
-      { label: "Store Room", value: "Yes" },
       { label: "Tower", value: "T2 & T12" },
     ],
     description: "3 Bedroom + 3 Toilet + Store",
@@ -107,7 +104,6 @@ const plans = [
       { label: "Saleable Area", value: "1825 Sqft" },
       { label: "Bedrooms", value: "3" },
       { label: "Bathrooms", value: "3" },
-      { label: "Servant Room", value: "Yes" },
     ],
     description: "3 Bedroom + 3 Toilet + Servant",
   },
@@ -118,7 +114,6 @@ const plans = [
       { label: "Saleable Area", value: "1832 Sqft" },
       { label: "Bedrooms", value: "3" },
       { label: "Bathrooms", value: "3" },
-      { label: "Servant Room", value: "Yes" },
     ],
     description: "3 Bedroom + 3 Toilet + Servant",
   },
@@ -129,7 +124,6 @@ const plans = [
       { label: "Saleable Area", value: "1840 Sqft" },
       { label: "Bedrooms", value: "3" },
       { label: "Bathrooms", value: "3" },
-      { label: "Servant Room", value: "Yes" },
       { label: "Tower", value: "T16 & T17" },
     ],
     description: "3 Bedroom + 3 Toilet + Servant",
@@ -141,30 +135,38 @@ const plans = [
       { label: "Saleable Area", value: "2225 Sqft" },
       { label: "Bedrooms", value: "4" },
       { label: "Bathrooms", value: "3" },
-      { label: "Servant Room", value: "Yes" },
       { label: "Tower", value: "T16 & T17" },
     ],
     description: "4 Bedroom + 3 Toilet + Servant",
   },
 ];
 
-
-
 export default function ProjectPage() {
   const flipBook = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    const saved = sessionStorage.getItem("leadData");
+    if (saved) {
+      setFormData(JSON.parse(saved));
+      setSubmitted(true);
+    }
+  }, []);
 
   const handleTabClick = (index) => {
     if (flipBook.current) {
-      flipBook.current.pageFlip().flip(index * 2); // Each plan has front/back => multiply by 2
+      flipBook.current.pageFlip().flip(index * 2);
     }
-    setActiveIndex(index);
   };
+
   const handleFlip = (e) => {
-    const page = e.data; // current page number
-    const planIndex = Math.floor(page / 2);
-    setActiveIndex(planIndex);
+    const page = e.data;
+    const index =
+      window.innerWidth < 768 ? Math.trunc(page / 2) : Math.floor(page / 2);
+    setActiveIndex(index);
   };
 
   useGSAP(() => {
@@ -192,18 +194,39 @@ export default function ProjectPage() {
       );
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // 🔹 collect form data
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-    console.log("Lead Data:", data);
-    setShowForm(false);
-    // 🔹 open brochure AFTER submit
-    if (showForm == "Brochure") {
-      window.open("/assets/Spring-Elmas-Brochure.pdf", "_blank");
-    } else {
-      window.open("/assets/SpringElmasPriceList.pdf", "_blank");
+
+    try {
+      if (!submitted) {
+        const res = await fetch("/api/send-lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...formData,
+            type: showForm === "Brochure" ? "Brochure" : "Price List",
+            project: "Elmas Aquacasa",
+          }),
+        });
+
+        if (!res.ok) throw new Error("API failed");
+
+        sessionStorage.setItem("leadData", JSON.stringify(formData));
+        setSubmitted(true);
+      }
+
+      const link = document.createElement("a");
+      link.href =
+        showForm === "Brochure"
+          ? "/assets/Spring-Elmas-Brochure.pdf"
+          : "/assets/SpringElmasPriceList.pdf";
+      link.download = "";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      console.error("Lead submission failed:", err);
+      alert("Something went wrong. Please try again.");
     }
   };
 
@@ -494,9 +517,8 @@ export default function ProjectPage() {
         </div>
       </section>
 
-      
       {/* <NeighbourSection /> */}
-      <LocationSection/>
+      <LocationSection />
       <ProjectHighlights />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
@@ -581,21 +603,43 @@ export default function ProjectPage() {
             <p>Please fill the details to proceed</p>
 
             <form onSubmit={handleSubmit}>
-              <input type="text" name="name" placeholder="Full Name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                required
+                disabled={submitted}
+              />
               <input
                 type="email"
                 name="email"
                 placeholder="Email Address"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 required
+                disabled={submitted}
               />
               <input
                 type="tel"
                 name="phone"
                 placeholder="Mobile Number"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
                 required
+                disabled={submitted}
               />
 
-              <button type="submit">Submit & Download</button>
+              <button type="submit">
+                {submitted ? "Download" : "Submit & Download"}
+              </button>
             </form>
           </div>
         </div>

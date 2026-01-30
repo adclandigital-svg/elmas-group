@@ -217,6 +217,7 @@
 /* MOBILE */
 @media (max-width: 900px) {
   .career-page {
+    overflow-x: hidden;
     flex-direction: column;
   }
 
