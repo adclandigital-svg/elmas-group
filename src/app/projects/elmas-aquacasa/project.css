@@ -268,6 +268,7 @@
     width: 100%;
     padding: 60px 30px;
     gap: 40px;
+    flex-direction: column;
   }
 
   .text-side {
@@ -276,10 +277,8 @@
 
   .icon-grid {
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 10px;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 0px;
   }
   .text-side p br {
     display: none;
@@ -388,7 +387,7 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .facilities-wrapper {
-    width: 90%;
+    width: 95%;
   }
   .arrival-images {
     grid-template-columns: repeat(2, 1fr);
@@ -401,6 +400,9 @@
 
 /* Mobile */
 @media (max-width: 600px) {
+  .facilities-wrapper {
+    width: 90%;
+  }
   .arrival-section h2 {
     font-size: 26px;
   }

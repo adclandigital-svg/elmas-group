@@ -257,7 +257,7 @@
 /* ================= MOBILE ================= */
 @media (max-width: 600px) {
   .left-side {
-    height: 420px;
+    height: 550px;
   }
 
   .left-text h1 {

@@ -298,9 +298,18 @@
 }
 
 /* Responsive */
+
+@media (max-width: 1600px) {
+  .luxury-wrap {
+    padding: 0px 30px;
+  }
+}
 @media (max-width: 1100px) {
+  .luxury-wrap {
+    padding: 0;
+  }
   .luxury-section {
-    padding: 60px 5%;
+    padding: 60px 2.5%;
   }
   .luxury-head {
     grid-template-columns: 1fr;

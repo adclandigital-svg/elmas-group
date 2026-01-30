@@ -109,21 +109,23 @@
 
 /* ---------- RIGHT ---------- */
 .ph-right {
- padding: 40px 60px;
+  padding: 40px 60px;
 }
 
 .ph-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px 64px;
-  margin-bottom: 10PX;
+  margin-bottom: 10px;
 }
 
 .ph-item {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .ph-item:hover {
@@ -251,8 +253,6 @@
   }
 }
 
-
-
 .ph-right,
 .ph-left {
   overflow: hidden;
@@ -262,5 +262,3 @@
 .ph-list li {
   will-change: transform, opacity;
 }
-
-
