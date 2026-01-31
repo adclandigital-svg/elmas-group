@@ -218,8 +218,8 @@ export default function ProjectPage() {
       const link = document.createElement("a");
       link.href =
         showForm === "Brochure"
-          ? "/assets/Spring-Elmas-Brochure.pdf"
-          : "/assets/SpringElmasPriceList.pdf";
+          ? "/assets/AC-brochure-new.pdf"
+          : "/assets/AC-brochure-new.pdf";
       link.download = "";
       document.body.appendChild(link);
       link.click();
