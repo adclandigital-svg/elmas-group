@@ -73,7 +73,7 @@ export default function FeaturedSection() {
           <h2>SKYLINE RESIDENCES — THE NEXT ICONIC ADDRESS</h2>
 
           <div className="featured-image">
-            <img src="/construction/10.1.jpg" loading="lazy" />
+            <img src="https://elmas-group.vercel.app/construction/87.jpeg" loading="lazy" />
             <p className="featured-desc">
               Our latest project update reveals the launch of Skyline Residences
               — a future-ready residential landmark offering premium smart
