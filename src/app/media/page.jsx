@@ -77,10 +77,7 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img
-                src="/assets/12.jpg"
-                loading="lazy"
-              />
+              <img src="/assets/12.jpg" loading="lazy" />
               <div className="mc-feature-overlay">
                 <span>Press Release</span>
                 <h3>Spring Elmas Launches Premium Smart Residences</h3>
@@ -96,10 +93,7 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img
-                src="/assets/13.jpg"
-                loading="lazy"
-              />
+              <img src="/assets/13.jpg" loading="lazy" />
               <div className="mc-feature-overlay">
                 <span>In The News</span>
                 <h3>Elmas Group Featured Among Top Emerging Developers</h3>
@@ -125,20 +119,62 @@ export default function MediaCenterPage() {
         </div>
 
         <div className="mc-press-grid">
-          {[1, 2, 3, 4].map((_, i) => (
-            <article key={i} className="mc-press-card reveal">
-              <span className="reveal-mask" />
-              <div className="reveal-inner">
-                <span>Press Release</span>
-                <h4>Elmas Aquacasa Construction Milestone Achieved</h4>
-                <p>
-                  Phase 1 structural completion reached ahead of schedule,
-                  reaffirming our delivery commitment.
-                </p>
-                <a href="#">Read More →</a>
-              </div>
-            </article>
-          ))}
+          <article key={1} className="mc-press-card reveal">
+            <span className="reveal-mask" />
+            <div className="reveal-inner">
+              <span>Press Release</span>
+              <h4>Spring Elmas Towers Amber & Beryl Achieve Top-Out</h4>
+              <p>
+                Both towers reach their final height, marking a major
+                construction milestone. Interior finishing and landscaping now
+                underway for timely delivery.
+              </p>
+              <a href="#">Read More →</a>
+            </div>
+          </article>
+
+          <article key={2} className="mc-press-card reveal">
+            <span className="reveal-mask" />
+            <div className="reveal-inner">
+              <span>Press Release</span>
+              <h4>Elmas Aquacasa Wins 'Best Waterfront Project' Award</h4>
+              <p>
+                Recognized at the Noida Real Estate Excellence Awards 2025 for
+                innovative design and sustainable lakeside development.
+              </p>
+              <a href="#">Read More →</a>
+            </div>
+          </article>
+
+          <article key={3} className="mc-press-card reveal">
+            <span className="reveal-mask" />
+            <div className="reveal-inner">
+              <span>Press Release</span>
+              <h4>Elmas Group Launches Green Building Initiative</h4>
+              <p>
+                All new projects to feature solar power, rainwater harvesting,
+                and electric vehicle charging stations, aiming for IGBC Platinum
+                certification.
+              </p>
+              <a href="#">Read More →</a>
+            </div>
+          </article>
+
+          <article key={4} className="mc-press-card reveal">
+            <span className="reveal-mask" />
+            <div className="reveal-inner">
+              <span>Press Release</span>
+              <h4>
+                Strategic Partnership with Noida Authority for Infrastructure
+              </h4>
+              <p>
+                Elmas Group collaborates on widening of sector roads and
+                development of green belts around its projects to enhance
+                resident connectivity.
+              </p>
+              <a href="#">Read More →</a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -155,50 +191,35 @@ export default function MediaCenterPage() {
           <div className="mc-gallery-item tall reveal">
             <div className="reveal-inner">
               <span className="reveal-mask" />
-              <img
-                src="/springelmas_gallery/1.jpg"
-                loading="lazy"
-              />
+              <img src="/springelmas_gallery/1.jpg" loading="lazy" />
               <span>Luxury Living Room</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img
-                src="/springelmas_gallery/2.jpg"
-                loading="lazy"
-              />
+              <img src="/springelmas_gallery/2.jpg" loading="lazy" />
               <span>Modern Kitchen</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img
-                src="/springelmas_gallery/3.jpg"
-                loading="lazy"
-              />
+              <img src="/springelmas_gallery/3.jpg" loading="lazy" />
               <span>Bedroom Suite</span>
             </div>
           </div>
           <div className="mc-gallery-item tall reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img
-                src="/springelmas_gallery/4.jpg"
-                loading="lazy"
-              />
+              <img src="/springelmas_gallery/4.jpg" loading="lazy" />
               <span>Grand Entrance Lobby</span>
             </div>
           </div>
           <div className="mc-gallery-item wide reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img
-                src="/springelmas_gallery/5.jpg"
-                loading="lazy"
-              />
+              <img src="/springelmas_gallery/5.jpg" loading="lazy" />
               <span>Clubhouse & Amenities</span>
             </div>
           </div>
