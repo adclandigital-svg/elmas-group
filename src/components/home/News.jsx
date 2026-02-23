@@ -40,7 +40,7 @@ export default function FeaturedSection() {
               },
               600: {
                 direction: "horizontal", // vertical on all screen sizes
-                centeredSlides:false,
+                centeredSlides: false,
                 slidesPerView: 2,
                 spaceBetween: 8,
               },
@@ -73,10 +73,7 @@ export default function FeaturedSection() {
           <h2>SKYLINE RESIDENCES — THE NEXT ICONIC ADDRESS</h2>
 
           <div className="featured-image">
-            <img
-              src="https://img.freepik.com/premium-photo/dark-modern-stylish-male-apartment-interior-with-lighting-decorative-walls-fireplace-dressing-area-huge-window_267786-234.jpg?w=2000"
-              loading="lazy"
-            />
+            <img src="/construction/10.1.jpg" loading="lazy" />
             <p className="featured-desc">
               Our latest project update reveals the launch of Skyline Residences
               — a future-ready residential landmark offering premium smart
@@ -95,11 +92,11 @@ export default function FeaturedSection() {
             slidesPerView="auto"
             spaceBetween={40}
             loop={true}
-            speed={5000}
             autoplay={{
-              delay: 0,
+              delay: 1, 
               disableOnInteraction: false,
             }}
+            speed={5000}
             allowTouchMove={false}
             modules={[Autoplay]}
             className="logo-swiper linear-scroll"

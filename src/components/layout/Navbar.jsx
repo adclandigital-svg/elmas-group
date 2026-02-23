@@ -109,6 +109,7 @@ export default function Navbar() {
     "/cookies-policy",
     "/terms-conditions",
     "/cookies-policy",
+    "/construction-update"
   ];
 
   const isDark = darkRoutes.some((r) => pathname.startsWith(r));
@@ -192,6 +193,9 @@ export default function Navbar() {
           </Link>
           <Link href="/media" onClick={handleLinkClick}>
             Media Centre
+          </Link>
+          <Link href="/construction-update" onClick={handleLinkClick}>
+            Construction Updates
           </Link>
           <Link href="/careers" onClick={handleLinkClick}>
             Job Openings

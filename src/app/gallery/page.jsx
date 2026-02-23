@@ -8,15 +8,18 @@ import "./GalleryPage.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export const galleryImages = [
-  { title: "Luxury Pool", image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Clubhouse Lounge", image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Celebration Lawn", image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Fitness Center", image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Kids Play Area", image: "https://images.unsplash.com/photo-1641693765525-ffae066e40a2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Jogging Track", image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&w=1200&q=80" },
-  { title: "Banquet Hall",  image: "https://plus.unsplash.com/premium_photo-1673626577922-1b3f9771fc3f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", },
-  { title: "Security & Safety", image: "https://images.unsplash.com/photo-1614213856754-b28af802aa04?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", },
-  // duplicate or add more images as needed
+  { title: "Sport Area", image: "/springelmas_gallery/1.jpg" },
+  { title: "Park", image: "/springelmas_gallery/2.jpg" },
+  { title: "Badminton Court", image: "/springelmas_gallery/3.jpg" },
+  { title: "Kids Play", image: "/springelmas_gallery/4.jpg" },
+  { title: "Kids Play Area", image: "/springelmas_gallery/5.jpg" },
+  { title: "Swimming Pool", image: "/springelmas_gallery/6.jpg" },
+  { title: "Swimming Pool View", image: "/springelmas_gallery/7.jpg" },
+  { title: "Lift Area", image: "/springelmas_gallery/8.jpg" },
+  { title: "Bed Room", image: "/springelmas_gallery/9.jpg" },
+  { title: "Dining Area", image: "/springelmas_gallery/10.jpg" },
+  { title: "Shopping Complex", image: "/springelmas_gallery/11.jpg" },
+  { title: "Shopping Complex Exterior", image: "/springelmas_gallery/12.jpg" }
 ];
 
 export default function GalleryPage() {

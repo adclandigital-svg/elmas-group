@@ -33,7 +33,7 @@ export default function ProjectSlider() {
             className="project-slide"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=90')",
+                "url('https://seturealtors.com/wp-content/uploads/2026/02/sublime-spring-elmas-drawing-room-1170x738-1.webp)",
             }}
           >
             <div className="project-image"></div>
@@ -61,7 +61,7 @@ export default function ProjectSlider() {
             className="project-slide"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=90')",
+                "url('/assets/11.jpg')",
             }}
           >
             <div className="project-image"></div>

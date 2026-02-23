@@ -3,9 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./project.css";
 import HTMLFlipBook from "react-pageflip";
-import NeighbourSection from "./components/NeighbourSection";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectHighlights from "./components/ProjectHighlights";
 import { useGSAP } from "@gsap/react";
 import LocationSection from "./components/LocationSection";
@@ -327,7 +325,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353"
+                src="/springelmas_gallery/1.jpg"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -335,7 +333,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+               src="/springelmas_gallery/6.jpg"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -343,7 +341,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
+                src="/springelmas_gallery/10.jpg"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>

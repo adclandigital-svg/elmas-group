@@ -286,3 +286,10 @@
     height: 42px;
   }
 }
+
+.logo-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+} 

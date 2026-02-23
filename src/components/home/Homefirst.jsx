@@ -171,7 +171,10 @@ export default function Homefirst() {
           playsInline={true}
           preload="none"
         >
-          <source src="https://player.vimeo.com/progressive_redirect/playback/1047563454/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&oauth2_token_id=1679488103&signature=5afdff00577b5149ba096a81985770974bb1252229147bf0d87cea3ff95094f2" type="video/mp4" />
+          <source
+            src="https://player.vimeo.com/progressive_redirect/playback/1047563454/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&oauth2_token_id=1679488103&signature=5afdff00577b5149ba096a81985770974bb1252229147bf0d87cea3ff95094f2"
+            type="video/mp4"
+          />
         </video>
       </section>
       <section ref={thirdRef} className="section third third-section">
@@ -184,26 +187,20 @@ export default function Homefirst() {
           <div className="third-second-img">
             <img
               className="slide-img active"
-              src="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table_105762-2185.jpg"
+              src="/assets/13.jpg"
               alt="residential"
               loading="lazy"
             />
             <img
               className="slide-img"
-              src="https://img.freepik.com/free-photo/modern-interior-design-office_181624-21578.jpg"
+              src="/assets/12.jpg"
               alt="commercial"
               loading="lazy"
             />
             <img
               className="slide-img"
-              src="https://img.freepik.com/free-photo/minimalist-office-interior-design_23-2151826250.jpg?t=st=1766473652~exp=1766477252~hmac=6d0309ea549431e4e7a764a9d0f2b96ec5974b9108246429001fff3d5369ac0d&w=1480"
+              src="/assets/11.jpg"
               alt="residential"
-              loading="lazy"
-            />
-            <img
-              className="slide-img"
-              src="https://img.freepik.com/free-photo/modern-interior-design-office_181624-21578.jpg"
-              alt="commercial"
               loading="lazy"
             />
           </div>
@@ -300,28 +297,16 @@ export default function Homefirst() {
             className="second-div1"
             ref={(el) => el && imagesRef.current.push(el)}
           >
-            <img
-              className="float-img"
-              src="/assets/luxury-modern-living-room-with-elegant-decor-generated-by-ai.jpg"
-              loading="lazy"
-            />
-            <img
-              className="float-img"
-              src="/assets/modern-living-room-with-sectional-sofa-fireplace.jpg"
-              loading="lazy"
-            />
-            <img
-              className="float-img"
-              src="/assets/interior-design-neoclassical-style-with-furnishings-decor.jpg"
-              loading="lazy"
-            />
+            <img className="float-img" src="/assets/11.jpg" loading="lazy" />
+            <img className="float-img" src="/assets/12.jpg" loading="lazy" />
+            <img className="float-img" src="/assets/13.jpg" />
           </div>
           <div className="second-div2-absolute">
             {[
-              { count: 50, label: "Complete Projects" },
-              { count: 70, label: "Years Experience" },
-              { count: 15, label: "Lakh sq.m Delivered" },
-              { count: 14, label: "Awards Won" },
+              { count: 28, label: "Projects" },
+              { count: 14, label: "Years" },
+              { count: 9, label: "Mn Sq.ft" },
+              { count: 4500, label: "Families" },
             ].map((item, i) => (
               <div key={i} className="second-div2-inner-dimond">
                 <img

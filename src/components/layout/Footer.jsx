@@ -41,7 +41,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="#"
+          href="https://www.instagram.com/elmasgroupofficial/"
           className="social instagram"
           target="_blank"
           rel="noopener noreferrer"

@@ -1,17 +1,14 @@
 export const allBlogs = [
   {
-    slug: "waterfront-luxury-living",
-    title: "Waterfront Luxury Living",
-    description:
-      "Explore serene lakeside apartments and premium waterfront amenities at Rudra Aquacasa.",
-    image:
-      "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=1200&q=80",
-    author: "Rudra Aquacasa Team",
-    date: "Jan 5, 2026",
-    category: "Luxury Living",
-    content:
-      "Experience unparalleled waterfront luxury at Rudra Aquacasa. Each apartment is designed to maximize natural light and offer panoramic views of the serene lake. Large windows and open-plan layouts ensure a seamless connection between your indoor living spaces and the outdoors.\n\nThe residences feature spacious layouts with premium finishes, smart home automation, and expansive balconies. Every corner is thoughtfully designed to offer comfort, elegance, and convenience, making it ideal for modern family living. The interiors blend contemporary aesthetics with functional design for daily luxury.\n\nResidents enjoy world-class amenities including private decks, resort-style swimming pools, and clubhouse lounges. Dedicated concierge services and personalized support add convenience to everyday life. From spa zones to indoor activity areas, leisure is always at your doorstep.\n\nBeautifully landscaped gardens, jogging tracks, wellness zones, and meditation areas create a calm and rejuvenating environment. Outdoor spaces are crafted to provide serenity while promoting a healthy lifestyle. Children’s play areas and family zones ensure fun for all ages.\n\nPerfect for modern families and professionals seeking tranquility without compromising connectivity. Enjoy easy access to business hubs, schools, shopping centers, and entertainment destinations. Rudra Aquacasa combines luxury, community, and convenience for an unmatched residential experience.",
-  },
+    "slug": "spring-elmas-construction-update",
+    "title": "Construction Milestones at Spring Elmas",
+    "description": "Stay updated with the latest construction progress of Spring Elmas towers – Amber, Beryl, Coral, and Diamond – as we build your dream home.",
+    "image": "/assets/3.jpg",
+    "author": "Spring Elmas Team",
+    "date": "Jan 5, 2026",
+    "category": "Construction Updates",
+    "content": "We are excited to share the latest construction milestones at Spring Elmas. The project features four iconic towers – Amber, Beryl, Coral, and Diamond – each designed to offer premium living spaces with modern architecture and thoughtful layouts.\n\nWork on all four towers is progressing on schedule. Tower A (Amber) and Tower B (Beryl) have reached their 15th floor, while Tower C (Coral) and Tower D (Diamond) are advancing rapidly with framework completed up to the 12th floor. The construction team is focused on quality and timely delivery.\n\nInterior finishing is underway in the lower floors of Amber and Beryl, showcasing elegant flooring, modular kitchens, and premium fixtures. The lobbies and common areas are being designed to provide a grand welcome for residents.\n\nExternal development includes landscaping of the central garden, children's play areas, and the swimming pool complex. The clubhouse, which will feature a gym, indoor games, and community spaces, is also taking shape.\n\nWe are committed to transparency and will continue to provide regular photo updates. You can view the latest images in our gallery. Thank you for your trust in Spring Elmas – your dream home is becoming a reality."
+},
   {
     slug: "smart-township-planning",
     title: "Smart Township Planning",

@@ -77,7 +77,10 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" loading="lazy"/>
+              <img
+                src="/assets/12.jpg"
+                loading="lazy"
+              />
               <div className="mc-feature-overlay">
                 <span>Press Release</span>
                 <h3>Spring Elmas Launches Premium Smart Residences</h3>
@@ -93,7 +96,10 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=1400" loading="lazy"/>
+              <img
+                src="/assets/13.jpg"
+                loading="lazy"
+              />
               <div className="mc-feature-overlay">
                 <span>In The News</span>
                 <h3>Elmas Group Featured Among Top Emerging Developers</h3>
@@ -149,35 +155,50 @@ export default function MediaCenterPage() {
           <div className="mc-gallery-item tall reveal">
             <div className="reveal-inner">
               <span className="reveal-mask" />
-              <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1400" loading="lazy"/>
+              <img
+                src="/springelmas_gallery/1.jpg"
+                loading="lazy"
+              />
               <span>Luxury Living Room</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400" loading="lazy"/>
+              <img
+                src="/springelmas_gallery/2.jpg"
+                loading="lazy"
+              />
               <span>Modern Kitchen</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400" loading="lazy"/>
+              <img
+                src="/springelmas_gallery/3.jpg"
+                loading="lazy"
+              />
               <span>Bedroom Suite</span>
             </div>
           </div>
           <div className="mc-gallery-item tall reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400" loading="lazy"/>
+              <img
+                src="/springelmas_gallery/4.jpg"
+                loading="lazy"
+              />
               <span>Grand Entrance Lobby</span>
             </div>
           </div>
           <div className="mc-gallery-item wide reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1600" loading="lazy"/>
+              <img
+                src="/springelmas_gallery/5.jpg"
+                loading="lazy"
+              />
               <span>Clubhouse & Amenities</span>
             </div>
           </div>
@@ -199,9 +220,11 @@ export default function MediaCenterPage() {
             <span className="reveal-mask" />
             <div className="reveal-inner">
               <iframe
-                src="https://www.youtube.com/embed/ysz5S6PUM-U"
-                loading="lazy"
-                allowFullScreen
+                src="https://www.youtube.com/embed/Td3HO6uWi5M"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen=""
               ></iframe>
               <h4>Spring Elmas — Project Walkthrough</h4>
             </div>
@@ -211,9 +234,13 @@ export default function MediaCenterPage() {
             <span className="reveal-mask" />
             <div className="reveal-inner">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                loading="lazy"
-                allowFullScreen
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/sr19eLZi3Ak"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
               ></iframe>
               <h4>Elmas Group — Brand Story</h4>
             </div>
@@ -223,12 +250,9 @@ export default function MediaCenterPage() {
 
       {/* ================= CONTACT ================= */}
       <section className="mc-contact ">
-        
-
         <div className="mc-contact-box reveal">
           <span className="reveal-mask" />
           <div className="reveal-inner ">
-            
             <h3>Connect With Our Media Desk</h3>
             <p>
               Journalists, partners, and collaborators — reach our
