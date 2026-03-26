@@ -49,9 +49,10 @@
   /*background: var(--nav-bg);
   -webkit-backdrop-filter: blur(12px);
   */
-  /* background: #d3b071; */
-  backdrop-filter: blur(4px);
-  box-shadow: 0 8px 32px var(--nav-shadow);
+  /* backdrop-filter: blur(4px); */
+  /* box-shadow: 0 8px 32px var(--nav-shadow); */
+
+  background-color: #fff;
 }
 
 .nav-container {
@@ -71,11 +72,12 @@
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-light);
+  /* color: var(--text-light); */
+  color: #b17e38;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 1000;
   text-transform: uppercase;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease  ;
 }
 .nav-links a:hover {
   color: var(--hover-accent) !important; /* ✅ same as normal */
@@ -89,6 +91,7 @@
 
 .navbar.scrolled a {
   color: var(--text-dark);
+  
 }
 .navbar.scrolled a:hover {
   color: var(--hover-accent) !important;
@@ -105,8 +108,9 @@
 .menu-toggle span {
   width: 24px;
   height: 2px;
-  background: var(--text-light);
+  /* background: var(--text-light); */
   transition: background 0.3s ease;
+  background-color: #b17e38;
 }
 
 .menu-toggle:hover span {
@@ -216,6 +220,10 @@
   .sidebar-links-project {
     display: none !important;
   }
+  /* .navbar{
+    position: sticky;
+  } */
+
 }
 
 /* Floating WhatsApp button */

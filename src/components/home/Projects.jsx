@@ -29,42 +29,10 @@ export default function ProjectSlider() {
       >
         {/* Slide 1 */}
         <SwiperSlide>
-          <div
-            className="project-slide"
-            style={{
-              backgroundImage:
-                "url('https://seturealtors.com/wp-content/uploads/2026/02/sublime-spring-elmas-drawing-room-1170x738-1.webp)",
-            }}
-          >
-            <div className="project-image"></div>
-
-            <div className="project-content">
-              <h2>Elmas Aquacasa</h2>
-              <h4>Luxury Waterfront Residences</h4>
-              <p>
-                Elmas Aquacasa is a premium residential development designed for
-                elevated urban living. Featuring contemporary architecture,
-                expansive green spaces, and resort-style amenities, the project
-                offers thoughtfully crafted homes that balance elegance,
-                comfort, and sustainability.
-              </p>
-              <Link href="/projects/elmas-aquacasa" className="project-btn">
-                Explore Project
-              </Link>
+          <div className="project-slide">
+            <div className="project-image">
+              <img src="/assets/Spring Elmas/spring-elmas-new.jpg" alt="" />
             </div>
-          </div>
-        </SwiperSlide>
-
-        {/* Slide 2 */}
-        <SwiperSlide>
-          <div
-            className="project-slide"
-            style={{
-              backgroundImage:
-                "url('/assets/11.jpg')",
-            }}
-          >
-            <div className="project-image"></div>
 
             <div className="project-content">
               <h2>Spring Elmas</h2>
@@ -82,6 +50,34 @@ export default function ProjectSlider() {
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="project-slide"
+            style={{
+              backgroundImage:
+                "url('https://seturealtors.com/wp-content/uploads/2026/02/sublime-spring-elmas-drawing-room-1170x738-1.webp)",
+            }}
+          >
+            <div className="project-image"></div>
+
+            <div className="project-content">
+              <h2>Elmas Aquacasa</h2>
+              <h4>Designed for Comfort, Built for Luxury</h4>
+              <p>
+                Elmas Aquacasa is a premium residential development designed for
+                elevated urban living. Featuring contemporary architecture,
+                expansive green spaces, and resort-style amenities, the project
+                offers thoughtfully crafted homes that balance elegance,
+                comfort, and sustainability.
+              </p>
+              <Link href="/projects/elmas-aquacasa" className="project-btn">
+                Explore Project
+              </Link>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 2 */}
       </Swiper>
     </div>
   );

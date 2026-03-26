@@ -42,10 +42,10 @@
 }
 
 .ph-eyebrow {
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 3px;
-  color: #8f7a4a;
-  font-weight: 600;
+  color: #b17e38;
+  font-weight: 1000;
   display: inline-block;
   margin-bottom: 30px;
   margin-top: 10px;
@@ -89,9 +89,9 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 15px;
-  color: #2c2c2c;
-  margin-bottom: 16px;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 12px;
 }
 
 .ph-list li span {
@@ -102,9 +102,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  color: #d2ab63;
-  background: linear-gradient(145deg, #fff, #fbf5e8);
+  font-size: 14px;
+  color: #000000;
+  font-weight: 600;
+  background: white;
 }
 
 /* ---------- RIGHT ---------- */
@@ -136,7 +137,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #fff, #f7ecd8);
+  background: white;
   border: 1px solid #ead3aa;
   display: flex;
   align-items: center;
@@ -152,7 +153,7 @@
 }
 
 .ph-item h5 {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 1.4px;
   margin-bottom: 4px;
   color: #1e1e1e;
@@ -160,10 +161,10 @@
 }
 
 .ph-item p {
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
+  color: #000000;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.3;
 }
 
 /* ---------- RESPONSIVE ---------- */

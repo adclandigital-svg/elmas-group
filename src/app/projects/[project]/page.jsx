@@ -21,7 +21,7 @@ import {
 const plans = [
   {
     title: "3 BHK + 2T - 1355 Sqft",
-    image: "https://springelmas.com/img/others/1355.png",
+    image: "/assets/spring-elmas-map/1.png",
     details: [
       { label: "Balcony Area", value: "186.87 Sqft" },
       { label: "Saleable Area", value: "1355 Sqft" },
@@ -34,7 +34,7 @@ const plans = [
 
   {
     title: "3 BHK + 3T - 1580 Sqft",
-    image: "https://springelmas.com/img/others/1580.png",
+    image: "/assets/spring-elmas-map/2.png",
     details: [
       { label: "Balcony Area", value: "195.96 Sqft" },
       { label: "Saleable Area", value: "1580 Sqft" },
@@ -47,7 +47,7 @@ const plans = [
 
   {
     title: "3 BHK + 3T - 1600 Sqft",
-    image: "https://springelmas.com/img/others/1600.png",
+    image: "/assets/spring-elmas-map/3.png",
     details: [
       { label: "Balcony Area", value: "186.29 Sqft" },
       { label: "Saleable Area", value: "1600 Sqft" },
@@ -60,7 +60,7 @@ const plans = [
 
   {
     title: "3BHK + Study - 1895 Sqft",
-    image: "https://springelmas.com/img/others/1895.png",
+    image: "/assets/spring-elmas-map/4.png",
     details: [
       { label: "Total Area", value: "1895 Sqft" },
       { label: "Bedroom", value: "132 Sqft" },
@@ -73,7 +73,7 @@ const plans = [
 
   {
     title: "4BHK + Servant - 2450 Sqft",
-    image: "https://springelmas.com/img/others/2450.png",
+    image: "/assets/spring-elmas-map/5.png",
     details: [
       { label: "Total Area", value: "2450 Sqft" },
       { label: "Bedroom", value: "154 Sqft" },
@@ -325,7 +325,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="/springelmas_gallery/1.jpg"
+                src="/assets/Spring Elmas/0004.jpg"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -333,7 +333,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-               src="/springelmas_gallery/6.jpg"
+                src="/assets/Spring Elmas/0026.jpg"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -341,7 +341,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="/springelmas_gallery/10.jpg"
+                src="/assets/Spring Elmas/0024.jpg"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -525,7 +525,7 @@ export default function ProjectPage() {
       <section className="map-section">
         <div className="map-wrapper">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1183054479466!2d77.33707237469218!3d28.596227485729816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce51bb75705cd%3A0x88444239fb967882!2sSpring%20Elmas!5e0!3m2!1sen!2sin!4v1685816154912!5m2!1sen!2sin"
+            src="https://www.google.com/maps?q=28.5623129,77.4830676&z=15&output=embed"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

@@ -69,7 +69,7 @@ export default function LocationSection() {
         {/* Header */}
         <div className="luxury-head">
           <div className="luxury-head-left">
-            <div className="luxury-eyebrow">Elmas AquaCasa</div>
+            <div className="luxury-eyebrow">Spring Elmas</div>
             <h2>
               Where Luxury Begins With <span>Perfect Placement</span>
             </h2>

@@ -48,7 +48,7 @@
 }
 
 .latest-articles h4 {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 2px;
   margin-bottom: 18px;
   color: #b27f38;
@@ -81,7 +81,7 @@
 }
 
 .article-card p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   text-align: center;
   line-height: 1.4;
@@ -98,9 +98,9 @@
 }
 
 .featured-main h5 {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 2px;
-  color: #e1bd9b;
+  color: #b27f38;
 }
 
 .featured-main h2 {
@@ -129,8 +129,9 @@
 
 .featured-desc {
   width: 35%;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
+  font-weight: 500;
 }
 
 /* =========================
@@ -147,7 +148,7 @@
 }
 
 .logo-swiper .swiper-slide {
-  width: auto !important;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,11 +258,12 @@
   }
 
   .article-card p {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .featured-main h5 {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 1000;
   }
 
   .featured-main h2 {
@@ -274,7 +276,7 @@
   }
 
   .featured-desc {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.45;
   }
 
@@ -283,7 +285,7 @@
   }
 
   .logo-card img {
-    height: 42px;
+    height: 62px;
   }
 }
 

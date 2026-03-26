@@ -81,7 +81,7 @@ export default function Footer() {
         <div className="footer-inner">
           {/* Brand / About */}
           <div className="footer-brand">
-            <img src="/assets/logo.png" width={120} loading="lazy" />
+            <img src="/assets/logo.png" className="footer-logo" width={120} loading="lazy" />
             <p>
               Designing spaces that feel alive, balanced, and enduring. Elmas
               Group is committed to building vibrant, sustainable communities.
@@ -112,7 +112,7 @@ export default function Footer() {
             <p>Elmas Group,</p>
             <p>Noida Extension, Uttar Pradesh, India</p>
             <p>Email: info@elmasgroup.com</p>
-            <p>Phone: +91 98765 43210</p>
+            <p >Phone: +91 98765 43210</p>
           </div>
         </div>
 

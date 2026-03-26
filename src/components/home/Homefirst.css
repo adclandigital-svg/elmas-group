@@ -96,7 +96,7 @@
 .third-second-text p {
   width: 100%;
   margin-bottom: 10px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   text-align: center;
   font-size: 20px;
   line-height: 1.7;
@@ -286,7 +286,9 @@ img {
   }
 
   .third-second-text p {
-    font-size: 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.6;
   }
   .third-second-text {
     height: 420px;
@@ -317,7 +319,7 @@ img {
     width: 350px;
   }
   .third-second-text p {
-    font-size: 10px;
+    font-size: 10.5px;
   }
 }
 
@@ -352,7 +354,6 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: black;
 }
 
 .second-div1::after {
@@ -618,15 +619,20 @@ img {
   }
 
   .second-div2-inner-dimond h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .second-div2-inner-dimond p {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: none;
   }
 
   .second-div2-inner-image {
     width: 190px;
+  }
+  .second-div1::after{
+    background-color: transparent;
   }
 }
 
@@ -645,11 +651,11 @@ img {
   }
 
   .second-div2-inner-dimond h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .second-div2-inner-dimond p {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .second-div2-inner-image {

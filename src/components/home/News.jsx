@@ -6,9 +6,17 @@ import "swiper/css";
 import "./news.css";
 import { allBlogs } from "@/app/blogs/blogData";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function FeaturedSection() {
   const route = useRouter();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <section className="featured-wrap">
@@ -24,22 +32,27 @@ export default function FeaturedSection() {
             loop={true}
             speed={1200}
             centeredSlides={true}
-            allowTouchMove={true} // enable swipe
-            simulateTouch={true} // allow swipe gestures
+            allowTouchMove={true}
+            simulateTouch={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
+            }}
+            observer={true}
+            observeParents={true}
+            onSwiper={(swiper) => {
+              setTimeout(() => swiper.update(), 100);
             }}
             modules={[Autoplay]}
             className="article-swiper"
             breakpoints={{
               0: {
-                direction: "horizontal", // vertical on all screen sizes
+                direction: "horizontal",
                 slidesPerView: 1,
                 spaceBetween: 8,
               },
               600: {
-                direction: "horizontal", // vertical on all screen sizes
+                direction: "horizontal",
                 centeredSlides: false,
                 slidesPerView: 2,
                 spaceBetween: 8,
@@ -59,7 +72,11 @@ export default function FeaturedSection() {
                 style={{ cursor: "pointer" }}
               >
                 <div className="article-card">
-                  <img src={blog.image} alt={blog.title} loading="lazy" />
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    loading={index === 0 ? "eager" : "lazy"} // fix layout shift
+                  />
                   <p>{blog.title}</p>
                 </div>
               </SwiperSlide>
@@ -67,13 +84,17 @@ export default function FeaturedSection() {
           </Swiper>
         </div>
 
-        {/* CENTER COLUMN — STATIC */}
+        {/* CENTER COLUMN */}
         <div className="featured-main">
           <h5>LATEST PROJECT UPDATE</h5>
           <h2>SKYLINE RESIDENCES — THE NEXT ICONIC ADDRESS</h2>
 
           <div className="featured-image">
-            <img src="https://elmas-group.vercel.app/construction/87.jpeg" loading="lazy" />
+            <img
+              src="https://elmas-group.vercel.app/construction/87.jpeg"
+              loading="eager"
+              alt="project"
+            />
             <p className="featured-desc">
               Our latest project update reveals the launch of Skyline Residences
               — a future-ready residential landmark offering premium smart
@@ -92,12 +113,17 @@ export default function FeaturedSection() {
             slidesPerView="auto"
             spaceBetween={40}
             loop={true}
-            autoplay={{
-              delay: 1, 
-              disableOnInteraction: false,
-            }}
             speed={5000}
             allowTouchMove={false}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            observer={true}
+            observeParents={true}
+            onSwiper={(swiper) => {
+              setTimeout(() => swiper.update(), 100);
+            }}
             modules={[Autoplay]}
             className="logo-swiper linear-scroll"
           >
@@ -109,7 +135,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -118,7 +143,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -127,7 +151,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -136,7 +159,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -153,7 +175,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -162,7 +183,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -171,7 +191,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -180,7 +199,6 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="logo-card">
                 <img

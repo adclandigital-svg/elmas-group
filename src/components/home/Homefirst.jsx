@@ -186,20 +186,38 @@ export default function Homefirst() {
         <div className="third-second">
           <div className="third-second-img">
             <img
-              className="slide-img active"
-              src="/assets/13.jpg"
+              className="slide-img"
+              src="/assets/Spring Elmas/0022.jpg"
               alt="residential"
               loading="lazy"
             />
             <img
               className="slide-img"
-              src="/assets/12.jpg"
+              src="/assets/Spring Elmas/0023.jpg"
+              alt="residential"
+              loading="lazy"
+            />
+            <img
+              className="slide-img"
+              src="/assets/Spring Elmas/0024.jpg"
+              alt="residential"
+              loading="lazy"
+            />
+            <img
+              className="slide-img active"
+              src="/assets/Spring Elmas/0011.jpg"
+              alt="residential"
+              loading="lazy"
+            />
+            <img
+              className="slide-img"
+              src="/assets/Spring Elmas/0012.jpg"
               alt="commercial"
               loading="lazy"
             />
             <img
               className="slide-img"
-              src="/assets/11.jpg"
+              src="/assets/Spring Elmas/0013.jpg"
               alt="residential"
               loading="lazy"
             />
@@ -220,8 +238,7 @@ export default function Homefirst() {
                 Going smart over the natural resources <br /> endow the
                 residents with an <br />
                 eco-living in this blissfully
-                <br /> tranquil location. <br />
-                end
+                <br /> tranquil location.
               </p>
               <img
                 className="diamond-img"

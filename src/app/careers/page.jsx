@@ -102,12 +102,11 @@ export default function CareerPage() {
       {/* LEFT IMAGE PANEL */}
       <div className="career-left-panel">
         <img
-          src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
+          src="/assets/Spring Elmas/0014.jpg"
           alt="Building"
         />
         <div className="career-tagline">
           <h4>Building Legacies.</h4>
-          <p>Your Dreams, Our Blueprint.</p>
         </div>
       </div>
 

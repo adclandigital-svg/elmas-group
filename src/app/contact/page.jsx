@@ -178,7 +178,7 @@ export default function ContactPage() {
               <span className="icon">📞</span>
               <div>
                 <h3>Phone</h3>
-                <p>+91 98765 43210</p>
+                <p >+91 98765 43210</p>
               </div>
             </div>
             <div className="info-card">

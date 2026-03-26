@@ -108,12 +108,12 @@
   }
 
   .hero-overlay h1 {
-    font-size: 24px;
-    -webkit-text-stroke: 0.3px #fff;
+    font-size: 35px;
+    -webkit-text-stroke: 0.5px #fff;
   }
 
   .hero-overlay p {
-    font-size: 13px;
+    font-size: 18px;
   }
 }
 
@@ -161,9 +161,10 @@
 }
 
 .text-side .tag {
-  color: #d8a23d;
+  color: #b27f38;
   letter-spacing: 2px;
   font-size: 12px;
+  font-weight: 1000;
 }
 
 .text-side h2 {
@@ -178,10 +179,11 @@
   max-width: 550px;
 }
 .tag {
-  color: #d8a23d;
-  letter-spacing: 2.5px;
+  color:#b27f38;
+  letter-spacing: 2px;
   font-size: 12px;
   margin-bottom: 5px;
+  font-weight: 1000;
 }
 
 .icon-grid {
@@ -623,9 +625,9 @@
 }
 
 .fp-description {
-  font-size: 0.95rem;
+  font-size: 16px;
   margin-bottom: 15px;
-  color: #555;
+  color: #000000;
 }
 
 .fp-details-list {
@@ -642,11 +644,12 @@
 }
 
 .fp-details-list span {
-  color: #444;
+  color: #080808;
 }
 
 .fp-details-list strong {
-  color: #463636;
+  color: #313131;
+  font-family: none;
 }
 
 /* Download links */
@@ -883,7 +886,7 @@
 .project-address span {
   display: block;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #b27f38;
@@ -891,7 +894,7 @@
 }
 
 .project-address p {
-  font-size: 16px;
+  font-size: 18px;
   color: #222;
   font-weight: 500;
   line-height: 1.6;
@@ -907,7 +910,7 @@
 .about-text p {
   font-size: 18px;
   line-height: 1.7;
-  color: #555;
+  color: #000000;
 }
 
 .stats-grid {
@@ -938,8 +941,8 @@
 }
 
 .stat span {
-  font-size: 14px;
-  color: #777;
+  font-size: 18px;
+  color: #000000;
 }
 @media (max-width: 1800px) {
   .about-container {

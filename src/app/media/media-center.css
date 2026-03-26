@@ -10,7 +10,7 @@
 .mc-hero {
   position: relative;
   height: 85vh;
-  background: url("/assets/11.jpg")
+  background: url("/assets/Spring Elmas/0020.jpg")
     center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -50,10 +50,10 @@
 }
 
 .mc-hero-content p {
-  font-size: 18px;
+  font-size: 20px;
   max-width: 650px;
   margin: auto;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* ================= SECTIONS ================= */
@@ -75,8 +75,8 @@
 }
 
 .mc-section-head p {
-  font-size: 16px;
-  color: #555;
+  font-size: 20px;
+  color: #000000;
 }
 
 /* ================= FEATURED ================= */
@@ -134,6 +134,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #e1bd9b;
+  font-weight: 700;
 }
 
 .mc-feature-overlay h3 {
@@ -142,8 +143,8 @@
 }
 
 .mc-feature-overlay p {
-  font-size: 15px;
-  opacity: 0.9;
+  font-size: 18px;
+  opacity: 2;
 }
 
 .mc-feature-overlay a {
@@ -153,7 +154,7 @@
   border-radius: 30px;
   border: 1px solid #e1bd9b;
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -200,27 +201,30 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #b27f38;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mc-press-card h4 {
   font-size: 17px;
-  line-height: 1.4;
+  line-height: 1.3;
   color: #111;
 }
 
 .mc-press-card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
+  margin-top: 10PX;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #000000;
+  margin-bottom: 10px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .mc-press-card a {
-  margin-top: auto;
-  font-size: 13px;
+  font-size: 15px;
   color: #b27f38;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mc-press-card a:hover {
@@ -280,7 +284,7 @@
     rgba(0, 0, 0, 0.8)
   );
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.3px;
 }
 
@@ -415,15 +419,15 @@
   }
 
   .mc-hero-content p {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .mc-section-head h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .mc-section-head p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .mc-feature-card {
@@ -435,11 +439,11 @@
   }
 
   .mc-feature-overlay h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .mc-feature-overlay p {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .mc-press-grid {
@@ -474,16 +478,17 @@
   }
 
   .mc-contact-box h3 {
-    font-size: 24px;
+    font-size: 25px;
   }
 
   .mc-contact-box p {
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 1.3;
   }
 
   .mc-contact-box a {
     padding: 12px 28px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 

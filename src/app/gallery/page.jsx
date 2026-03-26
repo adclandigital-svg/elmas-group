@@ -8,18 +8,18 @@ import "./GalleryPage.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export const galleryImages = [
-  { title: "Sport Area", image: "/springelmas_gallery/1.jpg" },
-  { title: "Park", image: "/springelmas_gallery/2.jpg" },
-  { title: "Badminton Court", image: "/springelmas_gallery/3.jpg" },
-  { title: "Kids Play", image: "/springelmas_gallery/4.jpg" },
-  { title: "Kids Play Area", image: "/springelmas_gallery/5.jpg" },
-  { title: "Swimming Pool", image: "/springelmas_gallery/6.jpg" },
-  { title: "Swimming Pool View", image: "/springelmas_gallery/7.jpg" },
+  { title: "Sport Area", image: "/assets/Spring Elmas/0007.jpg" },
+  { title: "Park", image: "/assets/Spring Elmas/0006.jpg"  },
+  { title: "Badminton Court", image: "/assets/Spring Elmas/0003.jpg"  },
+  { title: "Kids Play", image: "/assets/Spring Elmas/0004.jpg" },
+  { title: "Kids Play Area", image: "/assets/Spring Elmas/0005.jpg" },
+  { title: "Swimming Pool", image: "/assets/Spring Elmas/0025.jpg" },
+  { title: "Swimming Pool View", image: "/assets/Spring Elmas/0026.jpg" },
   { title: "Lift Area", image: "/springelmas_gallery/8.jpg" },
-  { title: "Bed Room", image: "/springelmas_gallery/9.jpg" },
-  { title: "Dining Area", image: "/springelmas_gallery/10.jpg" },
-  { title: "Shopping Complex", image: "/springelmas_gallery/11.jpg" },
-  { title: "Shopping Complex Exterior", image: "/springelmas_gallery/12.jpg" }
+  { title: "Bed Room", image: "/assets/Spring Elmas/0012.jpg" },
+  { title: "Dining Area", image: "/assets/Spring Elmas/0013.jpg" },
+  { title: "Shopping Complex", image:  "/assets/Spring Elmas/0022.jpg" },
+  { title: "Shopping Complex Exterior", image: "/assets/Spring Elmas/0024.jpg" }
 ];
 
 export default function GalleryPage() {

@@ -2,7 +2,7 @@
   --lux-gold: #b27f38;
   --lux-gold-soft: rgba(178, 127, 56, 0.25);
   --lux-text-dark: #0b0c10;
-  --lux-text-soft: #4b5563;
+  --lux-text-soft: #000000;
   --lux-line: rgba(0, 0, 0, 0.08);
 }
 
@@ -69,11 +69,12 @@
 }
 
 .luxury-eyebrow {
-  font-size: clamp(10px, 1vw, 12px);
+  font-size: clamp(10px, 1vw, 14px);
   letter-spacing: 0.45em;
   text-transform: uppercase;
   color: var(--lux-gold);
   margin-bottom: 22px;
+  font-weight: 1000;
 }
 
 .luxury-head-left h2 {
@@ -276,7 +277,7 @@
   padding-left: 28px;
   font-size: clamp(14px, 1.5vw, 17px);
   line-height: 1.9;
-  color: #1f2937;
+  color: #000000;
 }
 
 .luxury-item::before {
@@ -292,9 +293,11 @@
 }
 
 .luxury-item span {
+
   color: var(--lux-gold);
-  font-weight: 500;
+  font-weight: 1000;
   float: right;
+  font-family: none;
 }
 
 /* Responsive */

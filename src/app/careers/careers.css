@@ -25,7 +25,7 @@
   bottom: 70px;
   left: 50px;
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  text-shadow:1px 5px 5px rgba(0, 0, 0, 0.8);
 }
 
 .career-tagline h4 {
@@ -36,6 +36,7 @@
 .career-tagline p {
   font-size: 1.1rem;
   margin: 4px 0 0;
+  text-shadow:1px 5px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* RIGHT PANEL */
@@ -50,7 +51,7 @@
 
 .career-contact-info h5 {
   font-size: 0.8rem;
-  color: #888;
+  color: #000000;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -64,18 +65,18 @@
 }
 
 .career-contact-info p {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 1);
   margin-bottom: 25px;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .contact-details {
   display: flex;
   gap: 100px;
   margin-bottom: 20px;
-  font-size: 0.95rem;
-  color: #979797;
+  font-size: 1.2rem;
+  color: #000000;
 }
 
 .contact-details .visit,
@@ -84,8 +85,8 @@
 }
 
 .contact-details strong {
-  color: #424242;
-  font-weight: 500;
+  color: #000000;
+  font-weight: 1000;
 }
 
 /* FORM */
@@ -111,7 +112,7 @@
   width: 200px;
   padding: 14px;
   border: none;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 1);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -142,7 +143,7 @@
 
 /* RESUME UPLOAD */
 .file-upload label {
-  font-size: 12px;
+  font-size: 16px;
   color: #b27f38;
   margin-bottom: 6px;
   display: block;
@@ -180,8 +181,8 @@
 }
 
 .upload-ui p {
-  font-size: 14px;
-  color: #555;
+  font-size: 16px;
+  color: #000000;
 }
 
 .upload-ui span {
@@ -258,7 +259,7 @@
   }
 
   .career-tagline h4 {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
 
   .career-tagline p {

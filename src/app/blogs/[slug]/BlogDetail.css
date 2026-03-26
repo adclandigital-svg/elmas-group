@@ -38,24 +38,22 @@
 }
 .blog-hero-content p{
   cursor: pointer;
-  font-size:large;
+  font-size:18px;
   margin-bottom: 10px;
 }
 
 .blog-hero-content h1 {
-  letter-spacing: 5px;
   text-align: left;
-  font-size: clamp(34px, 6vw, 64px);
-  line-height: 1.1;
+  font-size: clamp(34px, 6vw, 60px);
+  line-height: 1;
   margin-bottom: 12px;
 }
 
 .blog-meta {
-  opacity: 0.9;
   display: flex;
   gap: 10px;
   justify-content: left;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.5px;
 }
 
@@ -134,16 +132,23 @@
   }
 
   .blog-hero-content h1 {
-    font-size: clamp(20px, 5vw, 28px);
+    font-size: clamp(25px, 6vw, 28px);
     letter-spacing: 1px;
   }
 
   .blog-hero-content p {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 
   .blog-body {
     font-size: 14px;
     margin: 30px auto 60px;
+  }
+  .blog-meta span{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .blog-body h5{
+    font-size: 16px;
   }
 }

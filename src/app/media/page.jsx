@@ -77,7 +77,7 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img src="/assets/12.jpg" loading="lazy" />
+              <img src="/assets/Spring Elmas/0019.jpg" loading="lazy" />
               <div className="mc-feature-overlay">
                 <span>Press Release</span>
                 <h3>Spring Elmas Launches Premium Smart Residences</h3>
@@ -93,7 +93,7 @@ export default function MediaCenterPage() {
           <article className="mc-feature-card ">
             <div className="reveal-inner reveal">
               <span className="reveal-mask" />
-              <img src="/assets/13.jpg" loading="lazy" />
+              <img src="/assets/Spring Elmas/0020.jpg" loading="lazy" />
               <div className="mc-feature-overlay">
                 <span>In The News</span>
                 <h3>Elmas Group Featured Among Top Emerging Developers</h3>
@@ -191,35 +191,35 @@ export default function MediaCenterPage() {
           <div className="mc-gallery-item tall reveal">
             <div className="reveal-inner">
               <span className="reveal-mask" />
-              <img src="/springelmas_gallery/1.jpg" loading="lazy" />
+              <img src="/assets/Spring Elmas/0016.jpg" loading="lazy" />
               <span>Luxury Living Room</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="/springelmas_gallery/2.jpg" loading="lazy" />
+              <img src="/assets/Spring Elmas/0015.jpg" loading="lazy" />
               <span>Modern Kitchen</span>
             </div>
           </div>
           <div className="mc-gallery-item reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="/springelmas_gallery/3.jpg" loading="lazy" />
+              <img src="/assets/Spring Elmas/0017.jpg" loading="lazy" />
               <span>Bedroom Suite</span>
             </div>
           </div>
           <div className="mc-gallery-item tall reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="/springelmas_gallery/4.jpg" loading="lazy" />
+              <img src="/assets/Spring Elmas/0023.jpg" loading="lazy" />
               <span>Grand Entrance Lobby</span>
             </div>
           </div>
           <div className="mc-gallery-item wide reveal">
             <span className="reveal-mask" />
             <div className="reveal-inner">
-              <img src="/springelmas_gallery/5.jpg" loading="lazy" />
+              <img src="/assets/Spring Elmas/0004.jpg" loading="lazy" />
               <span>Clubhouse & Amenities</span>
             </div>
           </div>

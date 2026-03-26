@@ -1,12 +1,12 @@
 :root {
-  --footer-bg: linear-gradient(160deg, #d3b071,#b17e38 );
+  --footer-bg: linear-gradient(160deg, #d3b071, #b17e38);
   --footer-text-white: #fff;
   --footer-text-muted: rgba(0, 0, 0, 1);
   --footer-text-dark: rgba(0, 0, 0, 1);
   --footer-text-black: #000000;
   --footer-accent: bLACK;
   --footer-border: rgba(0, 0, 0, 0.3);
-  --hover:#006c70;
+  --hover: #006c70;
 }
 
 /* ================= FOOTER ================= */
@@ -15,8 +15,8 @@
   background: var(--footer-bg);
   color: var(--footer-text-white);
 }
-.footer a:hover{
-  color:  var(--hover)!important;
+.footer a:hover {
+  color: var(--hover) !important;
 }
 
 .footer-inner {
@@ -32,9 +32,11 @@
 .footer-brand p {
   max-width: 360px;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.3;
   margin-top: 10px;
-  color: var(--footer-text-muted);
+  /* color: var(--footer-text-muted); */
+  color: #000000;
+  font-weight: 500;
 }
 
 .footer-nav h4,
@@ -54,6 +56,8 @@
   text-decoration: none;
   margin-bottom: 10px;
   padding-bottom: 4px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .footer-nav a::after,
@@ -64,7 +68,7 @@
   bottom: 0;
   width: 100px;
   height: 1px;
-  background: var(--hover)!important;
+  background: var(--hover) !important;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -89,11 +93,21 @@
 .footer-connect .social-icons a {
   font-size: 20px;
   color: var(--footer-text-black);
-  transition: color 0.3s ease, transform 0.3s ease;
-  -webkit-transition: color 0.3s ease, transform 0.3s ease;
-  -moz-transition: color 0.3s ease, transform 0.3s ease;
-  -ms-transition: color 0.3s ease, transform 0.3s ease;
-  -o-transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  -webkit-transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  -moz-transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  -ms-transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  -o-transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .footer-connect .social-icons a:hover i {
@@ -109,10 +123,12 @@
   color: rgba(0, 0, 0, 1);
   border-top: 1px solid var(--footer-border);
   padding-top: 20px;
+  font-weight: 500;
 }
 
 .footer-connect p {
   color: var(--footer-text-black);
+  font-size: 18px;
 }
 
 /* Responsive */
@@ -134,8 +150,6 @@
     gap: 20px;
   }
 }
-
-
 
 .floating-socials {
   position: fixed;
@@ -188,15 +202,30 @@
 }
 
 /* Brand colors */
-.floating-socials .facebook { background: #3b5998; }
-.floating-socials .twitter { background: #1da1f2; }
-.floating-socials .instagram { background: #e1306c; }
-.floating-socials .linkedin { background: #0077b5; }
-.floating-socials .youtube { background: #ff0000; }
+.floating-socials .facebook {
+  background: #3b5998;
+}
+.floating-socials .twitter {
+  background: #1da1f2;
+}
+.floating-socials .instagram {
+  background: #e1306c;
+}
+.floating-socials .linkedin {
+  background: #0077b5;
+}
+.floating-socials .youtube {
+  background: #ff0000;
+}
 
 /* Responsive: hide on small screens */
 @media (max-width: 768px) {
   .floating-socials {
     display: none;
+  }
+  .footer-nav a:hover::after,
+  .footer-policy a:hover::after {
+    transform: scaleX(0);
+
   }
 }
