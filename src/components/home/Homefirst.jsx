@@ -172,7 +172,8 @@ export default function Homefirst() {
           preload="none"
         >
           <source
-            src="https://player.vimeo.com/progressive_redirect/playback/1047563454/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&oauth2_token_id=1679488103&signature=5afdff00577b5149ba096a81985770974bb1252229147bf0d87cea3ff95094f2"
+            // src="https://player.vimeo.com/progressive_redirect/playback/1047563454/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&oauth2_token_id=1679488103&signature=5afdff00577b5149ba096a81985770974bb1252229147bf0d87cea3ff95094f2"
+            src="/assets/B2.mp4"
             type="video/mp4"
           />
         </video>

@@ -255,7 +255,8 @@ export default function ProjectPage() {
         <section className="hero-video-section">
           <video
             className="hero-video"
-            src="/assets/aqua.mp4"
+            // src="/assets/aqua.mp4"
+            src="/assets/B3.mp4"
             autoPlay
             muted
             loop
@@ -265,6 +266,7 @@ export default function ProjectPage() {
           {/* fallback image if video not supported */}
           <img
             src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80"
+            
             className="hero-video-fallback"
             loading="lazy"
           />

@@ -198,7 +198,8 @@ export default function ProjectPage() {
         <section className="hero-video-section">
           <video
             className="hero-video"
-            src="https://www.som.com/wp-content/uploads/2025/06/WeBank-Homepage_noBMU-1748959748.mp4"
+            // src="https://www.som.com/wp-content/uploads/2025/06/WeBank-Homepage_noBMU-1748959748.mp4"
+            src="/assets/B1.mp4"
             autoPlay
             muted
             loop
