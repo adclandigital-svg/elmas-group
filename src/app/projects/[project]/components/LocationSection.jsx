@@ -110,7 +110,7 @@ export default function LocationSection() {
               <div
                 key={key}
                 className={`luxury-tab ${activeTab === key ? "active" : ""}`}
-                onClick={() => setActiveTab(key)}
+                onMouseEnter={() => setActiveTab(key)}
               >
                 {contentData[key].icon} {contentData[key].title}
               </div>

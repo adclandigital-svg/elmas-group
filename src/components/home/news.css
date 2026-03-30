@@ -4,32 +4,26 @@
 .featured-wrap {
   width: 100%;
   overflow: hidden;
-  /* background-color: #ebf8ff; */
 
-  /* Minimal true diamond pattern */
   background-image:
     repeating-linear-gradient(
       45deg,
-      rgba(178, 127, 56, 0.05) 0px,
-      rgba(178, 127, 56, 0.05) 2px,
+      rgba(178, 127, 56, 0.030) 0px,
+      rgba(178, 127, 56, 0.030) 2px,
       transparent 2px,
       transparent 20px
     ),
     repeating-linear-gradient(
       -45deg,
-      rgba(178, 127, 56, 0.05) 0px,
-      rgba(178, 127, 56, 0.05) 2px,
+      rgba(178, 127, 56, 0.030) 0px,
+      rgba(178, 127, 56, 0.030) 2px,
       transparent 2px,
       transparent 20px
     );
-  background-size: 40px 40px;
-  background-position:
-    0 0,
-    0 0;
 
+  background-size: 40px 40px;
   padding: 50px 0px;
 }
-
 .featured-container {
   width: 90%;
   margin: auto;
@@ -228,7 +222,7 @@
     height: 90%;
   }
   .article-card p {
-    font-size: 16px ;
+    font-size: 16px;
   }
 }
 
@@ -249,7 +243,7 @@
   .article-swiper {
     height: 300px;
   }
-  .article-card{
+  .article-card {
     padding: 0;
     gap: 20px;
   }
@@ -276,9 +270,15 @@
   }
 
   .featured-desc {
-    font-size: 18px;
-    line-height: 1.45;
-  }
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+}
 
   .logo-card {
     padding: 10px 22px;
@@ -294,4 +294,4 @@
 }
 .swiper-wrapper {
   transition-timing-function: linear !important;
-} 
+}

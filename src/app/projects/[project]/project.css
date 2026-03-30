@@ -127,25 +127,30 @@
 
 .facilities-section-outer {
   width: 100%;
-  position: relative;
-  background-image: url("https://www.springelmas.in/images/flower-background.png");
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
+  min-height: 400px;
+  position: relative; /* 🔥 REQUIRED */
+
+  background-image: url("/pattern1.jpg");
+  background-size: 400px auto;
+  background-repeat: repeat;
+  background-position: top left;
 }
+
+/* overlay */
 .facilities-section-outer::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.634); /* overlay */
+  background: rgba(255, 255, 255, 0.85);
   z-index: 1;
+  pointer-events: none; /* optional but recommended */
 }
 
+/* content above overlay */
 .facilities-section-outer > * {
   position: relative;
   z-index: 2;
 }
-
 .facilities-section {
   width: 1800px;
   margin: auto;
@@ -846,7 +851,8 @@
 .about-section {
   width: 100%;
   padding: 80px 0;
-  background-image: url("https://www.springelmas.in/images/flower-background.png");
+  background-image: url("/pattern1.jpg");
+  background-size: 400px auto;
   position: relative;
   overflow: hidden;
 }
@@ -855,7 +861,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.634); /* overlay */
+  background: rgba(255, 255, 255, 0.85); /* overlay */
   z-index: 1;
 }
 

@@ -21,38 +21,13 @@
   --text-light: #000000;
 }
 
-/* :root {
-  --nav-bg: #d3b071;
-  --nav-shadow: rgba(0, 0, 0, 0.15);
-  --text-light: #fff;
-  --text-dark: #111;
-  --hover-accent: #a86e02;
-  --sidebar-bg: rgba(255, 255, 255, 0.96);
-  --sidebar-hover: #a86e02;
-} */
-/* :root {
-  --nav-bg: #d6ebe2;
-  --nav-shadow: rgba(0, 0, 0, 0.15);
-  --text-light: #a86e02;
-  --text-dark: #111;
-  --hover-accent: #a86e02;
-  --sidebar-bg: rgba(255, 255, 255, 0.96);
-  --sidebar-hover: #a86e02;
-} */
-
 /* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: -2px;
   width: 100%;
   z-index: 1000;
-  /*background: var(--nav-bg);
-  -webkit-backdrop-filter: blur(12px);
-  */
-  /* backdrop-filter: blur(4px); */
-  /* box-shadow: 0 8px 32px var(--nav-shadow); */
-
-  background-color: #fff;
+  backdrop-filter: blur(4px);
 }
 
 .nav-container {
@@ -72,29 +47,49 @@
 
 .nav-links a {
   text-decoration: none;
-  /* color: var(--text-light); */
-  color: #b17e38;
+  /*color: var(--text-light);
+  */
+  color: #000000;
   font-size: 16px;
-  font-weight: 1000;
+  font-weight: 600;
   text-transform: uppercase;
-  transition: color 0.3s ease  ;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
 }
 .nav-links a:hover {
-  color: var(--hover-accent) !important; /* ✅ same as normal */
+  /*color: var(--hover-accent) !important;
+  */
+  transform: scale(1.05);
+  color: #000000 !important;
 }
 
 /* SCROLLED */
 .navbar.scrolled {
-  background: var(--nav-bg);
-  backdrop-filter: blur(12px);
+  /* background: var(--nav-bg); */
+  background-color: #e8d8c3;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.322);
+}
+.navbar.scrolled::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: rgba(178, 127, 56, 0.1);  */
+  background-image: url("https://i.pinimg.com/736x/ba/fc/19/bafc19937ab0c1a892f2e182c6f345a4.jpg");
+  background-size: 400px;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 .navbar.scrolled a {
   color: var(--text-dark);
-  
 }
 .navbar.scrolled a:hover {
-  color: var(--hover-accent) !important;
+  /* color: var(--hover-accent) !important; */
+  transform: scale(1.05);
+  color: #000000 !important;
 }
 
 /* MENU */
@@ -106,15 +101,17 @@
 }
 
 .menu-toggle span {
-  width: 24px;
+  width: 25px;
   height: 2px;
   /* background: var(--text-light); */
   transition: background 0.3s ease;
-  background-color: #b17e38;
+  background-color: #000000;
 }
 
 .menu-toggle:hover span {
-  background: var(--hover-accent) !important;
+  /* background: var(--hover-accent) !important; */
+  transform: scale(1.05);
+  color: #000000 !important;
 }
 
 /* When navbar is scrolled */
@@ -223,7 +220,6 @@
   /* .navbar{
     position: sticky;
   } */
-
 }
 
 /* Floating WhatsApp button */

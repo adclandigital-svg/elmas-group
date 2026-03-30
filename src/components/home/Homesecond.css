@@ -1,112 +1,4 @@
-/* .arch-facilities {
-  color: #fff;
-  padding: 0px 0;
-}
 
-.arch-container {
-  width: 90%;
-  margin: auto;
-}
-
-.arch-header {
-  max-width: 800px;
-  margin-bottom: 50px;
-}
-
-.arch-header h2 {
-  font-size: 42px;
-  margin-bottom: 12px;
-  color: #b27f38;
-}
-
-.arch-header p {
-  color: #686868;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-.arch-slider-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.arch-grid {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.6s ease;
-}
-
-.arch-card {
-  min-width: 25%;
-  height: 600px;
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-.arch-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 6px solid white;
-}
-
-.arch-card h3 {
-  position: absolute;
-  top: 30px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 10;
-  color: #b27f38; 
-  padding: 0;
-  font-size: 22px;
-  font-weight: 600;
-  text-align: center;
-  width: auto;
-}
-
-.arch-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  border: none;
-  font-size: 40px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arch-nav.prev {
-  left: 15px;
-}
-.arch-nav.next {
-  right: 15px;
-}
-
-.arch-card-dimond {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: url("/assets/dimond stroke pngs 4.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: 10;
-}
-
-@media (max-width: 900px) {
-  .arch-card {
-    min-width: 80%;
-  }
-} */
 
 /* client section */
 /* ================================================= */
@@ -331,7 +223,6 @@
   font-size: 20px;
   color: rgba(0, 0, 0, 1);
   margin-bottom: 40px;
-  font-weight: 500;
 }
 
 /* Swiper Container */
@@ -383,13 +274,13 @@
 
 /* Client Name */
 .adclan-video-text h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 3px;
 }
 
 /* Client Position/Subtitle */
 .adclan-video-text p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   color: #fff;
   font-weight: 500;
@@ -419,7 +310,8 @@
     display: none;
   }
   .adclan-testimonial-paragraph p {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
