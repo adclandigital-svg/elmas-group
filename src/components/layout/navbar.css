@@ -27,7 +27,8 @@
   top: -2px;
   width: 100%;
   z-index: 1000;
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
+  /* box-shadow: 10px 10px 10`px rgba(0, 0, 0, 0.08); */
 }
 
 .nav-container {
