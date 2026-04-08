@@ -1,0 +1,116 @@
+.siteplan-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.siteplan-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.siteplan-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #b4823d;
+}
+
+.siteplan-heading p {
+  font-size: 20px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+/* Image container */
+.siteplan-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Image */
+.siteplan-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect */
+.siteplan-container:hover .siteplan-image {
+  transform: scale(1.02);
+}
+
+
+
+
+/* =========================
+   ≤ 1200px
+========================= */
+@media (max-width: 1200px) {
+  .siteplan-heading h2 {
+    font-size: 36px;
+  }
+
+  .siteplan-heading p {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   ≤ 768px (Tablet)
+========================= */
+@media (max-width: 768px) {
+  .siteplan-section {
+    padding: 60px 15px;
+  }
+
+  .siteplan-heading {
+    margin-bottom: 30px;
+  }
+
+  .siteplan-heading h2 {
+    font-size: 28px;
+  }
+
+  .siteplan-heading p {
+    font-size: 16px;
+  }
+
+  .siteplan-container {
+    border-radius: 12px;
+  }
+
+  .siteplan-image {
+    border-radius: 12px;
+  }
+}
+
+/* =========================
+   ≤ 480px (Mobile)
+========================= */
+@media (max-width: 480px) {
+  .siteplan-section {
+    padding: 40px 10px;
+  }
+
+  .siteplan-heading h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .siteplan-heading p {
+    font-size: 14px;
+  }
+
+  .siteplan-heading {
+    margin-bottom: 20px;
+  }
+}

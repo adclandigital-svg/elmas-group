@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import ProjectHighlights from "./components/ProjectHighlights";
 import { useGSAP } from "@gsap/react";
 import LocationSection from "./components/LocationSection";
+import SitePlanSection from "./components/SitePlanSection";
 import {
   FaSwimmingPool,
   FaDumbbell,
@@ -443,7 +444,7 @@ export default function ProjectPage() {
               </div>
 
               <div className="stat">
-                <h3>4</h3>
+                <h3>5+</h3>
                 <span>Residential towers</span>
               </div>
 
@@ -464,6 +465,7 @@ export default function ProjectPage() {
       {/* <NeighbourSection /> */}
       <LocationSection />
       <ProjectHighlights />
+      <SitePlanSection />
       <section className="fp-book-section">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
         <div className="fp-tabs">

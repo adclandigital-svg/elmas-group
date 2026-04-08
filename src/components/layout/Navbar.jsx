@@ -201,7 +201,7 @@ export default function Navbar() {
             Job Openings
           </Link>
           <Link href="/contact" onClick={handleLinkClick}>
-            Reach us
+            Contact us
           </Link>
         </nav>
       </aside>

@@ -101,7 +101,7 @@ export default function Footer() {
             <Link href="/gallery">Gallery</Link>
             <Link href="/media">Media Centre</Link>
             <Link href="/careers">Job Openings</Link>
-            <Link href="/contact">Reach us</Link>
+            <Link href="/contact">Contact us</Link>
           </div>
 
           {/* Policy Links */}
@@ -122,7 +122,7 @@ export default function Footer() {
             
 
             <p>
-              <FaEnvelope /> info@elmasgroup.com
+              <FaEnvelope />  info@elmasgroup.in
             </p>
             <p>
               <FaPhoneAlt /> +91 98765 43210
