@@ -439,17 +439,17 @@ export default function ProjectPage() {
 
             <div className="stats-grid">
               <div className="stat">
-                <h3>5+</h3>
+                <h3>5</h3>
                 <span>Acres of development</span>
               </div>
 
               <div className="stat">
-                <h3>5+</h3>
+                <h3>8</h3>
                 <span>Residential towers</span>
               </div>
 
               <div className="stat">
-                <h3>400+</h3>
+                <h3>632</h3>
                 <span>Premium apartments</span>
               </div>
 
