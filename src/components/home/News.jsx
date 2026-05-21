@@ -127,14 +127,14 @@ export default function FeaturedSection() {
             modules={[Autoplay]}
             className="logo-swiper linear-scroll"
           >
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="logo-card">
                 <img
                   src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png"
                   loading="lazy"
                 />
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide>
               <div className="logo-card">
                 <img
@@ -167,14 +167,14 @@ export default function FeaturedSection() {
                 />
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="logo-card">
                 <img
                   src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png"
                   loading="lazy"
                 />
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide>
               <div className="logo-card">
                 <img
