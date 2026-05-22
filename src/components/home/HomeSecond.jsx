@@ -205,7 +205,7 @@ export default function HomeSecond() {
       </section> */}
       <ProjectSlider/>
       <FeaturedSection />
-      <section className="adclan-testimonial-section">
+      {/* <section className="adclan-testimonial-section">
         <div className="adclan-testimonial-heading">
           <h2>
             Hear From <br /> Our Happy Clients
@@ -255,7 +255,7 @@ export default function HomeSecond() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
+      </section> */}
     </>
   );
 }

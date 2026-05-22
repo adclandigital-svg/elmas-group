@@ -91,7 +91,7 @@ export default function FeaturedSection() {
 
           <div className="featured-image">
             <img
-              src="https://elmas-group.vercel.app/construction/87.jpeg"
+              src="/construction/87.jpeg"
               loading="eager"
               alt="project"
             />
