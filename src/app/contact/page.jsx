@@ -82,7 +82,7 @@ export default function ContactPage() {
     {
       question: "How can I contact your team?",
       answer:
-        "You can reach us via the contact form above, call us at +91 98765 43210, or email info@elmasgroup.com.",
+        "You can reach us via the contact form above or email info@elmasgroup.com.",
     },
     {
       question: "Where are you located?",
@@ -172,13 +172,6 @@ export default function ContactPage() {
               <div>
                 <h3>Address</h3>
                 <p>Elmas Group Noida Extension, Uttar Pradesh, India</p>
-              </div>
-            </div>
-            <div className="info-card">
-              <span className="icon">📞</span>
-              <div>
-                <h3>Phone</h3>
-                <p >+91 98765 43210</p>
               </div>
             </div>
             <div className="info-card">
