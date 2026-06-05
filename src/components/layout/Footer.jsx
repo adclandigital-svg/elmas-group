@@ -124,9 +124,6 @@ export default function Footer() {
             <p>
               <FaEnvelope />  info@elmasgroup.in
             </p>
-            <p>
-              <FaPhoneAlt /> +91 98765 43210
-            </p>
           </div>
         </div>
 
