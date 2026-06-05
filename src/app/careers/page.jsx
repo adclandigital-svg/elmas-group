@@ -127,7 +127,13 @@ export default function CareerPage() {
             </div>
             <div className="contact">
               <strong>Email:</strong> hr@elmasgroup.com
+            </div>
+          </div>
+        </div>
 
+        {/* ✅ FORM */}
+        {status && <p className={`form-status ${statusType}`}>{status}</p>}
+        <form className="career-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               type="text"
