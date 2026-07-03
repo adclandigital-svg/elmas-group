@@ -89,7 +89,7 @@
   color: #b27f38;
 }
 
-.project-content h4 {
+.project-content h3, .project-content h4  {
   font-size: 18px;
   /* font-weight: 700; */
   margin-bottom: 16px;

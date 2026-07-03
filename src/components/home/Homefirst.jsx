@@ -308,9 +308,9 @@ export default function Homefirst() {
       </section>
       <section ref={sectionRef} className="section second">
         <div className="second-div">
-          <h2 className="section-title-absolute">
+          <h3 className="section-title-absolute">
             Our Legacy in Design &amp; Living
-          </h2>
+          </h3>
           <div
             className="second-div1"
             ref={(el) => el && imagesRef.current.push(el)}

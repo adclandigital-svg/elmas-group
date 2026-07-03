@@ -36,7 +36,7 @@ export default function ProjectSlider() {
 
             <div className="project-content">
               <h2>Spring Elmas</h2>
-              <h4>Modern Living in a Green Haven</h4>
+              <h3>Modern Living in a Green Haven</h3>
               <p>
                 Spring Elmas is a thoughtfully planned residential community
                 offering spacious homes, landscaped gardens, and world-class
