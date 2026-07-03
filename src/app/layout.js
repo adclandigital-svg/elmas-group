@@ -61,7 +61,6 @@ export default function RootLayout({ children }) {
     <html lang="en" className={{"--font-cormorant": playfair.style.fontFamily}}>
       <head>
         <link rel="preload" href="/assets/logo.png" as="image" />
-        <title>Elmas Group</title>
       </head>
 
       <body>
