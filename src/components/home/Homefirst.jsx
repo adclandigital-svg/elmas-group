@@ -254,25 +254,25 @@ export default function Homefirst() {
           <div className="third-second-img">
             <img
               className="slide-img active"
-              src="https://img.freepik.com/free-photo/minimalist-office-interior-design_23-2151826242.jpg?t=st=1766473565~exp=1766477165~hmac=ee474eef7a9833808e6dbfe77557a4ef5a9fffdb1d657dece13cf85c21eb78f5&w=1480"
+              src="/assets/Spring Elmas/ea-1.webp"
               alt="residential"
               loading="lazy"
             />
             <img
               className="slide-img"
-              src="https://img.freepik.com/free-photo/minimalist-office-interior-design_23-2151826265.jpg?t=st=1766473605~exp=1766477205~hmac=185a1c133c60fe1e53c0dbda3566076af4a07aec45a26015d6fbdf8b87dbe717&w=1480"
+              src="/assets/Spring Elmas/ea-2.webp"
               alt="commercial"
               loading="lazy"
             />
             <img
               className="slide-img"
-              src="https://img.freepik.com/free-photo/minimalist-office-interior-design_23-2151826239.jpg?t=st=1766473624~exp=1766477224~hmac=35b1cc1ad37845c97707e292c21cefb6e18e1578fbc3160e39a523ccec71142e&w=1480"
+              src="/assets/Spring Elmas/ea-3.webp"
               alt="residential"
               loading="lazy"
             />
             <img
               className="slide-img"
-              src="https://img.freepik.com/free-photo/minimalist-office-interior-design_23-2151826250.jpg?t=st=1766473652~exp=1766477252~hmac=6d0309ea549431e4e7a764a9d0f2b96ec5974b9108246429001fff3d5369ac0d&w=1480"
+              src="/assets/Spring Elmas/ea-4.webp"
               alt="commercial"
               loading="lazy"
             />
@@ -321,10 +321,10 @@ export default function Homefirst() {
           </div>
           <div className="second-div2-absolute">
             {[
-              { count: 28, label: "Projects" },
-              { count: 14, label: "Years" },
-              { count: 9, label: "Mn Sq.ft" },
-              { count: 4500, label: "Families" },
+              { count: 2, label: "Projects" },
+              { count: 10, label: "Years" },
+              { count: 2.5, label: "Mn Sq.ft" },
+              { count: 1500, label: "Families" },
             ].map((item, i) => (
               <div key={i} className="second-div2-inner-dimond">
                 <img
