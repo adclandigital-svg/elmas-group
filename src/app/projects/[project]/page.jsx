@@ -327,7 +327,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="/assets/Spring Elmas/0004.jpg"
+                src="/assets/Spring Elmas/se-1.webp"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -335,7 +335,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="/assets/Spring Elmas/0026.jpg"
+                src="/assets/Spring Elmas/se-2.webp"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -343,7 +343,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="/assets/Spring Elmas/0024.jpg"
+                src="/assets/Spring Elmas/se-3.webp"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>

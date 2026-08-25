@@ -386,7 +386,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353"
+                src="/assets/Spring Elmas/eaa-1.webp"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -394,7 +394,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+                src="/assets/Spring Elmas/eaa-2.webp"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
@@ -402,7 +402,7 @@ export default function ProjectPage() {
             <div>
               <img
                 className="float-img"
-                src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
+                src="/assets/Spring Elmas/eaa-3.webp"
                 loading="lazy"
               />
               <span className="blog-reveal"></span>
