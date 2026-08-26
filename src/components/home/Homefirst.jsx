@@ -151,11 +151,22 @@ export default function Homefirst() {
         start: "top 80%",
         onEnter: () => {
           gsap.to(el, {
-            innerText: el.dataset.count,
-            duration: 1.5,
-            ease: "power1.out",
-            snap: { innerText: 1 },
-          });
+  innerText: el.dataset.count,
+  duration: 1.5,
+  ease: "power1.out",
+  snap: {
+    innerText: el.dataset.count % 1 === 0 ? 1 : 0.1,
+  },
+  onUpdate: () => {
+    const value = parseFloat(el.innerText);
+
+    if (parseFloat(el.dataset.count) % 1 !== 0) {
+      el.innerText = value.toFixed(1);
+    } else {
+      el.innerText = Math.round(value);
+    }
+  },
+});
         },
       });
     });
