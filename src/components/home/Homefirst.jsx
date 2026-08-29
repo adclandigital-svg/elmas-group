@@ -166,7 +166,7 @@ export default function Homefirst() {
       el.innerText = Math.round(value);
     }
   },
-});
+}); 
         },
       });
     });
