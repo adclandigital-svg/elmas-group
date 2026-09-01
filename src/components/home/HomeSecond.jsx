@@ -205,8 +205,8 @@ export default function HomeSecond() {
         </div>
       </section> */}
       <ProjectSlider/>
-      <FeaturedSection />
       <InstagramSection />
+      <FeaturedSection />
       {/* <section className="adclan-testimonial-section">
         <div className="adclan-testimonial-heading">
           <h2>

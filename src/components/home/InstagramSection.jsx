@@ -105,7 +105,7 @@ export default function InstagramSection() {
             href="https://www.instagram.com/elmasgroupofficial/"
             target="_blank"
             rel="noopener noreferrer"
-            className="insta-btn"
+            className="project-btn"
           >
             View Profile
           </a>
