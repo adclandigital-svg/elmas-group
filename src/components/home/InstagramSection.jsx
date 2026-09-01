@@ -13,38 +13,33 @@ export default function InstagramSection() {
   const fallbackPosts = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-      link: "https://www.instagram.com/elmasgroupofficial/",
+      image: "https://www.instagram.com/p/DcjMKZoJw81/media/?size=l",
+      link: "https://www.instagram.com/p/DcjMKZoJw81/",
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-      link: "https://www.instagram.com/elmasgroupofficial/",
+      image: "https://www.instagram.com/p/DcjMG4fp40E/media/?size=l",
+      link: "https://www.instagram.com/p/DcjMG4fp40E/",
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-      link: "https://www.instagram.com/elmasgroupofficial/",
+      image: "https://www.instagram.com/p/DchS9WPSu5h/media/?size=l",
+      link: "https://www.instagram.com/p/DchS9WPSu5h/",
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80",
-      link: "https://www.instagram.com/elmasgroupofficial/",
+      image: "https://www.instagram.com/p/DcdrUxfRgDq/media/?size=l",
+      link: "https://www.instagram.com/p/DcdrUxfRgDq/",
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1600566753086-00f18efc2291?w=800&q=80",
-      link: "https://www.instagram.com/elmasgroupofficial/",
+      image: "https://www.instagram.com/p/DcbPyR0pEtf/media/?size=l",
+      link: "https://www.instagram.com/p/DcbPyR0pEtf/",
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
-      link: "https://www.instagram.com/elmasgroupofficial/",
-    },
-    {
-      id: 7,
-      image: "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?w=800&q=80",
-      link: "https://www.instagram.com/elmasgroupofficial/",
+      image: "https://www.instagram.com/p/DcbPsIBho09/media/?size=l",
+      link: "https://www.instagram.com/p/DcbPsIBho09/",
     }
   ];
 
@@ -75,8 +70,8 @@ export default function InstagramSection() {
               image: item.media_type === "VIDEO" ? item.thumbnail_url : item.media_url,
               link: item.permalink,
             }));
-          
-          if(dynamicPosts.length > 0) {
+
+          if (dynamicPosts.length > 0) {
             setPosts(dynamicPosts);
           } else {
             setPosts(fallbackPosts);
@@ -140,7 +135,7 @@ export default function InstagramSection() {
                 rel="noopener noreferrer"
                 className="insta-card"
               >
-                <img src={post.image} alt="Instagram Post" loading="lazy" />
+                <img src={post.image} alt="Instagram Post" loading="lazy" referrerPolicy="no-referrer" />
                 <div className="insta-overlay">
                   <div className="insta-icon">
                     <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
