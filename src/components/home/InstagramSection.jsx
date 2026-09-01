@@ -1,13 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "./instagram.css";
 
 export default function InstagramSection() {
-  const posts = [
+  const [posts, setPosts] = useState([]);
+
+  // Fallback static images if API key is not provided or API fails
+  const fallbackPosts = [
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
@@ -44,6 +47,51 @@ export default function InstagramSection() {
       link: "https://www.instagram.com/elmasgroupofficial/",
     }
   ];
+
+  React.useEffect(() => {
+    const fetchInstagramPosts = async () => {
+      // NOTE: Instagram blocks direct scraping. To make this work dynamically, 
+      // you need an Instagram Graph API Access Token and Account ID.
+      // Set them in your .env or .env.local file.
+      const token = process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN;
+      const accountId = process.env.NEXT_PUBLIC_INSTAGRAM_ACCOUNT_ID;
+
+      if (!token || !accountId) {
+        setPosts(fallbackPosts);
+        return;
+      }
+
+      try {
+        const res = await fetch(
+          `https://graph.facebook.com/v19.0/${accountId}/media?fields=id,media_type,media_url,thumbnail_url,permalink&access_token=${token}&limit=10`
+        );
+        const data = await res.json();
+
+        if (data && data.data) {
+          const dynamicPosts = data.data
+            .filter(item => item.media_type === "IMAGE" || item.media_type === "CAROUSEL_ALBUM" || item.media_type === "VIDEO")
+            .map(item => ({
+              id: item.id,
+              image: item.media_type === "VIDEO" ? item.thumbnail_url : item.media_url,
+              link: item.permalink,
+            }));
+          
+          if(dynamicPosts.length > 0) {
+            setPosts(dynamicPosts);
+          } else {
+            setPosts(fallbackPosts);
+          }
+        } else {
+          setPosts(fallbackPosts);
+        }
+      } catch (error) {
+        console.error("Error fetching Instagram posts:", error);
+        setPosts(fallbackPosts);
+      }
+    };
+
+    fetchInstagramPosts();
+  }, []);
 
   return (
     <section className="instagram-section">
