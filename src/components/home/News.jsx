@@ -19,7 +19,7 @@ export default function FeaturedSection() {
   if (!mounted) return null;
 
   return (
-    <section className="featured-wrap">
+    <section className="featured-wrap project-or-latest-project-sec">
       <div className="featured-container">
         {/* LEFT COLUMN — ARTICLES SLIDER */}
         <div className="latest-articles">

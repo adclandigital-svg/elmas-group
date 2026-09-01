@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "./Homesecond.css";
 import FeaturedSection from "@/components/home/News";
 import ProjectSlider from "./Projects";
+import InstagramSection from "./InstagramSection";
 
 export default function HomeSecond() {
   const cards = [
@@ -205,6 +206,7 @@ export default function HomeSecond() {
       </section> */}
       <ProjectSlider/>
       <FeaturedSection />
+      <InstagramSection />
       {/* <section className="adclan-testimonial-section">
         <div className="adclan-testimonial-heading">
           <h2>
