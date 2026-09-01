@@ -53,9 +53,14 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+import Maintenance from "@/components/Maintenance";
+
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith("/admin");
+  
+  // Set this flag to false in the future to disable the maintenance page
+  const isMaintenance = true;
 
   return (
     <html lang="en" className={{"--font-cormorant": playfair.style.fontFamily}}>
@@ -64,11 +69,12 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        {!isAdmin && <Navbar />}
-        {!isAdmin && <SmoothScroll />}
-        {children}
-        {!isAdmin && <Footer />}
-        {!isAdmin && <ContactPopup />}
+        {isMaintenance && <Maintenance />}
+        {!isMaintenance && !isAdmin && <Navbar />}
+        {!isMaintenance && !isAdmin && <SmoothScroll />}
+        {!isMaintenance && children}
+        {!isMaintenance && !isAdmin && <Footer />}
+        {!isMaintenance && !isAdmin && <ContactPopup />}
       </body>
     </html>
   );
