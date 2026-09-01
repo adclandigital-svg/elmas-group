@@ -13,32 +13,32 @@ export default function InstagramSection() {
   const fallbackPosts = [
     {
       id: 1,
-      image: "https://www.instagram.com/p/DcjMKZoJw81/media/?size=l",
+      image: "/instagram/DcjMKZoJw81.jpg",
       link: "https://www.instagram.com/p/DcjMKZoJw81/",
     },
     {
       id: 2,
-      image: "https://www.instagram.com/p/DcjMG4fp40E/media/?size=l",
+      image: "/instagram/DcjMG4fp40E.jpg",
       link: "https://www.instagram.com/p/DcjMG4fp40E/",
     },
     {
       id: 3,
-      image: "https://www.instagram.com/p/DchS9WPSu5h/media/?size=l",
+      image: "/instagram/DchS9WPSu5h.jpg",
       link: "https://www.instagram.com/p/DchS9WPSu5h/",
     },
     {
       id: 4,
-      image: "https://www.instagram.com/p/DcdrUxfRgDq/media/?size=l",
+      image: "/instagram/DcdrUxfRgDq.jpg",
       link: "https://www.instagram.com/p/DcdrUxfRgDq/",
     },
     {
       id: 5,
-      image: "https://www.instagram.com/p/DcbPyR0pEtf/media/?size=l",
+      image: "/instagram/DcbPyR0pEtf.jpg",
       link: "https://www.instagram.com/p/DcbPyR0pEtf/",
     },
     {
       id: 6,
-      image: "https://www.instagram.com/p/DcbPsIBho09/media/?size=l",
+      image: "/instagram/DcbPsIBho09.jpg",
       link: "https://www.instagram.com/p/DcbPsIBho09/",
     }
   ];
