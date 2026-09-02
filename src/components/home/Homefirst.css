@@ -9,7 +9,7 @@
   object-fit: cover;
 }
 @media (max-width: 768px) {
-  .hero {
+  .hero{
     height: 70vh;
   }
 }

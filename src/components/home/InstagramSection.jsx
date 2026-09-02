@@ -132,7 +132,7 @@ export default function InstagramSection() {
               <a
                 href={post.link}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer" 
                 className="insta-card"
               >
                 <img src={post.image} alt="Instagram Post" loading="lazy" referrerPolicy="no-referrer" />
