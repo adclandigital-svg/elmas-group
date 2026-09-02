@@ -123,7 +123,7 @@ export default function CareerPage() {
           <div className="contact-details">
             <div className="visit">
               <strong>Visit Us :</strong>
-              <p>Elmas Group Noida Extension, Uttar Pradesh, India</p>
+              <p>Elmas Group Greater Noida West 16B, Uttar Pradesh, India</p>
             </div>
             <div className="contact">
               <strong>Email:</strong> hr@elmasgroup.com

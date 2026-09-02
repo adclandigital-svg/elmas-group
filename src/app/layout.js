@@ -38,6 +38,7 @@
 
 "use client";
 
+import { useState, useEffect } from "react";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -59,11 +60,33 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith("/admin");
   
-  // Set this flag to false in the future to disable the maintenance page
-  const isMaintenance = true;
+  // Set maintenance mode state
+  const [isMaintenance, setIsMaintenance] = useState(true);
+
+  useEffect(() => {
+    // 1. Automatically disable maintenance mode for your local development environment
+    if (process.env.NODE_ENV === "development") {
+      setIsMaintenance(false);
+      return;
+    }
+
+    // 2. Secret URL bypass for production (Live Website)
+    // To view the site on live: yourwebsite.com/?preview=true
+    // To re-enable maintenance on live: yourwebsite.com/?preview=false
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("preview") === "true") {
+      localStorage.setItem("bypass_maintenance", "true");
+    } else if (params.get("preview") === "false") {
+      localStorage.removeItem("bypass_maintenance");
+    }
+
+    if (localStorage.getItem("bypass_maintenance") === "true") {
+      setIsMaintenance(false);
+    }
+  }, []);
 
   return (
-    <html lang="en" className={{"--font-cormorant": playfair.style.fontFamily}}>
+    <html lang="en" style={{"--font-cormorant": playfair.style.fontFamily}}>
       <head>
         <link rel="preload" href="/assets/logo.png" as="image" />
       </head>

@@ -171,7 +171,7 @@ export default function ContactPage() {
               <span className="icon">📍</span>
               <div>
                 <h3>Address</h3>
-                <p>Elmas Group Noida Extension, Uttar Pradesh, India</p>
+                <p>Elmas Group Greater Noida West 16B, Uttar Pradesh, India</p>
               </div>
             </div>
             <div className="info-card">
@@ -184,15 +184,14 @@ export default function ContactPage() {
           </div>
 
           {/* ✅ FORM */}
-            <p
-              className={`form-status ${
-                status?.includes("success") || status.includes("✅")
-                  ? "success"
-                  : "error"
+          <p
+            className={`form-status ${status?.includes("success") || status.includes("✅")
+              ? "success"
+              : "error"
               }`}
-            >
-              {status? status : ""}
-            </p>
+          >
+            {status ? status : ""}
+          </p>
 
           <form onSubmit={handleSubmit}>
             <div className="form-group">

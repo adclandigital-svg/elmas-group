@@ -17,7 +17,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  /* Premium radial gradient matching the diamond teal shade fading into dark */
+  background: radial-gradient(circle at center, rgba(0, 108, 112, 0.55) 0%, rgba(5, 15, 20, 0.85) 60%, rgba(0, 0, 0, 0.95) 100%);
   z-index: 1;
 }
 
@@ -32,17 +33,17 @@
 }
 
 .maintenance-logo {
-  max-width: 220px;
-  margin-bottom: 30px;
-  filter: drop-shadow(0px 0px 15px rgba(255,255,255,0.2));
+  max-width: 200px;
+  margin-bottom: 40px;
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.15));
 }
 
 .maintenance-text {
   color: #ffffff;
-  font-size: 54px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
   margin: 0;
   line-height: 1.2;
 }

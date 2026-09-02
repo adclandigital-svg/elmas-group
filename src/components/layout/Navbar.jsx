@@ -26,14 +26,26 @@ export default function Navbar() {
 
   const [open, setOpen] = useState(false);
 
-  /* GSAP SETUP (RUNS ONCE) */
-  useGSAP(() => {
-    ScrollTrigger.create({
-      start: 50,
-      onEnter: () => navbarRef.current.classList.add("scrolled"),
-      onLeaveBack: () => navbarRef.current.classList.remove("scrolled"),
-    });
+  /* Scroll detection for navbar background */
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!navbarRef.current) return;
+      if (window.scrollY > 300) {
+        navbarRef.current.classList.add("scrolled");
+      } else {
+        navbarRef.current.classList.remove("scrolled");
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Run once on mount in case page is already scrolled
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  /* GSAP SIDEBAR SETUP (RUNS ONCE) */
+  useGSAP(() => {
     const tl = gsap.timeline({
       paused: true,
       defaults: { ease: "power2.out" },
@@ -47,58 +59,47 @@ export default function Navbar() {
     tlRef.current = tl;
   }, []);
 
-  /* EVENTS */
+  const openSidebar = () => {
+    if (tlRef.current) tlRef.current.play();
+    openRef.current = true;
+    setOpen(true);
+  };
+
+  const closeSidebar = () => {
+    if (tlRef.current) tlRef.current.reverse();
+    openRef.current = false;
+    setOpen(false);
+  };
+
+  const toggleHandler = (e) => {
+    e.stopPropagation();
+    openRef.current ? closeSidebar() : openSidebar();
+  };
+
+  const closeHandler = (e) => {
+    e.stopPropagation();
+    closeSidebar();
+  };
+
   useEffect(() => {
-    const openSidebar = () => {
-      tlRef.current.play();
-      openRef.current = true;
-      setOpen(true);
-    };
-
-    const closeSidebar = () => {
-      tlRef.current.reverse();
-      openRef.current = false;
-      setOpen(false);
-    };
-
-    const toggleHandler = (e) => {
-      e.stopPropagation();
-      openRef.current ? closeSidebar() : openSidebar();
-    };
-
-    const closeHandler = (e) => {
-      e.stopPropagation();
-      closeSidebar();
-    };
-
     const outsideHandler = (e) => {
       if (
         openRef.current &&
         sidebarRef.current &&
-        toggleRef.current &&
         !sidebarRef.current.contains(e.target) &&
+        toggleRef.current &&
         !toggleRef.current.contains(e.target)
       ) {
         closeSidebar();
       }
     };
-
-    toggleRef.current.addEventListener("click", toggleHandler);
-    closeBtnRef.current.addEventListener("click", closeHandler);
     document.addEventListener("click", outsideHandler);
-
-    return () => {
-      toggleRef.current?.removeEventListener("click", toggleHandler);
-      closeBtnRef.current?.removeEventListener("click", closeHandler);
-      document.removeEventListener("click", outsideHandler);
-    };
+    return () => document.removeEventListener("click", outsideHandler);
   }, []);
 
   const handleLinkClick = () => {
     if (openRef.current) {
-      tlRef.current.reverse();
-      openRef.current = false;
-      setOpen(false);
+      closeSidebar();
     }
   };
   const darkRoutes = [
@@ -120,7 +121,7 @@ export default function Navbar() {
         ref={navbarRef}
         className={`navbar ${isDark ? "theme-dark" : ""}`}
       >
-        <div className="nav-container" style={{ cursor: "pointer" }}>
+        <div className="container nav-container" style={{ cursor: "pointer" }}>
           <div className="logo" onClick={() => route.push("/")}>
             <img
               src="/assets/logo.png"
@@ -143,7 +144,7 @@ export default function Navbar() {
               Elmas Aquacasa
             </Link>
 
-            <div ref={toggleRef} className="menu-toggle">
+            <div ref={toggleRef} className="menu-toggle" onClick={toggleHandler}>
               <span></span>
               <span></span>
               <span></span>
@@ -153,10 +154,14 @@ export default function Navbar() {
       </header>
 
       <aside ref={sidebarRef} className="sidebar">
-        <button ref={closeBtnRef} className="sidebar-close">
+        <button ref={closeBtnRef} className="sidebar-close" onClick={closeHandler}>
           <span></span>
           <span></span>
         </button>
+
+        <div className="sidebar-logo">
+          <img src="/assets/logo.png" alt="Elmas Group" width="120" />
+        </div>
 
         <nav className="sidebar-links">
           <Link

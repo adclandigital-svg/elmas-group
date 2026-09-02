@@ -151,22 +151,22 @@ export default function Homefirst() {
         start: "top 80%",
         onEnter: () => {
           gsap.to(el, {
-  innerText: el.dataset.count,
-  duration: 1.5,
-  ease: "power1.out",
-  snap: {
-    innerText: el.dataset.count % 1 === 0 ? 1 : 0.1,
-  },
-  onUpdate: () => {
-    const value = parseFloat(el.innerText);
+            innerText: el.dataset.count,
+            duration: 1.5,
+            ease: "power1.out",
+            snap: {
+              innerText: el.dataset.count % 1 === 0 ? 1 : 0.1,
+            },
+            onUpdate: () => {
+              const value = parseFloat(el.innerText);
 
-    if (parseFloat(el.dataset.count) % 1 !== 0) {
-      el.innerText = value.toFixed(1);
-    } else {
-      el.innerText = Math.round(value);
-    }
-  },
-}); 
+              if (parseFloat(el.dataset.count) % 1 !== 0) {
+                el.innerText = value.toFixed(1);
+              } else {
+                el.innerText = Math.round(value);
+              }
+            },
+          });
         },
       });
     });
@@ -190,170 +190,142 @@ export default function Homefirst() {
         </video>
       </section>
       <section ref={thirdRef} className="section third third-section">
-        <h1 className="third-section-h1">
-          Giving the <br />
-          best just for you
-        </h1>
+        <div className="third-section-header">
+          <span className="third-section-tagline">Our Signature Projects</span>
+          <h1 className="third-section-h1">
+            Giving the best just for you
+          </h1>
+          <div className="third-section-divider">
+            <span className="divider-diamond">◆</span>
+          </div>
+        </div>
 
-        <div className="third-second">
+        <div className="third-second project-card">
           <div className="third-second-img">
             <img
               className="slide-img"
               src="/assets/Spring Elmas/0022.jpg"
-              alt="residential"
-              // loading="lazy"
+              alt="Spring Elmas exterior view"
             />
             <img
               className="slide-img"
               src="/assets/Spring Elmas/0023.jpg"
-              alt="residential"
+              alt="Spring Elmas lobby"
               loading="lazy"
             />
             <img
               className="slide-img"
               src="/assets/Spring Elmas/0024.jpg"
-              alt="residential"
+              alt="Spring Elmas amenities"
               loading="lazy"
             />
             <img
               className="slide-img active"
               src="/assets/Spring Elmas/0011.jpg"
-              alt="residential"
+              alt="Spring Elmas front facade"
               loading="lazy"
             />
             <img
               className="slide-img"
               src="/assets/Spring Elmas/0012.jpg"
-              alt="commercial"
+              alt="Spring Elmas landscape"
               loading="lazy"
             />
             <img
               className="slide-img"
               src="/assets/Spring Elmas/0013.jpg"
-              alt="residential"
+              alt="Spring Elmas tower view"
               loading="lazy"
             />
           </div>
           <div className="third-second-text">
             <div className="residential-text active">
-              <h1> Spring Elmas</h1>
+              <span className="project-label">Residential</span>
+              <h1>Spring Elmas</h1>
               <p>
-                Spring Elmas has today evolved as one of the <br />
-                most vibrant real estate destinations,With a number <br /> of
-                ongoing world-class developments and meticulous expansion.{" "}
-                <br /> Where Spring Elmas in Noida Extension new launch
-                residential <br /> project with The sweeping lush surrounding,
-                assortment of <br />
-                finest amenities and ample space between towers will <br />
-                make your living an enriching experience,
-                <br />
-                Going smart over the natural resources <br /> endow the
-                residents with an <br />
-                eco-living in this blissfully
-                <br /> tranquil location.
+                Spring Elmas has today evolved as one of the most vibrant real estate destinations, with a number of ongoing world-class developments and meticulous expansion. Located in Greater Noida West, this new launch residential project features sweeping lush surroundings, an assortment of the finest amenities, and ample space between towers to make your living an enriching experience. Going smart over natural resources, it endows residents with eco-living in this blissfully tranquil location.
               </p>
-              <img
-                className="diamond-img"
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                // loading="lazy"
-              />
+              <a href="/projects" className="project-cta">Explore Project →</a>
             </div>
           </div>
         </div>
-        <div className="third-second">
+
+        <div className="third-second project-card">
           <div className="third-second-img">
             <img
               className="slide-img active"
               src="/assets/Spring Elmas/ea-1.webp"
-              alt="residential"
+              alt="Elmas Aquacasa exterior"
               loading="lazy"
             />
             <img
               className="slide-img"
               src="/assets/Spring Elmas/ea-2.webp"
-              alt="commercial"
+              alt="Elmas Aquacasa interior"
               loading="lazy"
             />
             <img
               className="slide-img"
               src="/assets/Spring Elmas/ea-3.webp"
-              alt="residential"
+              alt="Elmas Aquacasa amenities"
               loading="lazy"
             />
             <img
               className="slide-img"
               src="/assets/Spring Elmas/ea-4.webp"
-              alt="commercial"
+              alt="Elmas Aquacasa landscape"
               loading="lazy"
             />
           </div>
           <div className="third-second-text">
             <div className="commercial-text">
-              <h1>&nbsp;Elmas Aquacasa</h1>
+              <span className="project-label">Residential</span>
+              <h1>Elmas Aquacasa</h1>
               <p>
-                Thoughtfully planned residential spaces designed <br /> to bring
-                comfort, convenience, and a sense of belonging <br />
-                to everyday life. Homes crafted for modern families who value{" "}
-                <br />
-                quality living and peaceful surroundings.Spacious layouts,
-                abundant <br /> natural light, and smart use of space ensure
-                that every home feels <br /> open, warm, and welcoming. From
-                premium finishes to <br /> functional design, every detail is
-                created to elevate <br /> your lifestyle.With amenities for
-                relaxation, <br /> recreation, and community living, Elmas{" "}
-                <br />
-                Aquacasa offers a perfect balance <br /> between privacy and{" "}
-                <br />
-                togetherness.
+                Thoughtfully planned residential spaces designed to bring comfort, convenience, and a sense of belonging to everyday life. Homes crafted for modern families who value quality living and peaceful surroundings. Spacious layouts, abundant natural light, and smart use of space ensure that every home feels open, warm, and welcoming. From premium finishes to functional design, every detail is created to elevate your lifestyle. With amenities for relaxation, recreation, and community living, Elmas Aquacasa offers a perfect balance between privacy and togetherness.
               </p>
-              <img
-                className="diamond-img-commercial"
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                // loading="lazy"
-              />
+              <a href="/projects" className="project-cta">Explore Project →</a>
             </div>
           </div>
         </div>
       </section>
-      <section ref={sectionRef} className="section second">
+      <section ref={sectionRef} className="section second legacy-section">
         <div className="second-div">
-          <h3 className="section-title-absolute">
-            Our Legacy in Design &amp; Living
-          </h3>
+          <div className="legacy-header">
+            <span className="legacy-tagline">Our Story in Numbers</span>
+            <h3 className="section-title-absolute">
+              Our Legacy in Design &amp; Living
+            </h3>
+          </div>
           <div
             className="second-div1"
             ref={(el) => el && imagesRef.current.push(el)}
           >
             <img className="float-img" src="/assets/11.jpg" loading="lazy" />
             <img className="float-img" src="/assets/12.jpg" loading="lazy" />
-            <img className="float-img" src="/assets/13.jpg" loading="lazy"/>
+            <img className="float-img" src="/assets/13.jpg" loading="lazy" />
           </div>
           <div className="second-div2-absolute">
             {[
-              { count: 2, label: "Projects" },
-              { count: 10, label: "Years" },
-              { count: 2.5, label: "Mn Sq.ft" },
-              { count: 1500, label: "Families" },
+              { count: 2, label: "Projects", icon: "🏗️" },
+              { count: 10, label: "Years", icon: "📅" },
+              { count: 2.5, label: "Mn Sq.ft", icon: "📐" },
+              { count: 1500, label: "Families", icon: "🏡" },
             ].map((item, i) => (
-              <div key={i} className="second-div2-inner-dimond">
-                <img
-                  className="second-div2-inner-image"
-                  src="/assets/white-dimond-stroke.png"
-                  alt=""
-                  // loading="lazy"
-                />
-                <h1>
-                  <span
-                    data-count={item.count}
-                    ref={(el) => el && countersRef.current.push(el)}
-                  >
-                    0
-                  </span>
-                  <span className="plus">+</span>
-                </h1>
-                <p>{item.label}</p>
+              <div key={i} className="stat-card">
+                <div className="stat-card-inner">
+                  <h1>
+                    <span
+                      data-count={item.count}
+                      ref={(el) => el && countersRef.current.push(el)}
+                    >
+                      0
+                    </span>
+                    <span className="plus">+</span>
+                  </h1>
+                  <div className="stat-divider"></div>
+                  <p>{item.label}</p>
+                </div>
               </div>
             ))}
           </div>
