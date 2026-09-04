@@ -266,7 +266,7 @@ export default function ProjectPage() {
           {/* fallback image if video not supported */}
           <img
             src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80"
-            
+
             className="hero-video-fallback"
             loading="lazy"
           />
@@ -397,7 +397,7 @@ export default function ProjectPage() {
         </section>
       </div>
 
-      <div className="facilities-wrapper">
+      <div className="facilities-wrapper bg-grey">
         <section className="arrival-section">
           <div className="container">
             <div className="row text-center mb-5">
