@@ -61,7 +61,7 @@ a:not(.partner-btn, .cp-btn, .project-btn, .read-more-btn, .premium-btn):hover {
 }
 
 .bg-grey{
-  background-color: #f7f7f7;
+  background-color: #f7f7f7!important;
 }
 
 .partner-btn:hover, .cp-btn:hover, .project-btn:hover, .read-more-btn:hover, .premium-btn:hover {
