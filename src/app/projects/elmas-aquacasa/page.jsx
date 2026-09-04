@@ -283,93 +283,115 @@ export default function ProjectPage() {
       </div>
       <div className="facilities-section-outer">
         <section className="facilities-section">
-          <div className="text-side">
-            <p className="tag">PROJECT FACILITIES</p>
-            <h2>
-              World-Class <br /> Residential Amenities
-            </h2>
-            <p>
-              Aqua Casa is where tranquility meets modern living. Inspired by
-              the calming essence of water, our homes are designed to bring
-              peace, freshness, and a sense of harmony to everyday life. Every
-              corner of Aqua Casa reflects comfort, elegance, and a connection
-              with nature—making it not just a house, but a sanctuary you’ll be
-              proud to call home.
-            </p>
-            <p>Fresh Living, Inspired by Nature.</p>
-          </div>
+          <div className="container">
+            <div className="row g-5 align-items-start">
+              <div className="col-lg-5 text-side">
+                <p className="tag">PROJECT FACILITIES</p>
+                <h2>
+                  World-Class <br /> Residential Amenities
+                </h2>
+                <p>
+                  Aqua Casa is where tranquility meets modern living. Inspired by
+                  the calming essence of water, our homes are designed to bring
+                  peace, freshness, and a sense of harmony to everyday life. Every
+                  corner of Aqua Casa reflects comfort, elegance, and a connection
+                  with nature—making it not just a house, but a sanctuary you’ll be
+                  proud to call home.
+                </p>
+                <p>Fresh Living, Inspired by Nature.</p>
+              </div>
 
-          <div className="icon-grid">
-            <div className="icon-box">
-              <FaSwimmingPool /> Swimming Pool
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
+              <div className="col-lg-7">
+                <div className="row g-3">
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaSwimmingPool /> Swimming Pool
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-            <div className="icon-box">
-              <FaBuilding /> Clubhouse
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaBuilding /> Clubhouse
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-            <div className="icon-box">
-              <FaDumbbell /> Gymnasium
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaDumbbell /> Gymnasium
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-            <div className="icon-box">
-              <FaChild /> Kids Play Area
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaChild /> Kids Play Area
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-            <div className="icon-box">
-              <FaRunning /> Jogging Track
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaRunning /> Jogging Track
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-            <div className="icon-box">
-              <FaGamepad /> Indoor Games
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaGamepad /> Indoor Games
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-            <div className="icon-box">
-              <FaShieldAlt /> 24x7 Security
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaShieldAlt /> 24x7 Security
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-            <div className="icon-box">
-              <FaGlassCheers /> Banquet Hall
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaGlassCheers /> Banquet Hall
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -377,35 +399,47 @@ export default function ProjectPage() {
 
       <div className="facilities-wrapper">
         <section className="arrival-section">
-          <p className="tag">RELAXATION & COMFORT</p>
-          <h2>
-            Your Dream <br /> Home Awaits Your Arrival!
-          </h2>
+          <div className="container">
+            <div className="row text-center mb-5">
+              <div className="col-12">
+                <p className="tag">RELAXATION & COMFORT</p>
+                <h2>
+                  Your Dream <br /> Home Awaits Your Arrival!
+                </h2>
+              </div>
+            </div>
 
-          <div className="arrival-images">
-            <div>
-              <img
-                className="float-img"
-                src="/assets/Spring Elmas/eaa-1.webp"
-                loading="lazy"
-              />
-              <span className="blog-reveal"></span>
-            </div>
-            <div>
-              <img
-                className="float-img"
-                src="/assets/Spring Elmas/eaa-2.webp"
-                loading="lazy"
-              />
-              <span className="blog-reveal"></span>
-            </div>
-            <div>
-              <img
-                className="float-img"
-                src="/assets/Spring Elmas/eaa-3.webp"
-                loading="lazy"
-              />
-              <span className="blog-reveal"></span>
+            <div className="row g-4 arrival-images">
+              <div className="col-md-4">
+                <div className="arrival-img-box">
+                  <img
+                    className="float-img"
+                    src="/assets/Spring Elmas/eaa-1.webp"
+                    loading="lazy"
+                  />
+                  <span className="blog-reveal"></span>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="arrival-img-box">
+                  <img
+                    className="float-img"
+                    src="/assets/Spring Elmas/eaa-2.webp"
+                    loading="lazy"
+                  />
+                  <span className="blog-reveal"></span>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="arrival-img-box">
+                  <img
+                    className="float-img"
+                    src="/assets/Spring Elmas/eaa-3.webp"
+                    loading="lazy"
+                  />
+                  <span className="blog-reveal"></span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -465,54 +499,59 @@ export default function ProjectPage() {
         </section> */}
       </div>
       <section className="about-section">
-        <div className="about-container">
-          <div className="about-left">
-            <h2>About Project</h2>
-            <div className="project-address">
-              <span>Project Location</span>
-              <p>
-                Sector-16, Noida Extension <br />
-                (Greater Noida West), Uttar Pradesh – 201318
-              </p>
-            </div>
-          </div>
-
-          <div className="about-right">
-            <div className="about-text">
-              <p>
-                Elmas Aqua Casa is a premium residential development designed to
-                offer spacious homes with modern architecture, landscaped green
-                spaces, and lifestyle-focused amenities for comfortable urban
-                living.
-              </p>
-
-              <p>
-                Strategically located in Sector-16, Greater Noida West, the
-                project enjoys excellent connectivity to Noida, Ghaziabad, and
-                Delhi NCR through major expressways, metro routes, and upcoming
-                infrastructure.
-              </p>
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-5 about-left">
+              <h2>About Project</h2>
+              <div className="project-address">
+                <span>Project Location</span>
+                <p>
+                  Sector-16, Noida Extension <br />
+                  (Greater Noida West), Uttar Pradesh – 201318
+                </p>
+              </div>
             </div>
 
-            <div className="stats-grid">
-              <div className="stat">
-                <h3>10+</h3>
-                <span>Acres of land</span>
+            <div className="col-lg-7 about-right">
+              <div className="row g-4 about-text">
+                <div className="col-md-6">
+                  <p>
+                    Elmas Aqua Casa is a premium residential development designed to
+                    offer spacious homes with modern architecture, landscaped green
+                    spaces, and lifestyle-focused amenities for comfortable urban
+                    living.
+                  </p>
+                </div>
+                <div className="col-md-6">
+                  <p>
+                    Strategically located in Sector-16, Greater Noida West, the
+                    project enjoys excellent connectivity to Noida, Ghaziabad, and
+                    Delhi NCR through major expressways, metro routes, and upcoming
+                    infrastructure.
+                  </p>
+                </div>
               </div>
 
-              <div className="stat">
-                <h3>9</h3>
-                <span>Residential towers</span>
-              </div>
+              <div className="stats-grid">
+                <div className="stat">
+                  <h3>10+</h3>
+                  <span>Acres of land</span>
+                </div>
 
-              <div className="stat">
-                <h3>1,450+</h3>
-                <span>Premium residences</span>
-              </div>
+                <div className="stat">
+                  <h3>9</h3>
+                  <span>Residential towers</span>
+                </div>
 
-              <div className="stat">
-                <h3>70%</h3>
-                <span>Open & landscaped spaces</span>
+                <div className="stat">
+                  <h3>1,450+</h3>
+                  <span>Premium residences</span>
+                </div>
+
+                <div className="stat">
+                  <h3>70%</h3>
+                  <span>Open & landscaped spaces</span>
+                </div>
               </div>
             </div>
           </div>

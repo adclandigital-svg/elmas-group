@@ -13,48 +13,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 0%;
+  padding: 100px 0%;
   position: relative;
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(178, 127, 56, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(178, 127, 56, 0.08),
-      transparent 40%
-    );
 }
 
 .luxury-pattern {
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      rgba(178, 127, 56, 0.05) 0,
-      rgba(178, 127, 56, 0.05) 2px,
-      transparent 2px,
-      transparent 20px
-    ),
-    repeating-linear-gradient(
-      135deg,
-      rgba(178, 127, 56, 0.05) 0,
-      rgba(178, 127, 56, 0.05) 2px,
-      transparent 2px,
-      transparent 20px
-    );
-  background-size: 28px 28px;
-  opacity: 0.4;
-  filter: blur(0.3px);
-  pointer-events: none;
-  -webkit-filter: blur(0.3px);
+  display: none;
 }
 
 .luxury-wrap {
-  max-width: 1800px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -66,7 +34,6 @@
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: center;
-  margin-bottom: 110px;
 }
 
 .luxury-eyebrow {
@@ -79,7 +46,7 @@
 }
 
 .luxury-head-left h2 {
-  font-size: clamp(32px, 5vw, 82px);
+  font-size: clamp(32px, 4vw, 82px);
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 28px;
@@ -97,28 +64,13 @@
   max-width: 520px;
 }
 
-/* Glass Panel */
+/* Glass Panel -> Clean Panel */
 .luxury-head-right {
   position: relative;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--lux-line);
-  border-radius: 36px;
+  background: #fafafa;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 24px;
   padding: 52px 48px;
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
-
-.luxury-head-right::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top right,
-    rgba(178, 127, 56, 0.18),
-    transparent 60%
-  );
-  opacity: 0.8;
 }
 
 .luxury-stat-grid {
@@ -164,6 +116,7 @@
   grid-template-columns: 380px 1fr;
   gap: 80px;
   align-items: stretch;
+  margin-top: 40px;
 }
 
 .luxury-tabs {
@@ -207,40 +160,20 @@
 }
 
 .luxury-tab.active {
-  background: linear-gradient(
-    180deg,
-    rgba(178, 127, 56, 0.22),
-    rgba(255, 255, 255, 0.9)
-  );
-  border-color: rgba(178, 127, 56, 0.6);
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.12);
-  color: black;
+  background: #ffffff;
+  border-color: var(--lux-gold);
+  box-shadow: 0 10px 30px rgba(178, 127, 56, 0.08);
+  color: #000;
 }
 
 /* Panel */
 .luxury-panel {
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(14px);
-  border: 1px solid var(--lux-line);
-  border-radius: 46px;
-  padding: 68px 72px 74px;
-  box-shadow: 0 50px 160px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  min-height: 520px;
+  background: #fafafa;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 32px;
+  padding: 68px;
 }
-
-/* .luxury-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at bottom left,
-    rgba(178, 127, 56, 0.2),
-    transparent 60%
-  );
-  opacity: 0.75;
-} */
 
 .luxury-panel-inner {
   position: relative;
@@ -340,7 +273,7 @@
     margin-bottom: 50px;
   }
   .luxury-head-left h2 {
-    font-size: clamp(28px, 5vw, 42px);
+    font-size: clamp(28px, 4.5vw, 42px);
   }
   .luxury-head-left p {
     font-size: clamp(14px, 3vw, 16px);

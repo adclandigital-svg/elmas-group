@@ -66,9 +66,10 @@ export default function ProjectHighlights() {
 
   return (
     <section ref={sectionRef} className="ph-section">
-      <div className="ph-container">
-        {/* LEFT */}
-        <div className="ph-left">
+      <div className="container">
+        <div className="row g-5">
+          {/* LEFT */}
+          <div className="col-lg-5 ph-left">
           <span className="ph-eyebrow">PROJECT HIGHLIGHTS</span>
           <ul className="ph-list">
             <li>
@@ -109,10 +110,10 @@ export default function ProjectHighlights() {
         </div>
 
         {/* RIGHT */}
-        <div className="ph-right">
+        <div className="col-lg-7 ph-right">
           <span className="ph-eyebrow">KEY SPECIFICATIONS</span>
 
-          <div className="ph-grid">
+          <div className="row g-4">
             <Spec
               icon={<FaCouch />}
               title="GRAND LUXURY ENTRANCE"
@@ -171,17 +172,20 @@ export default function ProjectHighlights() {
           </div>
         </div>
       </div>
+      </div>
     </section>
   );
 }
 
 function Spec({ icon, title, text }) {
   return (
-    <div className="ph-item">
-      <div className="ph-icon-wrap">{icon}</div>
-      <div>
-        <h5>{title}</h5>
-        <p>{text}</p>
+    <div className="col-md-6 d-flex align-items-stretch">
+      <div className="ph-item flex-grow-1 w-100">
+        <div className="ph-icon-wrap">{icon}</div>
+        <div>
+          <h5>{title}</h5>
+          <p>{text}</p>
+        </div>
       </div>
     </div>
   );

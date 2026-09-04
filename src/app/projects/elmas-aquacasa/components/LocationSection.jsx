@@ -63,7 +63,7 @@ export default function LocationSection() {
   const [activeTab, setActiveTab] = useState("schools");
 
   return (
-    <section className="luxury-section">
+    <section className="luxury-section bg-grey">
       <div className="luxury-pattern"></div>
       <div className="luxury-wrap">
         {/* Header */}

@@ -230,28 +230,7 @@
   color: #b27f38;
 }
 
-  .facilities-section {
-    padding: 70px 30px;
-    gap: 30px;
-  }
-  .text-side h2 {
-    font-size: 32px;
-  }
-  .text-side p {
-    font-size: 16px;
-  }
-  .icon-box {
-    width: 180px;
-    height: 150px;
-    font-size: 16px;
-  }
-  .icon-box img {
-    width: 170px;
-    top: -15px;
-  }
-  .icon-grid {
-    gap: 25px 10px;
-  }
+
 /* ================= TABLET ================= */
 @media (max-width: 1024px) {
   .facilities-section {
@@ -278,7 +257,6 @@
 /* ================= MOBILE ================= */
 @media (max-width: 600px) {
   .facilities-section {
-    padding: 40px 20px;
     flex-direction: column;
     gap: 30px;
   }
@@ -530,9 +508,11 @@
 
 /* Container */
 .fp-book-section {
-  text-align: center;
-  padding: 40px 20px;
-  overflow: hidden;
+  background: #fff;
+    width: 100%;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Title */

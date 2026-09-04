@@ -1,84 +1,61 @@
 .ph-section {
   width: 100%;
-  padding: 110px 20px; /* small horizontal padding for mobile */
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.ph-container {
-  max-width: 1800px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1.1fr 2fr;
-  background: #fff;
-  border-radius: 26px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+  padding: 120px 0;
+  background: #0a0c10;
+  color: #fff;
+  overflow: clip; /* clip instead of hidden to allow position: sticky */
   position: relative;
-  border: 1px solid #e7c78a;
 }
 
-/* Gold accent glow */
-.ph-container::before {
-  content: "";
+/* Faint background text */
+.ph-section::before {
+  content: "ELMAS";
   position: absolute;
-  inset: -1px;
-  border-radius: 26px;
-  background: linear-gradient(
-    135deg,
-    transparent 20%,
-    #e7c78a 50%,
-    transparent 80%
-  );
-  opacity: 0.15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-cormorant), serif;
+  font-size: 25vw;
+  font-weight: 700;
+  color: rgba(178, 127, 56, 0.02);
   pointer-events: none;
+  z-index: 0;
 }
 
-/* ---------- LEFT ---------- */
-.ph-left {
-  padding: 40px 60px;
-  border-right: 1px solid #f0e1c6;
+/* ---------- LEFT & RIGHT ---------- */
+.ph-left, .ph-right {
   position: relative;
+  z-index: 2;
+}
+
+/* Sticky Left Side */
+.ph-left {
+  position: sticky;
+  top: 120px; 
 }
 
 .ph-eyebrow {
-  font-size: 18px;
-  letter-spacing: 3px;
-  color: #b17e38;
-  font-weight: 1000;
   display: inline-block;
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
-
-.ph-number-wrap {
-  width: 150px;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin: 18px 0 18px;
-}
-
-.ph-number-wrap h1 {
-  font-size: 150px;
-  font-weight: 300;
-  color: #d2ab63;
-  line-height: 1;
-  letter-spacing: -4px;
-  margin: 0;
-  transform: translateY(-10%);
-}
-
-.ph-subtitle {
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #c2a36a;
-  margin-bottom: 42px;
+  color: #d4a85c;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-/* List */
+.ph-eyebrow::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #d4a85c;
+}
+
+/* List (Highlights) */
 .ph-list {
   list-style: none;
   padding: 0;
@@ -88,178 +65,121 @@
 .ph-list li {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 18px;
-  color: #000000;
-  margin-bottom: 12px;
+  gap: 24px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .ph-list li span {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #d2ab63;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #000000;
+  font-family: var(--font-cormorant), serif;
+  font-size: 28px;
+  color: #d4a85c;
   font-weight: 600;
-  background: white;
+  min-width: 30px;
+  opacity: 0.9;
+  line-height: 1;
 }
 
-/* ---------- RIGHT ---------- */
-.ph-right {
-  padding: 40px 60px;
-}
-
-.ph-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px 64px;
-  margin-bottom: 10px;
-}
-
+/* Right Side (Specifications) */
+/* Reduce clutter on cards by removing heavy background and huge padding */
 .ph-item {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.4s ease, background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .ph-item:hover {
-  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom-color: rgba(212, 168, 92, 0.4);
 }
 
 .ph-icon-wrap {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: white;
-  border: 1px solid #ead3aa;
+  background: rgba(212, 168, 92, 0.05);
+  border: 1px solid rgba(212, 168, 92, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d2ab63;
+  color: #d4a85c;
   font-size: 20px;
   flex-shrink: 0;
-  transition: transform 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .ph-item:hover .ph-icon-wrap {
-  transform: rotate(-6deg) scale(1.05);
+  transform: scale(1.05);
+  background: #d4a85c;
+  color: #0a0c10;
 }
 
 .ph-item h5 {
-  font-size: 14px;
-  letter-spacing: 1.4px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
   margin-bottom: 4px;
-  color: #1e1e1e;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .ph-item p {
-  font-size: 16px;
-  color: #000000;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.6;
 }
 
 /* ---------- RESPONSIVE ---------- */
-
-/* Large tablets / small desktops */
-@media (max-width: 1200px) {
-  .ph-container {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 991px) {
   .ph-left {
-    border-right: none;
-    border-bottom: 1px solid #f0e1c6;
-  }
-  .ph-left,
-  .ph-right {
-    padding: 60px 40px;
-  }
-  .ph-number-wrap {
-    width: 120px;
-    height: 100px;
-  }
-  .ph-number-wrap h1 {
-    font-size: 120px;
+    position: relative;
+    top: 0;
+    margin-bottom: 60px;
   }
 }
 
-/* Tablets */
 @media (max-width: 768px) {
-  .ph-left,
-  .ph-right {
-    padding: 50px 30px;
+  .ph-section {
+    padding: 80px 0;
   }
-  .ph-number-wrap {
-    width: 100px;
-    height: 80px;
-  }
-  .ph-number-wrap h1 {
-    font-size: 96px;
-    letter-spacing: -2px;
-  }
-  .ph-subtitle {
-    font-size: 10px;
-  }
-  .ph-grid {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    margin-top: 0px;
-    padding-bottom: 50px;
+  .ph-item {
+    padding: 20px 0;
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .ph-section {
-    padding: 60px 10px;
+    padding: 60px 0;
   }
-  .ph-left,
-  .ph-right {
-    padding: 30px 20px;
+  .ph-list li {
+    font-size: 15px;
+    gap: 16px;
   }
-  .ph-number-wrap {
-    width: 80px;
-    height: 60px;
-  }
-  .ph-number-wrap h1 {
-    font-size: 64px;
-    letter-spacing: -1px;
-  }
-  .ph-subtitle {
-    font-size: 9px;
-    margin-bottom: 30px;
+  .ph-list li span {
+    font-size: 24px;
   }
   .ph-item h5 {
-    font-size: 12px;
+    font-size: 11px;
   }
   .ph-item p {
     font-size: 13px;
-  }
-  .ph-list li {
-    font-size: 14px;
-    gap: 12px;
-  }
-  .ph-list li span {
-    width: 24px;
-    height: 24px;
-    font-size: 10px;
   }
 }
 
 .ph-right,
 .ph-left {
-  overflow: hidden;
+  overflow: visible; /* needed for sticky to work */
 }
 
-.ph-item,
-.ph-list li {
-  will-change: transform, opacity;
+.ph-section .row {
+  align-items: flex-start; /* Ensure left column doesn't stretch, enabling sticky */
 }
