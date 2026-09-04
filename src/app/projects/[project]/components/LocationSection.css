@@ -172,8 +172,7 @@
   background: #fafafa;
   border: 1px solid rgba(0,0,0,0.05);
   border-radius: 32px;
-  padding: 68px 72px;
-  min-height: 520px;
+  padding: 68px;
 }
 
 .luxury-panel-inner {
