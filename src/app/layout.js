@@ -98,6 +98,7 @@ export default function RootLayout({ children }) {
         {!isMaintenance && children}
         {!isMaintenance && !isAdmin && <Footer />}
         {!isMaintenance && !isAdmin && <ContactPopup />}
+        <script src="https://digitalmarketingai.classofachievers.in/static/chatbot-widget.js" data-bot-id="9e612d5c-91ae-4622-bf0e-52a895913fea"></script>
       </body>
     </html>
   );
