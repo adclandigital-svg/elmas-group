@@ -478,65 +478,63 @@ export default function ProjectPage() {
       <LocationSection />
       <ProjectHighlights />
       <SitePlanSection />
-      <section className="fp-book-section">
-        <div className="container">
-          <h2 className="fp-book-title">Blueprints of Better Living</h2>
-          <div className="fp-tabs">
-            {plans.map((plan, i) => (
-              <button
-                key={i}
-                className={`fp-tab ${activeIndex === i ? "active1" : ""}`}
-                onClick={() => handleTabClick(i)}
-              >
-                {plan.title}
-              </button>
-            ))}
-          </div>
-
-          <HTMLFlipBook
-            width={size.width}
-            height={size.height}
-            className="fp-flipbook"
-            showCover={false}
-            drawShadow={true}
-            maxShadowOpacity={0.8}
-            flippingTime={900}
-            swipeDistance={30}
-            useMouseEvents={true}
-            mobileScrollSupport={true}
-            ref={flipBook}
-            onFlip={handleFlip}
-          >
-            {plans.flatMap((plan, index) => [
-              <div className="fp-page fp-front" key={`front-${index}`}>
-                <img
-                  src={plan.image}
-                  alt={plan.title}
-                  className="fp-image"
-                  loading="lazy"
-                />
-                <h3 className="fp-page-title">{plan.title}</h3>
-              </div>,
-
-              <div className="fp-page fp-back" key={`back-${index}`}>
-                <h3 className="fp-page-title">{plan.title}</h3>
-                <p className="fp-description">{plan.description}</p>
-                <ul className="fp-details-list">
-                  {plan.details.map((d, i2) => (
-                    <li key={i2}>
-                      <span>{d.label}</span>
-                      <strong>{d.value}</strong>
-                    </li>
-                  ))}
-                </ul>
-                <div className="fp-page-download">
-                  <a onClick={() => setShowForm("Brochure")}> Brochure</a>
-                  <a onClick={() => setShowForm("Price")}>Price List</a>
-                </div>
-              </div>,
-            ])}
-          </HTMLFlipBook>
+      <section className="fp-book-section bg-grey">
+        <h2 className="fp-book-title">Blueprints of Better Living</h2>
+        <div className="fp-tabs">
+          {plans.map((plan, i) => (
+            <button
+              key={i}
+              className={`fp-tab ${activeIndex === i ? "active1" : ""}`}
+              onClick={() => handleTabClick(i)}
+            >
+              {plan.title}
+            </button>
+          ))}
         </div>
+
+        <HTMLFlipBook
+          width={size.width}
+          height={size.height}
+          className="fp-flipbook"
+          showCover={false}
+          drawShadow={true}
+          maxShadowOpacity={0.8}
+          flippingTime={900}
+          swipeDistance={30}
+          useMouseEvents={true}
+          mobileScrollSupport={true}
+          ref={flipBook}
+          onFlip={handleFlip}
+        >
+          {plans.flatMap((plan, index) => [
+            <div className="fp-page fp-front" key={`front-${index}`}>
+              <img
+                src={plan.image}
+                alt={plan.title}
+                className="fp-image"
+                loading="lazy"
+              />
+              <h3 className="fp-page-title">{plan.title}</h3>
+            </div>,
+
+            <div className="fp-page fp-back" key={`back-${index}`}>
+              <h3 className="fp-page-title">{plan.title}</h3>
+              <p className="fp-description">{plan.description}</p>
+              <ul className="fp-details-list">
+                {plan.details.map((d, i2) => (
+                  <li key={i2}>
+                    <span>{d.label}</span>
+                    <strong>{d.value}</strong>
+                  </li>
+                ))}
+              </ul>
+              <div className="fp-page-download">
+                <a onClick={() => setShowForm("Brochure")}> Brochure</a>
+                <a onClick={() => setShowForm("Price")}>Price List</a>
+              </div>
+            </div>,
+          ])}
+        </HTMLFlipBook>
       </section>
 
       <section className="map-section">

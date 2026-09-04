@@ -1,0 +1,112 @@
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+}
+
+.welcome-layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.welcome-logo-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  animation: diamondGlow 3s infinite ease-in-out;
+  animation-delay: 3.8s; /* Waits for the cut-cut and slide to finish before glowing */
+}
+
+@keyframes diamondGlow {
+  0% {
+    filter: drop-shadow(0 0 15px rgba(178, 127, 56, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 45px rgba(178, 127, 56, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(178, 127, 56, 0.2));
+  }
+}
+
+.welcome-logo {
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.welcome-text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left align */
+  text-align: left; /* Left align text */
+  gap: 20px;
+  max-width: 600px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.welcome-text-content h1 {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(32px, 5vw, 48px);
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+}
+
+.welcome-text-content p {
+  font-family: var(--font-nunito), sans-serif;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.welcome-enter-btn {
+  margin-top: 15px;
+  background: transparent;
+  color: #b27f38;
+  border: 1px solid #b27f38;
+  padding: 12px 40px;
+  font-size: 14px;
+  font-family: var(--font-nunito), sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.welcome-enter-btn:hover {
+  background: #b27f38;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(178, 127, 56, 0.4);
+}
+
+@media (max-width: 768px) {
+  .welcome-logo {
+    max-width: 180px;
+  }
+  .welcome-enter-btn {
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+}

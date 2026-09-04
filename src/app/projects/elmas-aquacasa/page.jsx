@@ -561,8 +561,9 @@ export default function ProjectPage() {
       {/* <NeighbourSection /> */}
       <LocationSection />
       <ProjectHighlights />
-      <section className="fp-book-section">
+      <section className="fp-book-section bg-grey">
         <h2 className="fp-book-title">Blueprints of Better Living</h2>
+
         <div className="fp-tabs">
           {plans.map((plan, i) => (
             <button

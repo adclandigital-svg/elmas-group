@@ -1,0 +1,125 @@
+.disclaimer-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.disclaimer-bar {
+  pointer-events: auto;
+  background: rgba(10, 12, 16, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.disclaimer-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.disclaimer-bar-content p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-nunito), sans-serif;
+}
+
+.disclaimer-bar-content p a {
+  color: #d4a85c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.disclaimer-bar-content p a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer-bar-actions {
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.disclaimer-btn {
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-nunito), sans-serif;
+}
+
+.reject-btn {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reject-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.accept-btn {
+  background: rgba(212, 168, 92, 0.2);
+  color: #d4a85c;
+  border: 1px solid rgba(212, 168, 92, 0.3);
+}
+
+.accept-btn:hover {
+  background: rgba(212, 168, 92, 0.4);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-wrapper {
+    bottom: 0;
+  }
+  .disclaimer-wrapper .container {
+    padding: 0;
+  }
+  .disclaimer-bar {
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+  .disclaimer-bar-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .disclaimer-bar-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}

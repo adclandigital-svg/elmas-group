@@ -61,6 +61,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 import Maintenance from "@/components/Maintenance";
+import DisclaimerBar from "@/components/layout/DisclaimerBar";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -109,7 +110,8 @@ export default function RootLayout({ children }) {
         {!isMaintenance && !isAdmin && <SmoothScroll />}
         {!isMaintenance && children}
         {!isMaintenance && !isAdmin && <Footer />}
-        {!isMaintenance && !isAdmin && <ContactPopup />}
+        {/* {!isMaintenance && !isAdmin && <ContactPopup />} */}
+        {!isMaintenance && !isAdmin && <DisclaimerBar />}
         <script src="https://digitalmarketingai.classofachievers.in/static/chatbot-widget.js" data-bot-id="9e612d5c-91ae-4622-bf0e-52a895913fea"></script>
       </body>
     </html>
