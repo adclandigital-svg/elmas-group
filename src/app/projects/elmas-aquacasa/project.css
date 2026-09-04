@@ -510,7 +510,7 @@
 /* Container */
 .fp-book-section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 120px 0px;
   overflow: hidden;
 }
 
@@ -522,6 +522,7 @@
   color: #1a1a1a;
   letter-spacing: normal;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 /* Tabs */
