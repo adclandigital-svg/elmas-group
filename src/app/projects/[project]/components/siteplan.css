@@ -1,116 +1,98 @@
 .siteplan-section {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 120px 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Heading */
-.siteplan-heading {
-  text-align: center;
-  margin-bottom: 0px;
-  max-width: 700px;
+.siteplan-heading .tag {
+  display: inline-block;
+  color: #b27f38;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(178, 127, 56, 0.1);
+  border: 1px solid rgba(178, 127, 56, 0.2);
+  padding: 6px 20px;
+  border-radius: 30px;
 }
 
 .siteplan-heading h2 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #b4823d;
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(38px, 4vw, 56px);
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.2;
 }
 
 .siteplan-heading p {
-  font-size: 20px;
-  color: #000000;
-  margin-top: 10px;
+  color: #555555;
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Image container */
+/* Image Container */
 .siteplan-container {
+  position: relative;
   width: 100%;
-  max-width: 100%;
+  border-radius: 24px;
   overflow: hidden;
-  border-radius: 20px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-/* Image */
 .siteplan-image {
   width: 100%;
   height: auto;
-  object-fit: contain;
   display: block;
-  border-radius: 20px;
-  transition: transform 0.4s ease;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Hover effect */
 .siteplan-container:hover .siteplan-image {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-
-
-
-/* =========================
-   ≤ 1200px
-========================= */
-@media (max-width: 1200px) {
-  .siteplan-heading h2 {
-    font-size: 36px;
-  }
-
-  .siteplan-heading p {
-    font-size: 18px;
-  }
+/* Subtle inner glow for premium feel */
+.siteplan-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 70%, rgba(178, 127, 56, 0.05));
+  pointer-events: none;
 }
 
 /* =========================
-   ≤ 768px (Tablet)
+   Responsive
 ========================= */
+@media (max-width: 991px) {
+  .siteplan-section {
+    padding: 100px 0;
+  }
+}
+
 @media (max-width: 768px) {
   .siteplan-section {
-    padding: 60px 15px;
+    padding: 80px 0;
   }
-
-  .siteplan-heading {
-    margin-bottom: 30px;
-  }
-
-  .siteplan-heading h2 {
-    font-size: 28px;
-  }
-
-  .siteplan-heading p {
-    font-size: 16px;
-  }
-
   .siteplan-container {
-    border-radius: 12px;
-  }
-
-  .siteplan-image {
-    border-radius: 12px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
   }
 }
 
-/* =========================
-   ≤ 480px (Mobile)
-========================= */
 @media (max-width: 480px) {
   .siteplan-section {
-    padding: 40px 10px;
+    padding: 60px 0;
   }
-
   .siteplan-heading h2 {
-    font-size: 22px;
-    line-height: 1.3;
+    font-size: 32px;
   }
-
   .siteplan-heading p {
-    font-size: 14px;
-  }
-
-  .siteplan-heading {
-    margin-bottom: 20px;
+    font-size: 15px;
   }
 }

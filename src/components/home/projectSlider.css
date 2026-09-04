@@ -1,12 +1,12 @@
 .project-slider-home {
   width: 100%;
-  padding: 100px 0 20px;
+  padding: 100px 0 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 80px;
+  background-color: #f7f7f7;
 }
 
 .project-slider-desc {

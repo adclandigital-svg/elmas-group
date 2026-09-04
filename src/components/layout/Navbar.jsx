@@ -113,7 +113,12 @@ export default function Navbar() {
     "/construction-update"
   ];
 
-  const isDark = darkRoutes.some((r) => pathname.startsWith(r));
+  let isDark = darkRoutes.some((r) => pathname.startsWith(r));
+
+  // Exception: Single blog inner pages have a light background now
+  if (pathname.startsWith("/blogs/")) {
+    isDark = false;
+  }
 
   return (
     <>
@@ -121,11 +126,11 @@ export default function Navbar() {
         ref={navbarRef}
         className={`navbar ${isDark ? "theme-dark" : ""}`}
       >
-        <div className="container nav-container" style={{ cursor: "pointer" }}>
-          <div className="logo" onClick={() => route.push("/")}>
+        <div className="container nav-container">
+          <div className="logo" onClick={() => route.push("/")} style={{ cursor: "pointer" }}>
             <img
-              src="/assets/logo.png"
-              width="100"
+              src="/assets/logo-elmas.webp"
+              height="45"
               alt="Elmas Group"
               loading="eager"
               decoding="async"
@@ -133,7 +138,7 @@ export default function Navbar() {
             />
           </div>
 
-          <nav className="nav-links">
+          <nav className="nav-links desktop-only">
             <Link href="/" onClick={handleLinkClick}>
               Home
             </Link>
@@ -143,13 +148,25 @@ export default function Navbar() {
             <Link href="/projects/elmas-aquacasa" onClick={handleLinkClick}>
               Elmas Aquacasa
             </Link>
-
-            <div ref={toggleRef} className="menu-toggle" onClick={toggleHandler}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </nav>
+
+          <div className="nav-right">
+            <div className="nav-phone desktop-only">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 84470 00039</span>
+            </div>
+            <Link href="/partner" className="partner-btn desktop-only">
+              Become a Partner
+            </Link>
+            
+            <div ref={toggleRef} className="menu-toggle" onClick={toggleHandler}>
+              <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" strokeWidth="1.75" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="10" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </div>
+          </div>
         </div>
       </header>
 

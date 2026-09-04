@@ -64,10 +64,11 @@ export default function ProjectHighlights() {
 
   return (
     <section ref={sectionRef} className="ph-section">
-      <div className="ph-container">
-        {/* LEFT */}
-        <div className="ph-left">
-          <span className="ph-eyebrow">PROJECT HIGHLIGHTS</span>
+      <div className="container">
+        <div className="row g-5">
+          {/* LEFT */}
+          <div className="col-lg-5 ph-left">
+            <span className="ph-eyebrow">PROJECT HIGHLIGHTS</span>
           <ul className="ph-list">
             <li>
               <span>01</span> Grand Gated Community Entrance
@@ -103,13 +104,13 @@ export default function ProjectHighlights() {
               <span>11</span> Landscaped Greens & Central Open Spaces
             </li>
           </ul>
-        </div>
+          </div>
 
-        {/* RIGHT */}
-        <div className="ph-right">
-          <span className="ph-eyebrow">KEY SPECIFICATIONS</span>
+          {/* RIGHT */}
+          <div className="col-lg-7 ph-right">
+            <span className="ph-eyebrow">KEY SPECIFICATIONS</span>
 
-          <div className="ph-grid">
+            <div className="row g-4">
             <Spec
               icon={<FaCouch />}
               title="GRAND COMMUNITY ENTRANCE"
@@ -165,6 +166,7 @@ export default function ProjectHighlights() {
               title="LANDSCAPED CENTRAL GREENS"
               text="Beautifully landscaped gardens with walking paths, seating areas and serene open spaces for residents."
             />
+            </div>
           </div>
         </div>
       </div>
@@ -174,11 +176,13 @@ export default function ProjectHighlights() {
 
 function Spec({ icon, title, text }) {
   return (
-    <div className="ph-item">
-      <div className="ph-icon-wrap">{icon}</div>
-      <div>
-        <h5>{title}</h5>
-        <p>{text}</p>
+    <div className="col-md-6 d-flex align-items-stretch">
+      <div className="ph-item flex-grow-1 w-100">
+        <div className="ph-icon-wrap">{icon}</div>
+        <div>
+          <h5>{title}</h5>
+          <p>{text}</p>
+        </div>
       </div>
     </div>
   );

@@ -4,7 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { allBlogs } from "./blogData"; // Your JSON
+import { allBlogs } from "./blogData";
+import InnerHero from "@/components/layout/InnerHero";
 import "./BlogPage.css";
 import { useGSAP } from "@gsap/react";
 
@@ -66,28 +67,24 @@ export default function BlogPage() {
 //   }, [currentPage]);
 
   useGSAP(() => {
-    const reveals = gsap.utils.toArray(".blog-reveal");
-
-    gsap.set(reveals, { transformOrigin: "top" });
-
-    gsap
-      .timeline({
+    // Only animate the cards sliding up, no reveal overlay
+    const cards = gsap.utils.toArray(".blog-card");
+    gsap.fromTo(
+      cards,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.1,
         scrollTrigger: {
           trigger: ".blog-grid",
           start: "top 85%",
           end: "bottom 10%",
         },
-      })
-      .fromTo(
-        reveals,
-        { scaleY: 1 },
-        {
-          scaleY: 0,
-          duration: 0.6,
-          ease: "power3.out",
-          stagger: 0.09, // <- true sequential reveal
-        }
-      );
+      }
+    );
   }, [currentPage]);
 
   const goToPage = (page) => {
@@ -96,13 +93,15 @@ export default function BlogPage() {
   };
 
   return (
-    <section className="blog-page">
-      <div className="blog-header">
-        <h4>Insights & Stories</h4>
-        <h1>Latest <span>Insights</span></h1>
-        <p>Insights, stories, and trends from premium real estate.</p>
-      </div>
+    <section className="blog-page-wrapper">
+      <InnerHero 
+        tag="Insights & Stories" 
+        title="Latest Insights" 
+        description="Discover the latest trends, architectural marvels, and stories from the world of premium real estate."
+        bgImage="/construction/87.jpeg"
+      />
 
+      <section className="blog-page">
       <div className="blog-grid">
         {visibleBlogs.map((blog, i) => (
           <Link
@@ -113,12 +112,13 @@ export default function BlogPage() {
             <div className="blog-card" ref={(el) => (blogRefs.current[i] = el)}>
               <div className="blog-image">
                 <img src={blog.image} alt={blog.title} />
-                <span className="blog-reveal"></span>
+                <div className="blog-category">Real Estate</div>
               </div>
               <div className="blog-content">
                 <span className="blog-date">{blog.date}</span>
                 <h3>{blog.title}</h3>
                 <p>{blog.description}</p>
+                <span className="blog-read-more">Read Article <span>→</span></span>
               </div>
             </div>
           </Link>
@@ -139,6 +139,7 @@ export default function BlogPage() {
           ))}
         </div>
       )}
+      </section>
     </section>
   );
 }

@@ -4,7 +4,7 @@
 .featured-wrap {
   width: 100%;
   overflow: hidden;
-
+  background-color: #f7f7f7;
   background-image:
     repeating-linear-gradient(
       45deg,
@@ -22,7 +22,7 @@
     );
 
   background-size: 40px 40px;
-  padding: 50px 0px;
+  padding: 80px 0px;
 }
 .featured-container {
   width: 90%;
@@ -88,88 +88,219 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(178, 127, 56, 0.2);
+  border-radius: 20px;
+  padding: 35px 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
   overflow: hidden;
 }
 
 .featured-main h5 {
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
   color: #b27f38;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.featured-main h5::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #b27f38;
 }
 
 .featured-main h2 {
-  font-size: 28px;
-  margin: 14px 0 24px;
-  line-height: 1.3;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  margin: 0 0 30px;
+  line-height: 1.2;
+  color: #1a1a1a;
+  font-weight: 700;
   max-width: 850px;
+}
+
+.featured-main h2 span {
   color: #b27f38;
 }
 
 .featured-image {
   width: 100%;
   display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  overflow: hidden;
+  align-items: stretch;
+  gap: 35px;
 }
 
-.featured-image img {
-  width: 80%;
-  height: 480px;
-  object-fit: cover;
-  border-radius: 14px;
+.image-wrapper {
+  width: 60%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
 
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+  pointer-events: none;
+}
+
+.featured-text-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .featured-desc {
-  width: 35%;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.drop-cap {
+  float: left;
+  font-size: 54px;
+  line-height: 44px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #b27f38;
+  font-weight: 700;
+}
+
+.read-more-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #b27f38;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid #b27f38;
+  padding: 0 0 4px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+  color: #8c6024;
+  border-bottom-color: #8c6024;
+}
+
+.read-more-btn:hover svg {
+  transform: translateX(4px);
 }
 
 /* =========================
-    LOGO STRIP (HORIZONTAL)
+    MEDIA PARTNERS STRIP
   ========================= */
-.logo-swiper {
+.media-strip-label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   width: 100%;
-  margin-top: 26px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.media-strip-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(178, 127, 56, 0.35), transparent);
+}
+
+.media-strip-text {
+  font-family: var(--font-cormorant), serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.media-swiper {
+  width: 100%;
   overflow: hidden;
 }
 
-.logo-swiper .swiper-wrapper {
+.media-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
-}
-
-.logo-swiper .swiper-slide {
-  width: 200px;
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.logo-card {
-  padding: 14px 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-}
-
-.logo-card img {
-  height: 58px;
+.media-swiper .swiper-slide {
   width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-logo {
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-logo img {
+  height: 38px;
+  width: auto;
+  max-width: 130px;
   object-fit: contain;
+  filter: grayscale(100%) opacity(0.4);
+  transition: all 0.5s ease;
+}
+
+.media-logo:hover img {
+  filter: grayscale(0%) opacity(1);
 }
 
 /* =========================
     RESPONSIVE
   ========================= */
 @media (max-width: 1480px) {
+  .featured-text-content {
+    width: 40%;
+  }
   .featured-desc {
-    width: 35%;
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
 @media (max-width: 1024px) {
@@ -196,15 +327,23 @@
 
   .featured-image {
     flex-direction: column;
+    gap: 24px;
   }
 
-  .featured-image img {
+  .image-wrapper {
     width: 100%;
+  }
+
+  .image-wrapper img {
     height: 340px;
+    min-height: auto;
+  }
+
+  .featured-text-content {
+    width: 100%;
   }
 
   .featured-desc {
-    width: 100%;
     font-size: 15px;
   }
   .article-card-upper {
@@ -261,12 +400,13 @@
   }
 
   .featured-main h2 {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 22px;
+    margin-bottom: 20px;
   }
 
-  .featured-image img {
+  .image-wrapper img {
     height: 240px;
+    min-height: auto;
   }
 
   .featured-desc {
@@ -278,20 +418,22 @@
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
-}
-
-  .logo-card {
-    padding: 10px 22px;
   }
 
-  .logo-card img {
-    height: 62px;
+  .media-strip-section {
+    padding: 30px 0;
+  }
+
+  .media-logo img {
+    height: 30px;
+  }
+
+  .media-strip-text {
+    font-size: 12px;
+    letter-spacing: 1.5px;
   }
 }
 
-.logo-swiper .swiper-wrapper {
-  transition-timing-function: linear !important;
-}
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }

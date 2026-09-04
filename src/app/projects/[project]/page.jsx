@@ -220,133 +220,140 @@ export default function ProjectPage() {
       </div>
       <div className="facilities-section-outer">
         <section className="facilities-section">
-          <div className="text-side">
-            <p className="tag">PROJECT AMENITIES</p>
-            <h2>
-              Premium Lifestyle <br /> At Spring Elmas
-            </h2>
-            <p>
-              A thoughtfully designed residential community <br /> offering
-              luxury, comfort and modern living in the heart of Greater <br />
-              Noida West. Every amenity is crafted to elevate your everyday
-              lifestyle.
-            </p>
-            <p>
-              Enjoy a perfect blend of wellness, recreation and relaxation with{" "}
-              <br />
-              world-class facilities inside a secure gated township designed for{" "}
-              <br />
-              families, professionals and future-ready living.
-            </p>
-          </div>
+          <div className="container">
+            <div className="row g-5 align-items-start">
+              <div className="col-lg-5 text-side">
+                <p className="tag">PROJECT AMENITIES</p>
+                <h2>
+                  Premium Lifestyle <br /> At Spring Elmas
+                </h2>
+                <p>
+                  A thoughtfully designed residential community offering
+                  luxury, comfort and modern living in the heart of Greater
+                  Noida West. Every amenity is crafted to elevate your everyday
+                  lifestyle.
+                </p>
+                <p>
+                  Enjoy a perfect blend of wellness, recreation and relaxation with
+                  world-class facilities inside a secure gated township designed for
+                  families, professionals and future-ready living.
+                </p>
+              </div>
 
-          <div className="icon-grid">
-            <div className="icon-box">
-              <FaSwimmingPool /> Swimming Pool
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-
-            <div className="icon-box">
-              <FaBuilding /> Clubhouse
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-
-            <div className="icon-box">
-              <FaDumbbell /> Fitness Centre
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-
-            <div className="icon-box">
-              <FaChild /> Kids Play Zone
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-
-            <div className="icon-box">
-              <FaRunning /> Jogging Track
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-
-            <div className="icon-box">
-              <FaGamepad /> Indoor Games <br /> Room
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-
-            <div className="icon-box">
-              <FaShieldAlt /> 3-Tier Security <br /> System
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-
-            <div className="icon-box">
-              <FaGlassCheers /> Party Hall / <br /> Banquet
-              <img
-                src="/assets/dimond stroke pngs 2.png"
-                alt=""
-                loading="lazy"
-              />
+              <div className="col-lg-7">
+                <div className="row g-3">
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaSwimmingPool /> Swimming Pool
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaBuilding /> Clubhouse
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaDumbbell /> Fitness Centre
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaChild /> Kids Play Zone
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaRunning /> Jogging Track
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaGamepad /> Indoor Games <br /> Room
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaShieldAlt /> 3-Tier Security <br /> System
+                      <img
+                        src="/assets/dimond stroke pngs 2.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3">
+                    <div className="icon-box">
+                      <FaGlassCheers /> Party Hall / <br /> Banquet
+                      <img src="/assets/dimond stroke pngs 2.png" alt="" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
 
-      <div className="facilities-wrapper">
+      <div className="facilities-wrapper bg-grey">
         <section className="arrival-section">
-          <p className="tag">RELAXATION & COMFORT</p>
-          <h2>
-            Your Dream <br /> Home Awaits Your Arrival!
-          </h2>
+          <div className="container">
+            <div className="text-center">
+              <p className="tag">RELAXATION & COMFORT</p>
+              <h2>
+                Your Dream <br /> Home Awaits Your Arrival!
+              </h2>
+            </div>
 
-          <div className="arrival-images">
-            <div>
-              <img
-                className="float-img"
-                src="/assets/Spring Elmas/se-1.webp"
-                loading="lazy"
-              />
-              <span className="blog-reveal"></span>
-            </div>
-            <div>
-              <img
-                className="float-img"
-                src="/assets/Spring Elmas/se-2.webp"
-                loading="lazy"
-              />
-              <span className="blog-reveal"></span>
-            </div>
-            <div>
-              <img
-                className="float-img"
-                src="/assets/Spring Elmas/se-3.webp"
-                loading="lazy"
-              />
-              <span className="blog-reveal"></span>
+            <div className="row g-4 mt-2">
+              <div className="col-md-4">
+                <div className="arrival-img-box">
+                  <img src="/assets/Spring Elmas/se-1.webp" loading="lazy" />
+                  <span className="blog-reveal"></span>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="arrival-img-box">
+                  <img src="/assets/Spring Elmas/se-2.webp" loading="lazy" />
+                  <span className="blog-reveal"></span>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="arrival-img-box">
+                  <img src="/assets/Spring Elmas/se-3.webp" loading="lazy" />
+                  <span className="blog-reveal"></span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -406,56 +413,61 @@ export default function ProjectPage() {
         </section> */}
       </div>
       <section className="about-section">
-        <div className="about-container">
-          <div className="about-left">
-            <h2>About Spring Elmas</h2>
-            <div className="project-address">
-              <span>Project Location</span>
-              <p>
-                Sector-12, Greater Noida West <br />
-                (Noida Extension), Uttar Pradesh – 201318
-              </p>
-            </div>
-          </div>
-
-          <div className="about-right">
-            <div className="about-text">
-              <p>
-                Spring Elmas is a premium residential development crafted to
-                deliver elegant architecture, spacious homes and thoughtfully
-                curated lifestyle amenities. Every residence is designed to
-                offer superior comfort, natural ventilation and modern living
-                experiences.
-              </p>
-
-              <p>
-                Located in the heart of Greater Noida West, the project enjoys
-                excellent connectivity to Noida, Delhi and major business hubs
-                while being surrounded by schools, hospitals, shopping
-                destinations and daily conveniences — making it ideal for
-                families and working professionals.
-              </p>
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-5 about-left">
+              <h2>About Spring Elmas</h2>
+              <div className="project-address">
+                <span>Project Location</span>
+                <p>
+                  Sector-12, Greater Noida West <br />
+                  (Noida Extension), Uttar Pradesh – 201318
+                </p>
+              </div>
             </div>
 
-            <div className="stats-grid">
-              <div className="stat">
-                <h3>5</h3>
-                <span>Acres of development</span>
+            <div className="col-lg-7 about-right">
+              <div className="row g-4 about-text">
+                <div className="col-md-6">
+                  <p>
+                    Spring Elmas is a premium residential development crafted to
+                    deliver elegant architecture, spacious homes and thoughtfully
+                    curated lifestyle amenities. Every residence is designed to
+                    offer superior comfort, natural ventilation and modern living
+                    experiences.
+                  </p>
+                </div>
+                <div className="col-md-6">
+                  <p>
+                    Located in the heart of Greater Noida West, the project enjoys
+                    excellent connectivity to Noida, Delhi and major business hubs
+                    while being surrounded by schools, hospitals, shopping
+                    destinations and daily conveniences — making it ideal for
+                    families and working professionals.
+                  </p>
+                </div>
               </div>
 
-              <div className="stat">
-                <h3>8</h3>
-                <span>Residential towers</span>
-              </div>
+              <div className="stats-grid">
+                <div className="stat">
+                  <h3>5</h3>
+                  <span>Acres of development</span>
+                </div>
 
-              <div className="stat">
-                <h3>632</h3>
-                <span>Premium apartments</span>
-              </div>
+                <div className="stat">
+                  <h3>8</h3>
+                  <span>Residential towers</span>
+                </div>
 
-              <div className="stat">
-                <h3>65%</h3>
-                <span>Open & landscaped spaces</span>
+                <div className="stat">
+                  <h3>632</h3>
+                  <span>Premium apartments</span>
+                </div>
+
+                <div className="stat">
+                  <h3>65%</h3>
+                  <span>Open & landscaped spaces</span>
+                </div>
               </div>
             </div>
           </div>

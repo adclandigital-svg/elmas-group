@@ -87,33 +87,50 @@ export default function FeaturedSection() {
         {/* CENTER COLUMN */}
         <div className="featured-main">
           <h5>LATEST PROJECT UPDATE</h5>
-          <h2>SKYLINE RESIDENCES — THE NEXT ICONIC ADDRESS</h2>
+          <h2><span>SKYLINE RESIDENCES</span> — THE NEXT ICONIC ADDRESS</h2>
 
           <div className="featured-image">
-            <img
-              src="/construction/87.jpeg"
-              loading="eager"
-              alt="project"
-            />
-            <p className="featured-desc">
-              Our latest project update reveals the launch of Skyline Residences
-              — a future-ready residential landmark offering premium smart
-              homes, expansive green landscapes, and world-class lifestyle
-              amenities. Strategically located in the city’s fastest-growing
-              corridor, the development features modern clubhouses, wellness
-              zones, retail boulevards, and advanced security systems,
-              delivering a refined living experience for today’s urban families
-              and tomorrow’s investors.
-            </p>
+            <div className="image-wrapper">
+              <img
+                src="/construction/87.jpeg"
+                loading="eager"
+                alt="project"
+              />
+              <div className="image-overlay"></div>
+            </div>
+            
+            <div className="featured-text-content">
+              <p className="featured-desc">
+                <span className="drop-cap">O</span>ur latest project update reveals the launch of Skyline Residences
+                — a future-ready residential landmark offering premium smart
+                homes, expansive green landscapes, and world-class lifestyle
+                amenities. Strategically located in the city’s fastest-growing
+                corridor, the development features modern clubhouses, wellness
+                zones, retail boulevards, and advanced security systems,
+                delivering a refined living experience for today’s urban families
+                and tomorrow’s investors.
+              </p>
+              
+              <button className="read-more-btn">
+                Discover More
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
           </div>
 
           {/* LOGO STRIP */}
+          <div className="media-strip-label">
+            <span className="media-strip-line"></span>
+            <span className="media-strip-text">As Featured In</span>
+            <span className="media-strip-line"></span>
+          </div>
+
           <Swiper
             direction="horizontal"
             slidesPerView="auto"
-            spaceBetween={40}
+            spaceBetween={60}
             loop={true}
-            speed={5000}
+            speed={4000}
             allowTouchMove={false}
             autoplay={{
               delay: 0,
@@ -125,85 +142,77 @@ export default function FeaturedSection() {
               setTimeout(() => swiper.update(), 100);
             }}
             modules={[Autoplay]}
-            className="logo-swiper linear-scroll"
+            className="media-swiper"
           >
-            {/* <SwiperSlide>
-              <div className="logo-card">
-                <img
-                  src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png"
-                  loading="lazy"
-                />
-              </div>
-            </SwiperSlide> */}
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://e7.pngegg.com/pngimages/160/547/png-clipart-aaj-tak-india-television-channel-news-broadcasting-news-anchor-on-tv-breaking-news-television-text.png"
                   loading="lazy"
+                  alt="Aaj Tak"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://www.vhv.rs/dpng/d/493-4935300_the-hindu-newspaper-logo-png-logo-of-the.png"
                   loading="lazy"
+                  alt="The Hindu"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjjXoJrm98pN9PWgGodxByoe3Yc8bfIZaNM79xmEGUpJvFm0qPGr4T48&s=10"
                   loading="lazy"
+                  alt="Media Partner"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://lamhas.com/wp-content/uploads/2022/06/8-1.png"
                   loading="lazy"
+                  alt="Lamhas"
                 />
               </div>
             </SwiperSlide>
-            {/* <SwiperSlide>
-              <div className="logo-card">
-                <img
-                  src="https://www.clipartmax.com/png/middle/113-1138661_captain-news-logo.png"
-                  loading="lazy"
-                />
-              </div>
-            </SwiperSlide> */}
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://e7.pngegg.com/pngimages/160/547/png-clipart-aaj-tak-india-television-channel-news-broadcasting-news-anchor-on-tv-breaking-news-television-text.png"
                   loading="lazy"
+                  alt="Aaj Tak"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://www.vhv.rs/dpng/d/493-4935300_the-hindu-newspaper-logo-png-logo-of-the.png"
                   loading="lazy"
+                  alt="The Hindu"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjjXoJrm98pN9PWgGodxByoe3Yc8bfIZaNM79xmEGUpJvFm0qPGr4T48&s=10"
                   loading="lazy"
+                  alt="Media Partner"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="logo-card">
+              <div className="media-logo">
                 <img
                   src="https://lamhas.com/wp-content/uploads/2022/06/8-1.png"
                   loading="lazy"
+                  alt="Lamhas"
                 />
               </div>
             </SwiperSlide>

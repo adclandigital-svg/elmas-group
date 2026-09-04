@@ -9,6 +9,7 @@ import "./Homesecond.css";
 import FeaturedSection from "@/components/home/News";
 import ProjectSlider from "./Projects";
 import InstagramSection from "./InstagramSection";
+import BrandStory from "./BrandStory";
 
 export default function HomeSecond() {
   const cards = [
@@ -204,6 +205,7 @@ export default function HomeSecond() {
           </div>
         </div>
       </section> */}
+      <BrandStory />
       <ProjectSlider/>
       <InstagramSection />
       <FeaturedSection />

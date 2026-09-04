@@ -39,19 +39,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import ContactPopup from "@/components/layout/ContactPopup";
 import { usePathname } from "next/navigation";
-import { Playfair_Display } from "next/font/google";
+import { Nunito_Sans, Cormorant_Garamond } from "next/font/google";
 
-const playfair = Playfair_Display({
+const nunito = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-playfair",
 });
 
 import Maintenance from "@/components/Maintenance";
@@ -64,6 +70,9 @@ export default function RootLayout({ children }) {
   const [isMaintenance, setIsMaintenance] = useState(true);
 
   useEffect(() => {
+    // Import Bootstrap JS for client-side functionality (modals, dropdowns, etc.)
+    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+
     // 1. Automatically disable maintenance mode for your local development environment
     if (process.env.NODE_ENV === "development") {
       setIsMaintenance(false);
@@ -86,7 +95,10 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html lang="en" style={{"--font-cormorant": playfair.style.fontFamily}}>
+    <html lang="en" style={{ 
+      "--font-nunito": nunito.style.fontFamily,
+      "--font-cormorant": cormorant.style.fontFamily 
+    }}>
       <head>
         <link rel="preload" href="/assets/logo.png" as="image" />
       </head>

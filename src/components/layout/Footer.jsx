@@ -15,7 +15,6 @@ export default function Footer() {
   return (
     <>
       {/* Floating Social Icons */}
-      {/* Floating Social Icons */}
       <div className="floating-socials">
         <a href="https://www.facebook.com/share/19wWTjrzYM/" className="social facebook" target="_blank" rel="noopener noreferrer">
           <span className="icon"><FaFacebookF /></span>
@@ -44,14 +43,28 @@ export default function Footer() {
       </div>
 
       <footer className="footer">
+        {/* Top CTA Banner */}
+        <div className="footer-cta">
+          <h3>Let's Build Something Extraordinary Together</h3>
+          <p>Discover premium living spaces crafted with precision and passion.</p>
+          <Link href="/contact" className="footer-cta-btn">Get In Touch</Link>
+        </div>
+
         <div className="footer-inner">
           {/* Brand / About */}
           <div className="footer-brand">
-            <img src="/assets/logo.png" className="footer-logo" width={120} loading="lazy" />
+            <img src="/assets/logo-elmas.webp" className="footer-logo" width={160} loading="lazy" alt="Elmas Group" />
             <p>
               Designing spaces that feel alive, balanced, and enduring. Elmas
               Group is committed to building vibrant, sustainable communities.
             </p>
+            <div className="footer-social-row">
+              <a href="https://www.facebook.com/share/19wWTjrzYM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X"><FaXTwitter /></a>
+              <a href="https://www.instagram.com/elmasgroupofficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/elmas-group-05781a383" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://youtube.com/@elmas_group?si=JLgSoep_jh6kORVv" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -80,15 +93,19 @@ export default function Footer() {
               <FaMapMarkerAlt /> Elmas Group Greater Noida West 16B, Uttar Pradesh, India
             </p>
 
+            <p>
+              <FaPhoneAlt /> +91 84420 00039
+            </p>
 
             <p>
-              <FaEnvelope />  info@elmasgroup.in
+              <FaEnvelope /> info@elmasgroup.in
             </p>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <span>© 2025 Elmas Group | Based in India</span>
+          <span>© 2025 Elmas Group. All rights reserved.</span>
+          <span className="footer-bottom-right">Crafted with precision in India</span>
         </div>
       </footer>
     </>

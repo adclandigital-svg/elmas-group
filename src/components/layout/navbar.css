@@ -24,19 +24,53 @@
 /* ================= NAVBAR ================= */
 .navbar {
   position: fixed!important;
-  top: -2px;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
   background-color: transparent;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 20px 0;
+}
+
+.navbar.scrolled {
+  top: 15px;
+  padding: 0;
 }
 
 .nav-container {
-  max-width: 90%;
+  width: 90%;
+  max-width: 1300px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.4s ease;
+  border-radius: 60px;
+  padding: 0;
+}
+
+.navbar.scrolled .nav-container {
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 10px 30px;
+}
+
+/* Update logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+.navbar.scrolled .logo img {
+  height: 45px;
 }
 
 .nav-links {
@@ -53,50 +87,86 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  padding: 10px 0;
 }
+
+.navbar.theme-dark .nav-links a {
+  color: #ffffff;
+}
+
+.navbar.scrolled .nav-links a {
+  color: #111;
+}
+
+.navbar.scrolled .nav-links a:hover,
 .nav-links a:hover {
   color: #d4a85c !important;
 }
 
-/* SCROLLED */
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+/* Nav Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
-.navbar.scrolled a {
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #111111;
-}
-.navbar.scrolled a:hover {
-  color: #d4a85c !important;
+  font-weight: 700;
+  font-size: 14.5px;
+  transition: color 0.3s ease;
 }
 
-/* MENU */
+.navbar.theme-dark .nav-phone {
+  color: #ffffff;
+}
+
+.navbar.scrolled .nav-phone {
+  color: #111;
+}
+
+.partner-btn {
+  background: linear-gradient(90deg, #b27f38, #d4a85c);
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(178, 127, 56, 0.3);
+}
+
+.partner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(178, 127, 56, 0.5);
+  background: linear-gradient(90deg, #a1702d, #c39649);
+}
+
+/* MENU TOGGLE */
 .menu-toggle {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   padding: 5px;
-}
-
-.menu-toggle span {
-  width: 26px;
-  height: 2px;
+  color: #111111;
   transition: all 0.3s ease;
-  background-color: #111111;
 }
 
-.menu-toggle:hover span {
-  background-color: #d4a85c;
+.navbar.theme-dark .menu-toggle {
+  color: #ffffff;
 }
 
-/* When navbar is scrolled */
-.navbar.scrolled .menu-toggle span {
-  background: var(--text-dark);
+.navbar.scrolled .menu-toggle {
+  color: #111111;
+}
+
+.menu-toggle:hover {
+  color: #d4a85c !important;
 }
 
 /* SIDEBAR */
@@ -246,8 +316,8 @@
 }
 
 @media (max-width: 1024px) {
-  .nav-links a {
-    display: none;
+  .desktop-only {
+    display: none !important;
   }
   .sidebar-links-mobile {
     display: inline;
@@ -255,9 +325,6 @@
   .sidebar-links-project {
     display: none !important;
   }
-  /* .navbar{
-    position: sticky;
-  } */
 }
 
 /* Floating WhatsApp button */
