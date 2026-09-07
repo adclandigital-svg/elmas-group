@@ -201,7 +201,7 @@
 }
 .project-cta:hover {
   background: #b27f38;
-  color: #ffffff;
+  color: #ffffff!important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(178, 127, 56, 0.3);
 }

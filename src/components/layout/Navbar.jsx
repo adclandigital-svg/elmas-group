@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
   // TODO: replace with your WhatsApp number in international format (no + or dashes)
-  const WHATSAPP_NUMBER = "919876543210";
+  const WHATSAPP_NUMBER = "918447000039";
   const route = useRouter();
   const pathname = usePathname();
 

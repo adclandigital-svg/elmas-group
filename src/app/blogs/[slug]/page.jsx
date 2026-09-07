@@ -56,14 +56,14 @@ export default function BlogDetailPage() {
 
   return (
     <section className="blog-detail-page">
-      
+
       <div className="blog-detail-container">
         {/* HEADER SECTION */}
         <div className="blog-detail-header" ref={titleRef}>
           <button className="blog-back-btn" onClick={() => router.back()}>
-            <span>←</span> Back to Insights
+            <span>←</span> Back to Blogs
           </button>
-          
+
           <div className="blog-meta-top">
             <span className="blog-cat">{blog.category || "Real Estate"}</span>
             <span className="blog-date-sep">•</span>
@@ -71,7 +71,7 @@ export default function BlogDetailPage() {
           </div>
 
           <h1>{blog.title}</h1>
-          
+
           <div className="blog-author-meta">
             Written by <strong>{blog.author}</strong>
           </div>
