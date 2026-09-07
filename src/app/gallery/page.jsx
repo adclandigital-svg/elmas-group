@@ -1,105 +1,64 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./GalleryPage.css";
+import React from "react";
+import Link from "next/link";
+import "../construction-update/ProjectsPage.css"; // Reuse the luxurious projects styling
 
-gsap.registerPlugin(ScrollTrigger);
-
-export const galleryImages = [
-  { title: "Sport Area", image: "/assets/Spring Elmas/0007.jpg" },
-  { title: "Park", image: "/assets/Spring Elmas/0006.jpg"  },
-  { title: "Badminton Court", image: "/assets/Spring Elmas/0003.jpg"  },
-  { title: "Kids Play", image: "/assets/Spring Elmas/0004.jpg" },
-  { title: "Kids Play Area", image: "/assets/Spring Elmas/0005.jpg" },
-  { title: "Swimming Pool", image: "/assets/Spring Elmas/0025.jpg" },
-  { title: "Swimming Pool View", image: "/assets/Spring Elmas/0026.jpg" },
-  { title: "Lift Area", image: "/springelmas_gallery/8.jpg" },
-  { title: "Bed Room", image: "/assets/Spring Elmas/0012.jpg" },
-  { title: "Dining Area", image: "/assets/Spring Elmas/0013.jpg" },
-  { title: "Shopping Complex", image:  "/assets/Spring Elmas/0022.jpg" },
-  { title: "Shopping Complex Exterior", image: "/assets/Spring Elmas/0024.jpg" }
+const projects = [
+  {
+    id: "spring-elmas",
+    title: "SPRING ELMAS",
+    description: "Experience luxurious living with state-of-the-art amenities, beautiful landscapes, and premium quality construction.",
+    image: "/assets/Spring Elmas/0007.jpg",
+  },
+  {
+    id: "elmas-aquacasa",
+    title: "ELMAS AQUACASA",
+    description: "A prestigious development offering exquisite waterfront views and an unmatched lifestyle standard.",
+    image: "/construction/55.jpg",
+  }
 ];
 
-export default function GalleryPage() {
-  const blogsPerPage = 8;
-  const [modalImage, setModalImage] = useState(null);
-  const imageRefs = useRef([]);
-
-  const openModal = (img) => setModalImage(img);
-  const closeModal = () => setModalImage(null);
-
-  useEffect(() => {
-    imageRefs.current.forEach((el) => {
-      if (!el) return;
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 50, scale: 0.9 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
-    });
-
-    const overlays = gsap.utils.toArray(".gallery-reveal");
-    gsap.set(overlays, { transformOrigin: "top" });
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".gallery-grid",
-        start: "top 85%",
-        end: "bottom 10%",
-      },
-    }).fromTo(
-      overlays,
-      { scaleY: 1 },
-      { scaleY: 0, duration: 0.6, ease: "power3.out", stagger: 0.09 }
-    );
-  }, []);
-
+export default function GalleryProjectsPage() {
   return (
-    <section className="gallery-page">
-      <div className="gallery-header">
-        <h1>Explore <span>Elmas Group Moments</span></h1>
-        <p>Discover our lifestyle, amenities, and beautiful spaces.</p>
-      </div>
-
-      <div className="gallery-grid">
-        {galleryImages?.map((img, i) => (
-          <div
-            className="gallery-card"
-            key={i}
-            ref={(el) => (imageRefs.current[i] = el)}
-            onClick={() => openModal(img)}
-          >
-            <img src={img.image} alt={img.title} loading="lazy" />
-            <span className="gallery-reveal"></span>
-            <div className="gallery-overlay">
-              <h3>{img.title}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Modal */}
-      {modalImage && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src={modalImage.image} alt={modalImage.title} />
-            <h3>{modalImage.title}</h3>
-            <button className="modal-close" onClick={closeModal}>×</button>
-          </div>
+    <section className="projects-page">
+      {/* ===== HERO ===== */}
+      <div className="projects-hero">
+        <div className="projects-hero-bg">
+          <img src="/assets/Spring Elmas/0025.jpg" alt="Gallery Overview" onError={(e) => { e.target.src = "/construction/87.jpeg"; }} />
+          <div className="projects-hero-overlay"></div>
         </div>
-      )}
+        <div className="projects-hero-content">
+          <span className="projects-hero-tag">Discover Elmas Group Moments</span>
+          <h1><em>Project</em> Gallery</h1>
+          <p>Explore our lifestyle, amenities, and beautiful spaces across our premium projects.</p>
+        </div>
+      </div>
+
+      {/* ===== PROJECTS GRID ===== */}
+      <div className="projects-grid-container">
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <div className="project-card" key={project.id}>
+              <Link href={`/gallery/${project.id}`}><div className="project-image-wrap">
+                <img src={project.image} alt={project.title} className="project-image" />
+                <div className="project-overlay"></div>
+              </div></Link>
+              <div className="project-content">
+                <Link href={`/gallery/${project.id}`}><h2>{project.title}</h2></Link>
+                <p>{project.description}</p>
+                <Link href={`/gallery/${project.id}`} className="view-pictures-btn">
+                  View Pictures
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
