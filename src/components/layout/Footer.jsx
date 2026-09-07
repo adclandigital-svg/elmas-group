@@ -53,7 +53,7 @@ export default function Footer() {
         <div className="footer-inner">
           {/* Brand / About */}
           <div className="footer-brand">
-            <img src="/assets/logo-elmas.webp" className="footer-logo" width={160} loading="lazy" alt="Elmas Group" />
+            <img src="/assets/elmas-logo-wht.webp" className="footer-logo" width={180} loading="lazy" alt="Elmas Group" />
             <p>
               Designing spaces that feel alive, balanced, and enduring. Elmas
               Group is committed to building vibrant, sustainable communities.
