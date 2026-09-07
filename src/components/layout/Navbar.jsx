@@ -30,7 +30,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (!navbarRef.current) return;
-      if (window.scrollY > 300) {
+      if (window.scrollY > 20) {
         navbarRef.current.classList.add("scrolled");
       } else {
         navbarRef.current.classList.remove("scrolled");
@@ -158,7 +158,7 @@ export default function Navbar() {
             <Link href="/partner" className="partner-btn desktop-only">
               Become a Partner
             </Link>
-            
+
             <div ref={toggleRef} className="menu-toggle" onClick={toggleHandler}>
               <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" strokeWidth="1.75" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
