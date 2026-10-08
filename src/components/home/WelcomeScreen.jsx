@@ -87,7 +87,15 @@ export default function WelcomeScreen() {
   return (
     <div className="welcome-screen" ref={screenRef}>
       <div className="welcome-layout">
-        <div className="welcome-logo-wrapper" ref={logoRef}>
+        <div 
+          className="welcome-logo-wrapper" 
+          ref={logoRef}
+          style={{ 
+            opacity: 0, 
+            transform: "translate(-50%, -50%) scale(0.8)", 
+            clipPath: "inset(0 100% 0 0)" 
+          }}
+        >
           <img 
             src="/assets/welcome-screen.webp" 
             alt="Welcome" 
@@ -96,10 +104,20 @@ export default function WelcomeScreen() {
           />
         </div>
         
-        <div className="welcome-text-content" ref={contentRef}>
-          <h1>Welcome to Elmas Group</h1>
-          <p>Discover a legacy of premium living, sustainable design, and unparalleled luxury in the heart of Noida Extension.</p>
-          <button className="welcome-enter-btn" onClick={handleEnter}>
+        <div 
+          className="welcome-text-content" 
+          ref={contentRef}
+          style={{ 
+            transform: "translate(-70%, -50%) translateX(350px)" 
+          }}
+        >
+          <h1 style={{ opacity: 0, transform: "translateY(30px)" }}>Welcome to Elmas Group</h1>
+          <p style={{ opacity: 0, transform: "translateY(30px)" }}>Discover a legacy of premium living, sustainable design, and unparalleled luxury in the heart of Noida Extension.</p>
+          <button 
+            className="welcome-enter-btn" 
+            onClick={handleEnter}
+            style={{ opacity: 0, transform: "translateY(30px)" }}
+          >
             Enter Site
           </button>
         </div>
