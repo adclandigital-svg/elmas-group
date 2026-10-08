@@ -38,7 +38,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -60,39 +60,15 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-import Maintenance from "@/components/Maintenance";
 import DisclaimerBar from "@/components/layout/DisclaimerBar";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith("/admin");
-  
-  // Set maintenance mode state
-  const [isMaintenance, setIsMaintenance] = useState(false);
 
   useEffect(() => {
     // Import Bootstrap JS for client-side functionality (modals, dropdowns, etc.)
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
-
-    // 1. Automatically disable maintenance mode for your local development environment
-    if (process.env.NODE_ENV === "development") {
-      setIsMaintenance(false);
-      return;
-    }
-
-    // 2. Secret URL bypass for production (Live Website)
-    // To view the site on live: yourwebsite.com/?preview=true
-    // To re-enable maintenance on live: yourwebsite.com/?preview=false
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("preview") === "true") {
-      localStorage.setItem("bypass_maintenance", "true");
-    } else if (params.get("preview") === "false") {
-      localStorage.removeItem("bypass_maintenance");
-    }
-
-    if (localStorage.getItem("bypass_maintenance") === "true") {
-      setIsMaintenance(false);
-    }
   }, []);
 
   return (
@@ -105,13 +81,12 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        {isMaintenance && <Maintenance />}
-        {!isMaintenance && !isAdmin && <Navbar />}
-        {!isMaintenance && !isAdmin && <SmoothScroll />}
-        {!isMaintenance && children}
-        {!isMaintenance && !isAdmin && <Footer />}
-        {/* {!isMaintenance && !isAdmin && <ContactPopup />} */}
-        {!isMaintenance && !isAdmin && <DisclaimerBar />}
+        {!isAdmin && <Navbar />}
+        {!isAdmin && <SmoothScroll />}
+        {children}
+        {!isAdmin && <Footer />}
+        {/* {!isAdmin && <ContactPopup />} */}
+        {!isAdmin && <DisclaimerBar />}
         <script src="https://digitalmarketingai.classofachievers.in/static/chatbot-widget.js" data-bot-id="9e612d5c-91ae-4622-bf0e-52a895913fea"></script>
       </body>
     </html>
