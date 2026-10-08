@@ -85,7 +85,9 @@ export default function WelcomeScreen() {
   if (!show) return null;
 
   return (
-    <div className="welcome-screen" ref={screenRef}>
+    <>
+      <style>{`body { overflow: hidden !important; }`}</style>
+      <div className="welcome-screen" ref={screenRef}>
       <div className="welcome-layout">
         <div 
           className="welcome-logo-wrapper" 
@@ -123,5 +125,6 @@ export default function WelcomeScreen() {
         </div>
       </div>
     </div>
+    </>
   );
 }

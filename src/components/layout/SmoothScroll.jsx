@@ -15,8 +15,8 @@ export default function SmoothScroll() {
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smooth: true,
       smoothTouch: false,
-      wheelMultiplier: isMobile? 1.5:0.9,
-      touchMultiplier: isMobile? 1.5:0.9,
+      wheelMultiplier: isMobile ? 1.5 : 1.2,
+      touchMultiplier: isMobile ? 1.5 : 1.2,
     });
 
     const raf = (time) => {
