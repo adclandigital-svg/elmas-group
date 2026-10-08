@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
   const isAdmin = pathname.startsWith("/admin");
   
   // Set maintenance mode state
-  const [isMaintenance, setIsMaintenance] = useState(true);
+  const [isMaintenance, setIsMaintenance] = useState(false);
 
   useEffect(() => {
     // Import Bootstrap JS for client-side functionality (modals, dropdowns, etc.)
